@@ -3,6 +3,7 @@ package com.masquerade.service;
 import com.masquerade.exception.BadRequestException;
 import com.masquerade.model.ArchetypeEntity;
 import com.masquerade.repository.ArchetypeRepository;
+import com.masquerade.tools.Util;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -32,12 +33,17 @@ public class ArchetypeService {
     }
 
     @Transactional(readOnly = true)
-    public List<ArchetypeEntity> getArchetype(String name){
-        return archetypeRepository.findByDescription(name);
+    public List<ArchetypeEntity> getArchetype(String searchText){
+        return archetypeRepository.findByDescription(searchText);
     }
 
-    public void addArchetype(String name){
-        ArchetypeEntity archetypeEntity = new ArchetypeEntity(name);
+    public void addArchetype(String description, String note, Util.SettingLanguage language){
+        ArchetypeEntity archetypeEntity;
+        if (language.equals(Util.SettingLanguage.FR)) {
+            archetypeEntity = new ArchetypeEntity(null, description, null, note);
+        } else {
+            archetypeEntity = new ArchetypeEntity(description, null, note, null);
+        }
         archetypeRepository.save(archetypeEntity);
     }
 
@@ -49,12 +55,39 @@ public class ArchetypeService {
                 .orElseThrow(IllegalArgumentException::new));
     }
 
-    public void modifyArchetype(Long id, String description) throws BadRequestException {
+    public void modifyArchetype(Long id, String description, String note, Util.SettingLanguage language) throws BadRequestException {
         if(id == null) {
             throw BadRequestException.missingParameter();
         }
-        archetypeRepository.findById(id)
+        if(description != null) {
+            modifyArchetypeDescription(id, description, language);
+        }
+        if(note != null) {
+            modifyArchetypeNote(id, note, language);
+        }
+    }
+
+    private void modifyArchetypeDescription(Long id, String value, Util.SettingLanguage language) {
+        if ("FR".equals(language)) {
+            archetypeRepository.findById(id)
                 .orElseThrow(IllegalArgumentException::new)
-                .setDescription(description);
+                .setDescriptionFR(value);
+        } else {
+            archetypeRepository.findById(id)
+                    .orElseThrow(IllegalArgumentException::new)
+                    .setDescriptionEN(value);
+        }
+    }
+
+    private void modifyArchetypeNote(Long id, String value, Util.SettingLanguage language) {
+        if ("FR".equals(language)) {
+            archetypeRepository.findById(id)
+                    .orElseThrow(IllegalArgumentException::new)
+                    .setNoteFR(value);
+        } else {
+            archetypeRepository.findById(id)
+                    .orElseThrow(IllegalArgumentException::new)
+                    .setNoteEN(value);
+        }
     }
 }

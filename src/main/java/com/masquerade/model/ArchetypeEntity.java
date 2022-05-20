@@ -10,22 +10,46 @@ public class ArchetypeEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String description;
+    private String description_EN;
+    private String description_FR;
+    private String note_EN;
+    private String note_FR;
 
     public ArchetypeEntity() {
     }
 
-    public ArchetypeEntity(String description) {
-        this.description = description;
+    public ArchetypeEntity(String descriptionEN, String descriptionFR, String noteEN, String noteFR) {
+        this.description_EN = descriptionEN;
+        this.description_FR = descriptionFR;
+        this.note_EN = noteEN;
+        this.note_FR = noteFR;
     }
 
     public Long getId() {
         return id;
     }
 
-    public String getDescription() { return description; }
+    public String getDescriptionEN() { return description_EN; }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDescriptionEN(String description) {
+        this.description_EN = description;
+    }
+
+    public String getDescriptionFR() { return description_FR; }
+
+    public void setDescriptionFR(String description) {
+        this.description_FR = description;
+    }
+
+    public String getNoteEN() { return note_EN; }
+
+    public void setNoteEN(String note) {
+        this.note_EN = note;
+    }
+
+    public String getNoteFR() { return note_FR; }
+
+    public void setNoteFR(String note) {
+        this.note_FR = note;
     }
 }

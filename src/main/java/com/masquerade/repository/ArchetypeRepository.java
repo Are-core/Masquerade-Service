@@ -10,6 +10,6 @@ import java.util.List;
 
 @Repository
 public interface ArchetypeRepository extends JpaRepository<ArchetypeEntity, Long> {
-    @Query("SELECT a FROM ArchetypeEntity a WHERE a.description LIKE  %:description%")
-    List<ArchetypeEntity> findByDescription(@Param("description") String name);
+    @Query("SELECT a FROM ArchetypeEntity a WHERE a.description_EN LIKE  %:searchText%")
+    List<ArchetypeEntity> findByDescription(@Param("searchText") String searchText);
 }

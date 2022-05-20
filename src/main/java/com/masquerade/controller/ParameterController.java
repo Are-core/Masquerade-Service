@@ -3,6 +3,7 @@ package com.masquerade.controller;
 import com.masquerade.exception.BadRequestException;
 import com.masquerade.model.ArchetypeEntity;
 import com.masquerade.service.ArchetypeService;
+import com.masquerade.tools.Util;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,8 +36,8 @@ public class ParameterController {
     }
 
     @RequestMapping(value ="/parameter/addArchetype",method = RequestMethod.POST)
-    public ResponseEntity<HttpStatus> addArchetype(String name) {
-        archetypeService.addArchetype(name);
+    public ResponseEntity<HttpStatus> addArchetype(String name, String note, String language) {
+        archetypeService.addArchetype(name, note, Util.getLanguage(language));
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
@@ -47,8 +48,8 @@ public class ParameterController {
     }
 
     @RequestMapping(value ="/parameter/modifyArchetype",method = RequestMethod.PUT)
-    public ResponseEntity<HttpStatus> modifyArchetype(Long id, String name) throws BadRequestException {
-        archetypeService.modifyArchetype(id, name);
+    public ResponseEntity<HttpStatus> modifyArchetype(Long id, String name, String note, String language) throws BadRequestException {
+        archetypeService.modifyArchetype(id, name, note, Util.getLanguage(language));
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }
