@@ -4,15 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1c20cc1-6b67-4454-929b-ad7c0b38b878" name="Changes" comment="Feature - Adding Archetype service">
-      <change afterPath="$PROJECT_DIR$/masqueradeServiceLog.txt.2022-05-20.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/tools/Util.java" afterDir="false" />
+    <list default="true" id="e1c20cc1-6b67-4454-929b-ad7c0b38b878" name="Changes" comment="Feature - Changing structure for new model">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/EntityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/EntityEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/SmallEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/EntityRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/SmallEntityRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/EntityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/masqueradeServiceLog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/masqueradeServiceLog.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/ParameterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/ParameterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/ArchetypeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/ArchetypeEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/ArchetypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/ArchetypeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/ArchetypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/ArchetypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/masqueradeServiceLog.txt.2022-05-20.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/ParameterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/ArchetypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/ArchetypeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/parameter/ArchetypeEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/ArchetypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/parameter/ArchetypeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/ArchetypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/parameter/ArchetypeService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,14 +55,17 @@
     </option>
     <option name="myId2Visible">
       <map>
-        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
-        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
         <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="29OO43MwE5ep6JVEpOMVD3jxktk" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -168,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653067606727</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Feature - Changing structure for new model">
+      <created>1653086532856</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1653086532856</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -186,6 +203,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initializing Project" />
     <MESSAGE value="Feature - Adding Archetype service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature - Adding Archetype service" />
+    <MESSAGE value="Feature - Changing structure for new model" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature - Changing structure for new model" />
   </component>
 </project>

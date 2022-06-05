@@ -1,8 +1,8 @@
-package com.masquerade.controller;
+package com.masquerade.controller.parameter;
 
 import com.masquerade.exception.BadRequestException;
-import com.masquerade.model.ArchetypeEntity;
-import com.masquerade.service.ArchetypeService;
+import com.masquerade.model.parameter.ArchetypeEntity;
+import com.masquerade.service.parameter.ArchetypeService;
 import com.masquerade.tools.Util;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class ParameterController {
+public class ArchetypeController {
     private final ArchetypeService archetypeService;
 
-    public ParameterController(ArchetypeService archetypeService) {
+    public ArchetypeController(ArchetypeService archetypeService) {
         this.archetypeService = archetypeService;
     }
 

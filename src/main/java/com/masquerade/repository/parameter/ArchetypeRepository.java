@@ -1,6 +1,6 @@
-package com.masquerade.repository;
+package com.masquerade.repository.parameter;
 
-import com.masquerade.model.ArchetypeEntity;
+import com.masquerade.model.parameter.ArchetypeEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

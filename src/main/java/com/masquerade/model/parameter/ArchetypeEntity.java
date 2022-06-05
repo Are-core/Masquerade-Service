@@ -1,4 +1,4 @@
-package com.masquerade.model;
+package com.masquerade.model.parameter;
 
 import javax.persistence.*;
 

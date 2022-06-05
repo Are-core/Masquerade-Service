@@ -1,8 +1,8 @@
-package com.masquerade.service;
+package com.masquerade.service.parameter;
 
 import com.masquerade.exception.BadRequestException;
-import com.masquerade.model.ArchetypeEntity;
-import com.masquerade.repository.ArchetypeRepository;
+import com.masquerade.model.parameter.ArchetypeEntity;
+import com.masquerade.repository.parameter.ArchetypeRepository;
 import com.masquerade.tools.Util;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -68,7 +68,7 @@ public class ArchetypeService {
     }
 
     private void modifyArchetypeDescription(Long id, String value, Util.SettingLanguage language) {
-        if ("FR".equals(language)) {
+        if (language == Util.SettingLanguage.FR) {
             archetypeRepository.findById(id)
                 .orElseThrow(IllegalArgumentException::new)
                 .setDescriptionFR(value);
@@ -80,7 +80,7 @@ public class ArchetypeService {
     }
 
     private void modifyArchetypeNote(Long id, String value, Util.SettingLanguage language) {
-        if ("FR".equals(language)) {
+        if (language == Util.SettingLanguage.FR) {
             archetypeRepository.findById(id)
                     .orElseThrow(IllegalArgumentException::new)
                     .setNoteFR(value);
