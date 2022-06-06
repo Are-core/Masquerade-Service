@@ -2,7 +2,7 @@ package com.masquerade.model;
 
 import javax.persistence.*;
 
-@Table(name="entity")
+@Table(name="character_sheet")
 @Entity
 public class SimpleCharacterEntity {
     @Id

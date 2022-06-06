@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1c20cc1-6b67-4454-929b-ad7c0b38b878" name="Changes" comment="Modify - Change get character method by id">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/CharacterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/CharacterRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/SimpleCharacterRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/CharacterService.java" afterDir="false" />
+    <list default="true" id="e1c20cc1-6b67-4454-929b-ad7c0b38b878" name="Changes" comment="Modify - Refactor Entity to Character">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/EntityController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/EntityEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/CharacterEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/SmallEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/SimpleCharacterEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/EntityRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/SmallEntityRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/EntityService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/CharacterEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/CharacterEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654517538304</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Modify - Refactor Entity to Character">
+      <created>1654517935316</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1654517935316</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -217,6 +215,7 @@
     <MESSAGE value="Feature - Changing structure for new model" />
     <MESSAGE value="Feature - Add CrossOrigin domain" />
     <MESSAGE value="Modify - Change get character method by id" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modify - Change get character method by id" />
+    <MESSAGE value="Modify - Refactor Entity to Character" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modify - Refactor Entity to Character" />
   </component>
 </project>
