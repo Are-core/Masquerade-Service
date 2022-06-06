@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1c20cc1-6b67-4454-929b-ad7c0b38b878" name="Changes" comment="Feature - Changing structure for new model">
+    <list default="true" id="e1c20cc1-6b67-4454-929b-ad7c0b38b878" name="Changes" comment="Feature - Add CrossOrigin domain">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/masqueradeServiceLog.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/masqueradeServiceLog.txt.2022-05-20.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/EntityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/EntityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/ArchetypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/ArchetypeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ressources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ressources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653086532856</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Feature - Add CrossOrigin domain">
+      <created>1654517279357</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1654517279357</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -195,6 +198,7 @@
     <MESSAGE value="Initializing Project" />
     <MESSAGE value="Feature - Adding Archetype service" />
     <MESSAGE value="Feature - Changing structure for new model" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature - Changing structure for new model" />
+    <MESSAGE value="Feature - Add CrossOrigin domain" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature - Add CrossOrigin domain" />
   </component>
 </project>
