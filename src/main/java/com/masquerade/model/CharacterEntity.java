@@ -11,6 +11,7 @@ public class CharacterEntity {
     private Long id;
 
     private Boolean npc;
+    private Boolean archived;
     private String player;
     private String name;
 
@@ -297,5 +298,13 @@ public class CharacterEntity {
 
     public void setClan_id(Integer clan_id) {
         this.clan_id = clan_id;
+    }
+
+    public Boolean getArchived() {
+        return archived;
+    }
+
+    public void setArchived(Boolean archived) {
+        this.archived = archived;
     }
 }
