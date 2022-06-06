@@ -11,6 +11,7 @@ public class SimpleCharacterEntity {
     private Long id;
 
     private Boolean npc;
+    private Boolean archived;
     private String player;
     private String name;
 
@@ -46,5 +47,13 @@ public class SimpleCharacterEntity {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Boolean getArchived() {
+        return archived;
+    }
+
+    public void setArchived(Boolean archived) {
+        this.archived = archived;
     }
 }
