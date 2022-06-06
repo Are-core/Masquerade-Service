@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Table(name="entity")
 @Entity
-public class SmallEntity {
+public class SimpleCharacterEntity {
     @Id
     @Column(nullable = false, unique = true, updatable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,7 +14,7 @@ public class SmallEntity {
     private String player;
     private String name;
 
-    public SmallEntity() {}
+    public SimpleCharacterEntity() {}
 
     public Long getId() {
         return id;

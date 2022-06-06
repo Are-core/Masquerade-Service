@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Table(name="entity")
 @Entity
-public class EntityEntity {
+public class CharacterEntity {
     @Id
     @Column(nullable = false, unique = true, updatable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -49,7 +49,7 @@ public class EntityEntity {
     private Integer sect_id;
     private Integer clan_id;
 
-    public EntityEntity() {}
+    public CharacterEntity() {}
 
     public Long getId() {
         return id;
