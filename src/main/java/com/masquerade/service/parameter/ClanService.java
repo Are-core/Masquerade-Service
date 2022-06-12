@@ -66,11 +66,11 @@ public class ClanService {
         if(clan.isNull()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
-        updateRepositoryData(clan);
+        updateClanData(clan);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    private void updateRepositoryData(ClanEntity clan) throws EntityRequestException {
+    private void updateClanData(ClanEntity clan) throws EntityRequestException {
         if(!clanRepository.existsById(clan.getId())) {
             throw EntityRequestException.doesntExists(clan.getId());
         }
