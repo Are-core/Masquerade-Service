@@ -4,7 +4,6 @@ import com.masquerade.exception.BadRequestException;
 import com.masquerade.exception.EntityRequestException;
 import com.masquerade.model.parameter.ArchetypeEntity;
 import com.masquerade.service.parameter.ArchetypeService;
-import com.masquerade.tools.Util;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -36,7 +35,7 @@ public class ArchetypeController {
         return new ResponseEntity<>(archetypeService.getArchetype(name), HttpStatus.OK);
     }
 
-    @RequestMapping(value ="/parameter/removeArchetype",method = RequestMethod.DELETE)
+    @RequestMapping(value = ServicePrefix + "/removeArchetype",method = RequestMethod.DELETE)
     public ResponseEntity<HttpStatus> removeArchetype(Long id) throws BadRequestException {
         return archetypeService.removeArchetype(id);
     }
