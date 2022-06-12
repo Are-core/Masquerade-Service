@@ -31,19 +31,16 @@ public class SectController {
 
     @RequestMapping(value = ServicePrefix + "/removeSect",method = RequestMethod.DELETE)
     public ResponseEntity<HttpStatus> removeArchetype(Long id) throws BadRequestException {
-        sectService.removeSect(id);
-        return new ResponseEntity<>(HttpStatus.OK);
+        return sectService.removeSect(id);
     }
 
     @PostMapping(value = ServicePrefix + "/createSect", consumes = "application/json", produces = "application/json")
     public ResponseEntity<HttpStatus> createSect(@RequestBody String rawSect) throws BadRequestException {
-        sectService.createSect(rawSect);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        return sectService.createSect(rawSect);
     }
 
     @PostMapping(value = ServicePrefix + "/updateSect", consumes = "application/json", produces = "application/json")
-    public ResponseEntity<HttpStatus> updateSect(@RequestBody String rawSect) throws BadRequestException, EntityRequestException {
-        sectService.updateSect(rawSect);
-        return new ResponseEntity<>(HttpStatus.OK);
+    public ResponseEntity<HttpStatus> updateSect(@RequestBody String rawSect) throws EntityRequestException {
+        return sectService.updateSect(rawSect);
     }
 }

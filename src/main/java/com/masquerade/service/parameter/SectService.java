@@ -6,6 +6,8 @@ import com.masquerade.exception.EntityRequestException;
 import com.masquerade.model.parameter.ArchetypeEntity;
 import com.masquerade.model.parameter.SectEntity;
 import com.masquerade.repository.parameter.SectRepository;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -32,29 +34,16 @@ public class SectService {
                 .orElseThrow(IllegalArgumentException::new);
     }
 
-    public void addSect(String description){
-        SectEntity sectEntity = new SectEntity(description);
-        sectRepository.save(sectEntity);
-    }
-
-    public void modifySect(Long id, String description) throws BadRequestException {
-        if(id == null) {
-            throw BadRequestException.missingParameter();
-        }
-        sectRepository.findById(id)
-                .orElseThrow(IllegalArgumentException::new)
-                .setDescription(description);
-    }
-
-    public void removeSect(Long id) throws BadRequestException {
+    public ResponseEntity<HttpStatus> removeSect(Long id) throws BadRequestException {
         if(id == null) {
             throw BadRequestException.missingParameter();
         }
         sectRepository.delete(sectRepository.findById(id)
                 .orElseThrow(IllegalArgumentException::new));
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    public void createSect(String rawSect) throws BadRequestException {
+    public ResponseEntity<HttpStatus> createSect(String rawSect) throws BadRequestException {
         if(rawSect == null) {
             throw BadRequestException.missingParameter();
         }
@@ -64,18 +53,20 @@ public class SectService {
             throw BadRequestException.missingBody();
         }
         sectRepository.save(sect);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
-    public void updateSect(String rawSect) throws BadRequestException, EntityRequestException {
+    public ResponseEntity<HttpStatus> updateSect(String rawSect) throws EntityRequestException {
         if(rawSect == null) {
-            throw BadRequestException.missingParameter();
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
         Gson gson = new Gson();
         final SectEntity sect = gson.fromJson(rawSect, SectEntity.class);
         if(sect.isNull()) {
-            throw BadRequestException.missingBody();
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
         updateSectData(sect);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
     private void updateSectData(SectEntity sect) throws EntityRequestException {

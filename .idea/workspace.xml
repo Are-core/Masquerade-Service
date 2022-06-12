@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1ae5587-3f5e-4fd1-9d62-d3348b46aecb" name="Changes" comment="Modify - Change Insert &amp; Update method for archetype service">
+    <list default="true" id="d1ae5587-3f5e-4fd1-9d62-d3348b46aecb" name="Changes" comment="Feature - Set return HttpStatus to Sect services">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/ArchetypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/ArchetypeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/SectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/SectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/parameter/SectEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/parameter/SectEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/parameter/ArchetypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/parameter/ArchetypeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/parameter/SectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/parameter/SectService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ressources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ressources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/tools/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/tools/Util.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +112,28 @@
       <option name="project" value="LOCAL" />
       <updated>1655029698651</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Modify - Rename createArchetype function name&#10;Modify - Split RequestMapping with ServicePrefix">
+      <created>1655032067746</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1655032067746</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Modify - Change Add and Update method for a POST alternative&#10;Modify - Split RequestMapping with ServicePrefix">
+      <created>1655032107485</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1655032107485</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Feature - Set return HttpStatus to Archetype services">
+      <created>1655033681651</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1655033681651</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -133,6 +151,10 @@
     <MESSAGE value="Feature - Archived added to Character list entity" />
     <MESSAGE value="Feature - Sect methods added" />
     <MESSAGE value="Modify - Change Insert &amp; Update method for archetype service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modify - Change Insert &amp; Update method for archetype service" />
+    <MESSAGE value="Modify - Rename createArchetype function name&#10;Modify - Split RequestMapping with ServicePrefix" />
+    <MESSAGE value="Modify - Change Add and Update method for a POST alternative&#10;Modify - Split RequestMapping with ServicePrefix" />
+    <MESSAGE value="Feature - Set return HttpStatus to Archetype services" />
+    <MESSAGE value="Feature - Set return HttpStatus to Sect services" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature - Set return HttpStatus to Sect services" />
   </component>
 </project>
