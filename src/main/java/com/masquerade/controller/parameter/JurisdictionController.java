@@ -31,11 +31,6 @@ public class JurisdictionController {
         return new ResponseEntity<>(jurisdictionService.getJurisdiction(id), HttpStatus.OK);
     }
 
-    @RequestMapping(value = ServicePrefix + "/getJurisdictionByName",method = RequestMethod.GET)
-    public ResponseEntity<List<JurisdictionEntity>> getJurisdiction(String name) {
-        return new ResponseEntity<>(jurisdictionService.getJurisdiction(name), HttpStatus.OK);
-    }
-
     @RequestMapping(value = ServicePrefix + "/removeJurisdiction",method = RequestMethod.DELETE)
     public ResponseEntity<HttpStatus> removeJurisdiction(Long id) throws BadRequestException {
         return jurisdictionService.removeJurisdiction(id);

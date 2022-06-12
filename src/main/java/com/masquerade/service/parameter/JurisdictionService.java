@@ -35,10 +35,6 @@ public class JurisdictionService {
                 .orElseThrow(IllegalArgumentException::new);
     }
 
-    @Transactional(readOnly = true)
-    public List<JurisdictionEntity> getJurisdiction(String searchText){
-        return jurisdictionRepository.findByDescription(searchText);
-    }
 
     public ResponseEntity<HttpStatus> removeJurisdiction(Long id) throws BadRequestException {
         if(id == null) {

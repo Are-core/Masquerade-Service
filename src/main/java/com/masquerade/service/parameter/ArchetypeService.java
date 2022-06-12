@@ -37,11 +37,6 @@ public class ArchetypeService {
                 .orElseThrow(IllegalArgumentException::new);
     }
 
-    @Transactional(readOnly = true)
-    public List<ArchetypeEntity> getArchetype(String searchText){
-        return archetypeRepository.findByDescription(searchText);
-    }
-
     public ResponseEntity<HttpStatus> removeArchetype(Long id) throws BadRequestException {
         if(id == null) {
             throw BadRequestException.missingParameter();

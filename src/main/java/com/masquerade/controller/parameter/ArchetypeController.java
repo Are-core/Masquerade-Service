@@ -30,11 +30,6 @@ public class ArchetypeController {
         return new ResponseEntity<>(archetypeService.getArchetype(id), HttpStatus.OK);
     }
 
-    @RequestMapping(value = ServicePrefix + "/getArchetypeByName",method = RequestMethod.GET)
-    public ResponseEntity<List<ArchetypeEntity>> getArchetype(String name) {
-        return new ResponseEntity<>(archetypeService.getArchetype(name), HttpStatus.OK);
-    }
-
     @RequestMapping(value = ServicePrefix + "/removeArchetype",method = RequestMethod.DELETE)
     public ResponseEntity<HttpStatus> removeArchetype(Long id) throws BadRequestException {
         return archetypeService.removeArchetype(id);
