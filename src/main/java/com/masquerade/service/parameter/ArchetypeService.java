@@ -6,7 +6,6 @@ import com.masquerade.exception.BadRequestException;
 import com.masquerade.exception.EntityRequestException;
 import com.masquerade.model.parameter.ArchetypeEntity;
 import com.masquerade.repository.parameter.ArchetypeRepository;
-import com.masquerade.tools.Util;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
