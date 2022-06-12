@@ -52,7 +52,7 @@ public class ArchetypeService {
         }
         Gson gson = new Gson();
         ArchetypeEntity archetype = gson.fromJson(rawArchetype, ArchetypeEntity.class);
-        if(archetype.isNull()) {
+        if(archetype.emptyObjectCheck()) {
             throw BadRequestException.missingBody();
         }
         archetypeRepository.save(archetype);
@@ -65,7 +65,7 @@ public class ArchetypeService {
         }
         Gson gson = new Gson();
         final ArchetypeEntity archetype = gson.fromJson(rawArchetype, ArchetypeEntity.class);
-        if(archetype.isNull()) {
+        if(archetype.emptyObjectCheck()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
         updateArchetypeData(archetype);
@@ -79,7 +79,7 @@ public class ArchetypeService {
         Type listType = new TypeToken<List<ArchetypeEntity>>() {}.getType();
         final List<ArchetypeEntity> archetypes = new Gson().fromJson(rawArchetype, listType);
         for(ArchetypeEntity archetype : archetypes) {
-            if(archetype.isNull()) {
+            if(archetype.emptyObjectCheck()) {
                 return new ResponseEntity<>(HttpStatus.PARTIAL_CONTENT);
             }
             updateArchetypeData(archetype);

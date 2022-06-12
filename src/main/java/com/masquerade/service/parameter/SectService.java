@@ -3,7 +3,6 @@ package com.masquerade.service.parameter;
 import com.google.gson.Gson;
 import com.masquerade.exception.BadRequestException;
 import com.masquerade.exception.EntityRequestException;
-import com.masquerade.model.parameter.ArchetypeEntity;
 import com.masquerade.model.parameter.SectEntity;
 import com.masquerade.repository.parameter.SectRepository;
 import org.springframework.http.HttpStatus;
@@ -49,7 +48,7 @@ public class SectService {
         }
         Gson gson = new Gson();
         SectEntity sect = gson.fromJson(rawSect, SectEntity.class);
-        if(sect.isNull()) {
+        if(sect.emptyObjectCheck()) {
             throw BadRequestException.missingBody();
         }
         sectRepository.save(sect);
@@ -62,7 +61,7 @@ public class SectService {
         }
         Gson gson = new Gson();
         final SectEntity sect = gson.fromJson(rawSect, SectEntity.class);
-        if(sect.isNull()) {
+        if(sect.emptyObjectCheck()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
         updateSectData(sect);

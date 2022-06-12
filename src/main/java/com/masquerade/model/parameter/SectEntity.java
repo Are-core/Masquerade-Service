@@ -16,7 +16,7 @@ public class SectEntity {
 
     public SectEntity(String description) { this.description = description; }
 
-    public boolean isNull() {
+    public boolean emptyObjectCheck() {
         return (this.getId() == null && this.getDescription() == null);
     }
 

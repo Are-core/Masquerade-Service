@@ -51,7 +51,7 @@ public class StatusTypeService {
         }
         Gson gson = new Gson();
         StatusTypeEntity statusType = gson.fromJson(rawClan, StatusTypeEntity.class);
-        if(statusType.isNull()) {
+        if(statusType.emptyObjectCheck()) {
             throw BadRequestException.missingBody();
         }
         statusTypeRepository.save(statusType);
@@ -64,7 +64,7 @@ public class StatusTypeService {
         }
         Gson gson = new Gson();
         final StatusTypeEntity statusType = gson.fromJson(rawClan, StatusTypeEntity.class);
-        if(statusType.isNull()) {
+        if(statusType.emptyObjectCheck()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
         updateStatusTypeData(statusType);

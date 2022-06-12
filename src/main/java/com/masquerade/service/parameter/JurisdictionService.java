@@ -51,7 +51,7 @@ public class JurisdictionService {
         }
         Gson gson = new Gson();
         JurisdictionEntity jurisdiction = gson.fromJson(rawJurisdiction, JurisdictionEntity.class);
-        if(jurisdiction.isNull()) {
+        if(jurisdiction.emptyObjectCheck()) {
             throw BadRequestException.missingBody();
         }
         jurisdictionRepository.save(jurisdiction);
@@ -64,7 +64,7 @@ public class JurisdictionService {
         }
         Gson gson = new Gson();
         final JurisdictionEntity jurisdiction = gson.fromJson(rawJurisdiction, JurisdictionEntity.class);
-        if(jurisdiction.isNull()) {
+        if(jurisdiction.emptyObjectCheck()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
         updateJurisdictionData(jurisdiction);

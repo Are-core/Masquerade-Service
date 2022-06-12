@@ -25,7 +25,7 @@ public class ArchetypeEntity {
         this.note_FR = noteFR;
     }
 
-    public boolean isNull() {
+    public boolean emptyObjectCheck() {
         return (this.getDescriptionEN() == null &&
                 this.getDescriptionFR() == null &&
                 this.getNoteEN() == null &&
@@ -34,6 +34,10 @@ public class ArchetypeEntity {
 
     public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getDescriptionEN() { return description_EN; }

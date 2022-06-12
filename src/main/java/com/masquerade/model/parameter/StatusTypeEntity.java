@@ -24,7 +24,7 @@ public class StatusTypeEntity {
         this.note_FR = noteFR;
     }
 
-    public boolean isNull() {
+    public boolean emptyObjectCheck() {
         return (this.getDescription_EN() == null &&
                 this.getDescription_FR() == null &&
                 this.getNote_EN() == null &&

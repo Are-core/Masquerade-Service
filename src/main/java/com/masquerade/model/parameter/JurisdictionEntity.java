@@ -19,7 +19,7 @@ public class JurisdictionEntity {
         this.description = description;
     }
 
-    public boolean isNull() {
+    public boolean emptyObjectCheck() {
         return (this.getDescription() == null);
     }
 

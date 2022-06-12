@@ -50,7 +50,7 @@ public class ClanService {
         }
         Gson gson = new Gson();
         ClanEntity clan = gson.fromJson(rawClan, ClanEntity.class);
-        if(clan.isNull()) {
+        if(clan.emptyObjectCheck()) {
             throw BadRequestException.missingBody();
         }
         clanRepository.save(clan);
@@ -63,7 +63,7 @@ public class ClanService {
         }
         Gson gson = new Gson();
         final ClanEntity clan = gson.fromJson(rawClan, ClanEntity.class);
-        if(clan.isNull()) {
+        if(clan.emptyObjectCheck()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
         updateClanData(clan);
