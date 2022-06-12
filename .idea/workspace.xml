@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1ae5587-3f5e-4fd1-9d62-d3348b46aecb" name="Changes" comment="Modify - Add missing ServicePrefix">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/JurisdictionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/parameter/JurisdictionEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/parameter/JurisdictionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/parameter/JurisdictionService.java" afterDir="false" />
+    <list default="true" id="d1ae5587-3f5e-4fd1-9d62-d3348b46aecb" name="Changes" comment="Feature - Add Jurisdiction service">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/ClanController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/parameter/ClanEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/parameter/ClanRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/parameter/ClanService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ressources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ressources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/ArchetypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/ArchetypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/JurisdictionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/JurisdictionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/parameter/ArchetypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/parameter/ArchetypeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/parameter/JurisdictionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/parameter/JurisdictionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/parameter/ArchetypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/parameter/ArchetypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/parameter/JurisdictionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/parameter/JurisdictionService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +147,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655034007390</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Chore - Remove testing line">
+      <created>1655037171883</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1655037171883</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Feature - Add Jurisdiction service">
+      <created>1655037187773</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1655037187773</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -175,6 +194,8 @@
     <MESSAGE value="Modify - Change Add and Update method for a POST alternative&#10;Modify - Split RequestMapping with ServicePrefix" />
     <MESSAGE value="Feature - Set return HttpStatus to Archetype services" />
     <MESSAGE value="Feature - Set return HttpStatus to Sect services" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature - Set return HttpStatus to Sect services" />
+    <MESSAGE value="Chore - Remove testing line" />
+    <MESSAGE value="Feature - Add Jurisdiction service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature - Add Jurisdiction service" />
   </component>
 </project>
