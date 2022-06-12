@@ -25,6 +25,13 @@ public class ArchetypeEntity {
         this.note_FR = noteFR;
     }
 
+    public boolean isNull() {
+        return (this.getDescriptionEN() == null &&
+                this.getDescriptionFR() == null &&
+                this.getNoteEN() == null &&
+                this.getNoteFR() == null);
+    }
+
     public Long getId() {
         return id;
     }

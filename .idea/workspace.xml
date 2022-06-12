@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1ae5587-3f5e-4fd1-9d62-d3348b46aecb" name="Changes" comment="Feature - Archived added to Character list entity">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/SectController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/parameter/SectEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/parameter/SectRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/parameter/SectService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="d1ae5587-3f5e-4fd1-9d62-d3348b46aecb" name="Changes" comment="Modify - Change Insert &amp; Update method for archetype service">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/exception/EntityRequestException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/CharacterEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/CharacterEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/ControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/ControllerAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/ArchetypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/ArchetypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/exception/BadRequestException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/exception/BadRequestException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/parameter/ArchetypeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/parameter/ArchetypeEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/parameter/ArchetypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/parameter/ArchetypeService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,9 +46,26 @@
       </map>
     </option>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2AQhHHuyMCg8TlKGHEsMPg5OwGm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
+  }
+}]]></component>
   <component name="RunManager">
     <configuration name="MasqueradeApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.masquerade.MasqueradeApplication" />
@@ -68,6 +86,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task id="LOCAL-00001" summary="Feature - Archived added to Character list entity">
       <created>1654518964350</created>
@@ -76,7 +95,21 @@
       <option name="project" value="LOCAL" />
       <updated>1654518964350</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Feature - Sect methods added">
+      <created>1654521597404</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1654521597404</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d1ae5587-3f5e-4fd1-9d62-d3348b46aecb" name="Changes" comment="Feature - Sect methods added" />
+      <created>1654947632401</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1654947632401</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -92,6 +125,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Feature - Archived added to Character list entity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature - Archived added to Character list entity" />
+    <MESSAGE value="Feature - Sect methods added" />
+    <MESSAGE value="Modify - Change Insert &amp; Update method for archetype service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modify - Change Insert &amp; Update method for archetype service" />
   </component>
 </project>

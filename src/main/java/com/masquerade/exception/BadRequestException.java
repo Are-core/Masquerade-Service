@@ -11,4 +11,9 @@ public class BadRequestException extends Exception{
         String message = String.format(TEXT, "id");
         return new BadRequestException(CODE_MISSING_PARAMETER, message);
     }
+
+    public static BadRequestException missingBody() {
+        String message = String.format(TEXT, "body");
+        return new BadRequestException(CODE_MISSING_PARAMETER, message);
+    }
 }

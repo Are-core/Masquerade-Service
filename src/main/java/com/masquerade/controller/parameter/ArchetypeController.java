@@ -1,15 +1,14 @@
 package com.masquerade.controller.parameter;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.masquerade.exception.BadRequestException;
+import com.masquerade.exception.EntityRequestException;
 import com.masquerade.model.parameter.ArchetypeEntity;
 import com.masquerade.service.parameter.ArchetypeService;
 import com.masquerade.tools.Util;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -37,21 +36,27 @@ public class ArchetypeController {
         return new ResponseEntity<>(archetypeService.getArchetype(name), HttpStatus.OK);
     }
 
-    @RequestMapping(value ="/parameter/addArchetype",method = RequestMethod.POST)
-    public ResponseEntity<HttpStatus> addArchetype(String name, String note, String language) {
-        archetypeService.addArchetype(name, note, Util.getLanguage(language));
-        return new ResponseEntity<>(HttpStatus.CREATED);
-    }
-
     @RequestMapping(value ="/parameter/removeArchetype",method = RequestMethod.DELETE)
     public ResponseEntity<HttpStatus> removeArchetype(Long id) throws BadRequestException {
         archetypeService.removeArchetype(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @RequestMapping(value ="/parameter/modifyArchetype",method = RequestMethod.PUT)
-    public ResponseEntity<HttpStatus> modifyArchetype(Long id, String name, String note, String language) throws BadRequestException {
-        archetypeService.modifyArchetype(id, name, note, Util.getLanguage(language));
+    @PostMapping(value ="/parameter/createArchetype", consumes = "application/json", produces = "application/json")
+    public ResponseEntity<HttpStatus> createArchetype(@RequestBody String rawArchetype) throws BadRequestException {
+        archetypeService.saveUpdateArchetype(rawArchetype);
+        return new ResponseEntity<>(HttpStatus.CREATED);
+    }
+
+    @PostMapping(value ="/parameter/updateArchetype", consumes = "application/json", produces = "application/json")
+    public ResponseEntity<HttpStatus> updateArchetype(@RequestBody String rawArchetype) throws BadRequestException, EntityRequestException {
+        archetypeService.updateArchetype(rawArchetype);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @PostMapping(value ="/parameter/updateArchetypes", consumes = "application/json", produces = "application/json")
+    public ResponseEntity<HttpStatus> updateArchetypes(@RequestBody String rawArchetype) throws BadRequestException, EntityRequestException {
+        archetypeService.updateArchetypes(rawArchetype);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }
