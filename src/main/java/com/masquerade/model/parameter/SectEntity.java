@@ -16,6 +16,10 @@ public class SectEntity {
 
     public SectEntity(String description) { this.description = description; }
 
+    public boolean isNull() {
+        return (this.getId() == null && this.getDescription() == null);
+    }
+
     public Long getId() {
         return id;
     }

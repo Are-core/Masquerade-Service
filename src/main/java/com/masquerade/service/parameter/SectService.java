@@ -1,6 +1,9 @@
 package com.masquerade.service.parameter;
 
+import com.google.gson.Gson;
 import com.masquerade.exception.BadRequestException;
+import com.masquerade.exception.EntityRequestException;
+import com.masquerade.model.parameter.ArchetypeEntity;
 import com.masquerade.model.parameter.SectEntity;
 import com.masquerade.repository.parameter.SectRepository;
 import org.springframework.stereotype.Service;
@@ -49,5 +52,36 @@ public class SectService {
         }
         sectRepository.delete(sectRepository.findById(id)
                 .orElseThrow(IllegalArgumentException::new));
+    }
+
+    public void createSect(String rawSect) throws BadRequestException {
+        if(rawSect == null) {
+            throw BadRequestException.missingParameter();
+        }
+        Gson gson = new Gson();
+        SectEntity sect = gson.fromJson(rawSect, SectEntity.class);
+        if(sect.isNull()) {
+            throw BadRequestException.missingBody();
+        }
+        sectRepository.save(sect);
+    }
+
+    public void updateSect(String rawSect) throws BadRequestException, EntityRequestException {
+        if(rawSect == null) {
+            throw BadRequestException.missingParameter();
+        }
+        Gson gson = new Gson();
+        final SectEntity sect = gson.fromJson(rawSect, SectEntity.class);
+        if(sect.isNull()) {
+            throw BadRequestException.missingBody();
+        }
+        updateSectData(sect);
+    }
+
+    private void updateSectData(SectEntity sect) throws EntityRequestException {
+        if(!sectRepository.existsById(sect.getId())) {
+            throw EntityRequestException.doesntExists(sect.getId());
+        }
+        sectRepository.save(sect);
     }
 }
