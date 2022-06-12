@@ -48,7 +48,7 @@ public class ArchetypeService {
                 .orElseThrow(IllegalArgumentException::new));
     }
 
-    public void saveUpdateArchetype(String rawArchetype) throws BadRequestException {
+    public void createArchetype(String rawArchetype) throws BadRequestException {
         if(rawArchetype == null) {
             throw BadRequestException.missingParameter();
         }
