@@ -4,6 +4,7 @@ import com.masquerade.exception.BadRequestException;
 import com.masquerade.exception.EntityRequestException;
 import com.masquerade.model.parameter.ArchetypeEntity;
 import com.masquerade.service.parameter.ArchetypeService;
+import com.masquerade.tools.Util;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -37,25 +38,21 @@ public class ArchetypeController {
 
     @RequestMapping(value ="/parameter/removeArchetype",method = RequestMethod.DELETE)
     public ResponseEntity<HttpStatus> removeArchetype(Long id) throws BadRequestException {
-        archetypeService.removeArchetype(id);
-        return new ResponseEntity<>(HttpStatus.OK);
+        return archetypeService.removeArchetype(id);
     }
 
     @PostMapping(value = ServicePrefix + "/createArchetype", consumes = "application/json", produces = "application/json")
     public ResponseEntity<HttpStatus> createArchetype(@RequestBody String rawArchetype) throws BadRequestException {
-        archetypeService.createArchetype(rawArchetype);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        return archetypeService.createArchetype(rawArchetype);
     }
 
     @PostMapping(value = ServicePrefix + "/updateArchetype", consumes = "application/json", produces = "application/json")
-    public ResponseEntity<HttpStatus> updateArchetype(@RequestBody String rawArchetype) throws BadRequestException, EntityRequestException {
-        archetypeService.updateArchetype(rawArchetype);
-        return new ResponseEntity<>(HttpStatus.OK);
+    public ResponseEntity<HttpStatus> updateArchetype(@RequestBody String rawArchetype) throws EntityRequestException {
+        return archetypeService.updateArchetype(rawArchetype);
     }
 
     @PostMapping(value = ServicePrefix + "/updateArchetypes", consumes = "application/json", produces = "application/json")
-    public ResponseEntity<HttpStatus> updateArchetypes(@RequestBody String rawArchetype) throws BadRequestException, EntityRequestException {
-        archetypeService.updateArchetypes(rawArchetype);
-        return new ResponseEntity<>(HttpStatus.OK);
+    public ResponseEntity<HttpStatus> updateArchetypes(@RequestBody String rawArchetype) throws EntityRequestException {
+        return archetypeService.updateArchetypes(rawArchetype);
     }
 }
