@@ -47,7 +47,7 @@ public class TitleController {
     }
 
     @RequestMapping(value = ServicePrefix + "/updateTitleSect",method = RequestMethod.POST)
-    public ResponseEntity<HttpStatus> updateTitle(Long id, Long sectId) throws EntityRequestException {
+    public ResponseEntity<HttpStatus> updateTitle(Long id, Long sectId) throws BadRequestException {
         return titleService.updateTitleSect(id, sectId);
     }
 }

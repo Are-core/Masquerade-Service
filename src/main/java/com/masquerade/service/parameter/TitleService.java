@@ -90,9 +90,9 @@ public class TitleService {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    public ResponseEntity<HttpStatus> updateTitleSect(Long id, Long sect_id) throws EntityRequestException {
+    public ResponseEntity<HttpStatus> updateTitleSect(Long id, Long sect_id) throws BadRequestException {
         if(id == null || sect_id == null) {
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+            throw BadRequestException.missingParameter();
         }
         titleRepository.findById(id)
                 .orElseThrow(IllegalArgumentException::new)
