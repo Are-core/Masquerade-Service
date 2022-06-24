@@ -1,10 +1,10 @@
-package com.masquerade.model.parameter;
+package com.masquerade.model.entity.parameter;
 
 import javax.persistence.*;
 
-@Table(name="clan")
+@Table(name="status_type")
 @Entity
-public class ClanEntity {
+public class StatusTypeEntity {
     @Id
     @Column(nullable = false, unique = true, updatable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,9 +15,9 @@ public class ClanEntity {
     private String note_EN;
     private String note_FR;
 
-    public ClanEntity() {}
+    public StatusTypeEntity() {}
 
-    public ClanEntity(String descriptionEN, String descriptionFR, String noteEN, String noteFR) {
+    public StatusTypeEntity(String descriptionEN, String descriptionFR, String noteEN, String noteFR) {
         this.description_EN = descriptionEN;
         this.description_FR = descriptionFR;
         this.note_EN = noteEN;

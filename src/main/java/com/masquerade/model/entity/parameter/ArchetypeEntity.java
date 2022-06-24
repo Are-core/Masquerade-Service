@@ -1,4 +1,4 @@
-package com.masquerade.model.parameter;
+package com.masquerade.model.entity.parameter;
 
 import javax.persistence.*;
 

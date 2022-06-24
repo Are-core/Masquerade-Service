@@ -1,8 +1,8 @@
 package com.masquerade.service;
 
 import com.masquerade.exception.BadRequestException;
-import com.masquerade.model.CharacterEntity;
-import com.masquerade.model.SimpleCharacterEntity;
+import com.masquerade.model.entity.CharacterEntity;
+import com.masquerade.model.entity.SimpleCharacterEntity;
 import com.masquerade.repository.CharacterRepository;
 import com.masquerade.repository.SimpleCharacterRepository;
 import org.springframework.stereotype.Service;

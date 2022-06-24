@@ -2,7 +2,7 @@ package com.masquerade.controller.parameter;
 
 import com.masquerade.exception.BadRequestException;
 import com.masquerade.exception.EntityRequestException;
-import com.masquerade.model.parameter.TitleEntity;
+import com.masquerade.model.DTO.parameter.TitleDTO;
 import com.masquerade.service.parameter.TitleService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,12 +22,12 @@ public class TitleController {
     }
 
     @RequestMapping(value = ServicePrefix + "/getTitles",method = RequestMethod.GET)
-    public ResponseEntity<List<TitleEntity>> getTitles() {
+    public ResponseEntity<List<TitleDTO>> getTitles() {
         return new ResponseEntity<>(titleService.getTitles(), HttpStatus.OK);
     }
 
     @RequestMapping(value = ServicePrefix + "/getTitleById",method = RequestMethod.GET)
-    public ResponseEntity<TitleEntity> getArchetype(Long id) throws BadRequestException {
+    public ResponseEntity<TitleDTO> getArchetype(Long id) throws BadRequestException {
         return new ResponseEntity<>(titleService.getTitle(id), HttpStatus.OK);
     }
 

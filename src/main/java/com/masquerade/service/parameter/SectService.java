@@ -3,7 +3,7 @@ package com.masquerade.service.parameter;
 import com.google.gson.Gson;
 import com.masquerade.exception.BadRequestException;
 import com.masquerade.exception.EntityRequestException;
-import com.masquerade.model.parameter.SectEntity;
+import com.masquerade.model.entity.parameter.SectEntity;
 import com.masquerade.repository.parameter.SectRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

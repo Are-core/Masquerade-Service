@@ -1,34 +1,31 @@
-package com.masquerade.model.parameter;
+package com.masquerade.model.DTO.parameter;
 
-import javax.persistence.*;
+import com.masquerade.model.entity.parameter.SectEntity;
+import com.masquerade.model.entity.parameter.TitleEntity;
 
-@Table(name="status_type")
-@Entity
-public class StatusTypeEntity {
-    @Id
-    @Column(nullable = false, unique = true, updatable = false)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class TitleDTO {
     private Long id;
+
+    private SectEntity sect;
 
     private String description_EN;
     private String description_FR;
     private String note_EN;
     private String note_FR;
 
-    public StatusTypeEntity() {}
+    public TitleDTO() {}
 
-    public StatusTypeEntity(String descriptionEN, String descriptionFR, String noteEN, String noteFR) {
-        this.description_EN = descriptionEN;
-        this.description_FR = descriptionFR;
-        this.note_EN = noteEN;
-        this.note_FR = noteFR;
+    public TitleDTO(Long id, SectEntity sect, String description_EN, String description_FR, String note_EN, String note_FR) {
+        this.id = id;
+        this.sect = sect;
+        this.description_EN = description_EN;
+        this.description_FR = description_FR;
+        this.note_EN = note_EN;
+        this.note_FR = note_FR;
     }
 
-    public boolean emptyObjectCheck() {
-        return (this.getDescription_EN() == null &&
-                this.getDescription_FR() == null &&
-                this.getNote_EN() == null &&
-                this.getNote_FR() == null);
+    public TitleDTO(TitleEntity title) {
+        this(title.getId(), null, title.getDescription_EN(), title.getDescription_FR(), title.getNote_EN(), title.getNote_FR());
     }
 
     public Long getId() {
@@ -37,6 +34,14 @@ public class StatusTypeEntity {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public SectEntity getSect() {
+        return sect;
+    }
+
+    public void setSect(SectEntity sect) {
+        this.sect = sect;
     }
 
     public String getDescription_EN() {

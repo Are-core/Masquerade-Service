@@ -1,8 +1,8 @@
 package com.masquerade.controller;
 
 import com.masquerade.exception.BadRequestException;
-import com.masquerade.model.CharacterEntity;
-import com.masquerade.model.SimpleCharacterEntity;
+import com.masquerade.model.entity.CharacterEntity;
+import com.masquerade.model.entity.SimpleCharacterEntity;
 import com.masquerade.service.CharacterService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
