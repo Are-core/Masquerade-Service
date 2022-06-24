@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Fix - Change IsNull method to avoid getting read has a field">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/TitleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/parameter/TitleEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/parameter/TitleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/parameter/TitleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Feature - Add Title service">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/TitleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/TitleController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655042351060</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Feature - Add Title service">
+      <created>1656095429152</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1656095429152</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -212,6 +215,7 @@
     <MESSAGE value="Feature - Add Jurisdiction service" />
     <MESSAGE value="Modify - Remove unused search_by_name functions" />
     <MESSAGE value="Feature - Add clan service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature - Add clan service" />
+    <MESSAGE value="Feature - Add Title service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature - Add Title service" />
   </component>
 </project>

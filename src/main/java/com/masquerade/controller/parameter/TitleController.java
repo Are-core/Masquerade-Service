@@ -2,7 +2,6 @@ package com.masquerade.controller.parameter;
 
 import com.masquerade.exception.BadRequestException;
 import com.masquerade.exception.EntityRequestException;
-import com.masquerade.model.parameter.ArchetypeEntity;
 import com.masquerade.model.parameter.TitleEntity;
 import com.masquerade.service.parameter.TitleService;
 import org.springframework.http.HttpStatus;
