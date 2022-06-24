@@ -3,7 +3,6 @@ package com.masquerade.service.parameter;
 import com.google.gson.Gson;
 import com.masquerade.exception.BadRequestException;
 import com.masquerade.exception.EntityRequestException;
-import com.masquerade.model.DTO.parameter.StatusDTO;
 import com.masquerade.model.entity.parameter.SectEntity;
 import com.masquerade.model.entity.parameter.StatusEntity;
 import com.masquerade.model.entity.parameter.StatusTypeEntity;
@@ -15,7 +14,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -32,59 +30,17 @@ public class StatusService {
     }
 
     @Transactional(readOnly = true)
-    public List<StatusDTO> getStatus() {
-        List<StatusEntity> rawStatus = statusRepository.findAll();
-        List<StatusDTO> statusDto = new ArrayList<>();
-        for(StatusEntity status : rawStatus) {
-            StatusDTO dtoObject = new StatusDTO(status);
-            getExternalObjects(status, dtoObject);
-            statusDto.add(dtoObject);
-        }
-        return statusDto;
+    public List<StatusEntity> getStatus() {
+        return statusRepository.findAll();
     }
 
     @Transactional(readOnly = true)
-    public StatusDTO getStatus(Long id) throws BadRequestException {
+    public StatusEntity getStatus(Long id) throws BadRequestException {
         if(id == null){
             throw BadRequestException.missingParameter();
         }
-        StatusEntity rawStatus = statusRepository.findById(id)
+        return statusRepository.findById(id)
                 .orElseThrow(IllegalArgumentException::new);
-        if(rawStatus != null) {
-            StatusDTO dtoObject = new StatusDTO(rawStatus);
-            getExternalObjects(rawStatus, dtoObject);
-            return dtoObject;
-        }
-        return null;
-    }
-
-    private void getExternalObjects(StatusEntity status, StatusDTO dtoObject) {
-        setSect(status, dtoObject);
-        setType(status, dtoObject);
-    }
-
-    private void setSect(StatusEntity status, StatusDTO dtoObject) {
-        try {
-            if (status.getSect_id() != null) {
-                SectEntity sectRaw = sectRepository.findById(status.getSect_id())
-                        .orElseThrow(IllegalArgumentException::new);
-                dtoObject.setSect(sectRaw);
-            }
-        } catch(Exception ignored) {
-
-        }
-    }
-
-    private void setType(StatusEntity status, StatusDTO dtoObject) {
-        try {
-            if(status.getType_id() != null) {
-                StatusTypeEntity sectRaw = statusTypeRepository.findById(status.getType_id())
-                        .orElseThrow(IllegalArgumentException::new);
-                dtoObject.setType(sectRaw);
-            }
-        } catch(Exception ignored) {
-
-        }
     }
 
     public ResponseEntity<HttpStatus> createStatus(String rawBody) throws BadRequestException {
@@ -134,19 +90,23 @@ public class StatusService {
         if(id == null || sect_id == null) {
             throw BadRequestException.missingParameter();
         }
+        SectEntity sect = sectRepository.findById(sect_id)
+                .orElseThrow(IllegalArgumentException::new);
         statusRepository.findById(id)
                 .orElseThrow(IllegalArgumentException::new)
-                .setSect_id(sect_id);
+                .setSect_id(sect);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    public ResponseEntity<HttpStatus> updateStatusType(Long id, Long type_id) throws BadRequestException {
-        if(id == null || type_id == null) {
+    public ResponseEntity<HttpStatus> updateStatusType(Long id, Long typeId) throws BadRequestException {
+        if(id == null || typeId == null) {
             throw BadRequestException.missingParameter();
         }
+        StatusTypeEntity type = statusTypeRepository.findById(typeId)
+                .orElseThrow(IllegalArgumentException::new);
         statusRepository.findById(id)
                 .orElseThrow(IllegalArgumentException::new)
-                .setType_id(type_id);
+                .setStatusType(type);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }

@@ -2,7 +2,7 @@ package com.masquerade.controller.parameter;
 
 import com.masquerade.exception.BadRequestException;
 import com.masquerade.exception.EntityRequestException;
-import com.masquerade.model.DTO.parameter.StatusDTO;
+import com.masquerade.model.entity.parameter.StatusEntity;
 import com.masquerade.service.parameter.StatusService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,12 +22,12 @@ public class StatusController {
     }
 
     @RequestMapping(value = ServicePrefix + "/getStatus",method = RequestMethod.GET)
-    public ResponseEntity<List<StatusDTO>> getStatus() {
+    public ResponseEntity<List<StatusEntity>> getStatus() {
         return new ResponseEntity<>(statusService.getStatus(), HttpStatus.OK);
     }
 
     @RequestMapping(value = ServicePrefix + "/getStatusById",method = RequestMethod.GET)
-    public ResponseEntity<StatusDTO> getStatusById(Long id) throws BadRequestException {
+    public ResponseEntity<StatusEntity> getStatusById(Long id) throws BadRequestException {
         return new ResponseEntity<>(statusService.getStatus(id), HttpStatus.OK);
     }
 
