@@ -34,11 +34,7 @@ public class TitleService {
         List<TitleDTO> titles = new ArrayList<>();
         for(TitleEntity title : rawTitles) {
             TitleDTO dtoObject = new TitleDTO(title);
-            if(title.getSect_id() != null) {
-                SectEntity sectRaw = sectRepository.findById(title.getSect_id())
-                        .orElseThrow(IllegalArgumentException::new);
-                dtoObject.setSect(sectRaw);
-            }
+            setSect(title, dtoObject);
             titles.add(dtoObject);
         }
         return titles;
@@ -52,13 +48,9 @@ public class TitleService {
         TitleEntity titleRaw = titleRepository.findById(id)
                 .orElseThrow(IllegalArgumentException::new);
         if(titleRaw != null) {
-            TitleDTO title = new TitleDTO(titleRaw);
-            if(titleRaw.getSect_id() != null) {
-                SectEntity sectRaw = sectRepository.findById(titleRaw.getSect_id())
-                        .orElseThrow(IllegalArgumentException::new);
-                title.setSect(sectRaw);
-            }
-            return title;
+            TitleDTO titleDto = new TitleDTO(titleRaw);
+            setSect(titleRaw, titleDto);
+            return titleDto;
         }
         return null;
     }
@@ -103,5 +95,13 @@ public class TitleService {
             throw EntityRequestException.doesntExists(archetype.getId());
         }
         titleRepository.save(archetype);
+    }
+
+    private void setSect(TitleEntity title, TitleDTO dtoObject) {
+        if(title.getSect_id() != null) {
+            SectEntity sectRaw = sectRepository.findById(title.getSect_id())
+                    .orElseThrow(IllegalArgumentException::new);
+            dtoObject.setSect(sectRaw);
+        }
     }
 }
