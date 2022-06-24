@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Feature - Add services for Status">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/relation/TitleHasStatusEntity.java" afterDir="false" />
+    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Feature - Add relation between Title &amp; Status">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/DTO/parameter/TitleDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/DTO/parameter/TitleDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/TitleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/TitleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/DTO/parameter/TitleDTO.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/TitleEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/TitleEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/parameter/TitleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/parameter/TitleService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656102465456</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Feature - Add relation between Title &amp; Status">
+      <created>1656107810762</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1656107810762</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -275,7 +283,8 @@
     <MESSAGE value="Feature - Add sect update for titles" />
     <MESSAGE value="Feature - Change exception for TitleService" />
     <MESSAGE value="Feature - Add services for Status" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature - Add services for Status" />
+    <MESSAGE value="Feature - Add relation between Title &amp; Status" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature - Add relation between Title &amp; Status" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

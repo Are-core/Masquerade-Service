@@ -11,7 +11,9 @@ public class TitleEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long sect_id;
+    @ManyToOne
+    @JoinColumn(name = "sect_id")
+    private SectEntity sect_id;
 
     @ManyToMany
     @JoinTable(
@@ -28,7 +30,7 @@ public class TitleEntity {
     public TitleEntity() {
     }
 
-    public TitleEntity(Long id, Long sect_id, String description_EN, String description_FR, String note_EN, String note_FR) {
+    public TitleEntity(Long id, SectEntity sect_id, String description_EN, String description_FR, String note_EN, String note_FR) {
         this.id = id;
         this.sect_id = sect_id;
         this.description_EN = description_EN;
@@ -60,11 +62,11 @@ public class TitleEntity {
         this.id = id;
     }
 
-    public Long getSect_id() {
+    public SectEntity getSect_id() {
         return sect_id;
     }
 
-    public void setSect_id(Long sect_id) {
+    public void setSect_id(SectEntity sect_id) {
         this.sect_id = sect_id;
     }
 

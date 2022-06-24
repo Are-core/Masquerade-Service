@@ -3,7 +3,6 @@ package com.masquerade.service.parameter;
 import com.google.gson.Gson;
 import com.masquerade.exception.BadRequestException;
 import com.masquerade.exception.EntityRequestException;
-import com.masquerade.model.DTO.parameter.TitleDTO;
 import com.masquerade.model.entity.parameter.SectEntity;
 import com.masquerade.model.entity.parameter.TitleEntity;
 import com.masquerade.repository.parameter.SectRepository;
@@ -13,7 +12,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -29,30 +27,17 @@ public class TitleService {
     }
 
     @Transactional(readOnly = true)
-    public List<TitleDTO> getTitles() {
-        List<TitleEntity> rawTitles = titleRepository.findAll();
-        List<TitleDTO> titles = new ArrayList<>();
-        for(TitleEntity title : rawTitles) {
-            TitleDTO dtoObject = new TitleDTO(title);
-            setSect(title, dtoObject);
-            titles.add(dtoObject);
-        }
-        return titles;
+    public List<TitleEntity> getTitles() {
+        return titleRepository.findAll();
     }
 
     @Transactional(readOnly = true)
-    public TitleDTO getTitle(Long id) throws BadRequestException {
+    public TitleEntity getTitle(Long id) throws BadRequestException {
         if(id == null){
             throw BadRequestException.missingParameter();
         }
-        TitleEntity titleRaw = titleRepository.findById(id)
+        return titleRepository.findById(id)
                 .orElseThrow(IllegalArgumentException::new);
-        if(titleRaw != null) {
-            TitleDTO titleDto = new TitleDTO(titleRaw);
-            setSect(titleRaw, titleDto);
-            return titleDto;
-        }
-        return null;
     }
 
     public ResponseEntity<HttpStatus> removeTitle(Long id) throws BadRequestException {
@@ -94,9 +79,11 @@ public class TitleService {
         if(id == null || sect_id == null) {
             throw BadRequestException.missingParameter();
         }
+        SectEntity sect = sectRepository.findById(sect_id)
+                .orElseThrow(IllegalArgumentException::new);
         titleRepository.findById(id)
                 .orElseThrow(IllegalArgumentException::new)
-                .setSect_id(sect_id);
+                .setSect_id(sect);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
@@ -105,13 +92,5 @@ public class TitleService {
             throw EntityRequestException.doesntExists(archetype.getId());
         }
         titleRepository.save(archetype);
-    }
-
-    private void setSect(TitleEntity title, TitleDTO dtoObject) {
-        if(title.getSect_id() != null) {
-            SectEntity sectRaw = sectRepository.findById(title.getSect_id())
-                    .orElseThrow(IllegalArgumentException::new);
-            dtoObject.setSect(sectRaw);
-        }
     }
 }
