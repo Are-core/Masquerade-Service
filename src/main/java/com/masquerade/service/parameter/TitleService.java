@@ -90,6 +90,16 @@ public class TitleService {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    public ResponseEntity<HttpStatus> updateTitleSect(Long id, Long sect_id) throws EntityRequestException {
+        if(id == null || sect_id == null) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+        titleRepository.findById(id)
+                .orElseThrow(IllegalArgumentException::new)
+                .setSect_id(sect_id);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
     private void updateTitleData(TitleEntity archetype) throws EntityRequestException {
         if(!titleRepository.existsById(archetype.getId())) {
             throw EntityRequestException.doesntExists(archetype.getId());
