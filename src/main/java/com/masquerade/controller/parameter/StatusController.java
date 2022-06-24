@@ -1,13 +1,12 @@
 package com.masquerade.controller.parameter;
 
+import com.masquerade.exception.BadRequestException;
+import com.masquerade.exception.EntityRequestException;
 import com.masquerade.model.DTO.parameter.StatusDTO;
 import com.masquerade.service.parameter.StatusService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,5 +24,35 @@ public class StatusController {
     @RequestMapping(value = ServicePrefix + "/getStatus",method = RequestMethod.GET)
     public ResponseEntity<List<StatusDTO>> getStatus() {
         return new ResponseEntity<>(statusService.getStatus(), HttpStatus.OK);
+    }
+
+    @RequestMapping(value = ServicePrefix + "/getStatusById",method = RequestMethod.GET)
+    public ResponseEntity<StatusDTO> getStatusById(Long id) throws BadRequestException {
+        return new ResponseEntity<>(statusService.getStatus(id), HttpStatus.OK);
+    }
+
+    @PostMapping(value = ServicePrefix + "/createStatus", consumes = "application/json", produces = "application/json")
+    public ResponseEntity<HttpStatus> createStatus(@RequestBody String rawBody) throws BadRequestException {
+        return statusService.createStatus(rawBody);
+    }
+
+    @PostMapping(value = ServicePrefix + "/updateStatus", consumes = "application/json", produces = "application/json")
+    public ResponseEntity<HttpStatus> updateStatus(@RequestBody String rawBody) throws EntityRequestException {
+        return statusService.updateStatus(rawBody);
+    }
+
+    @RequestMapping(value = ServicePrefix + "/removeStatus",method = RequestMethod.DELETE)
+    public ResponseEntity<HttpStatus> removeStatus(Long id) throws BadRequestException {
+        return statusService.removeStatus(id);
+    }
+
+    @RequestMapping(value = ServicePrefix + "/updateStatusSect",method = RequestMethod.POST)
+    public ResponseEntity<HttpStatus> updateStatusSect(Long id, Long sectId) throws BadRequestException {
+        return statusService.updateStatusSect(id, sectId);
+    }
+
+    @RequestMapping(value = ServicePrefix + "/updateStatusType",method = RequestMethod.POST)
+    public ResponseEntity<HttpStatus> updateStatusType(Long id, Long typeId) throws BadRequestException {
+        return statusService.updateStatusType(id, typeId);
     }
 }
