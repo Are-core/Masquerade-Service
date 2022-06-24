@@ -13,7 +13,7 @@ public class TitleEntity {
 
     @ManyToOne
     @JoinColumn(name = "sect_id")
-    private SectEntity sect_id;
+    private SectEntity sect;
 
     @ManyToMany
     @JoinTable(
@@ -22,28 +22,32 @@ public class TitleEntity {
             inverseJoinColumns = @JoinColumn(name = "status_id"))
     private List<StatusEntity> status;
 
-    private String description_EN;
-    private String description_FR;
-    private String note_EN;
-    private String note_FR;
+    @Column(name = "description_EN")
+    private String descriptionEN;
+    @Column(name = "description_FR")
+    private String descriptionFR;
+    @Column(name = "note_EN")
+    private String noteEN;
+    @Column(name = "note_FR")
+    private String noteFR;
 
     public TitleEntity() {
     }
 
-    public TitleEntity(Long id, SectEntity sect_id, String description_EN, String description_FR, String note_EN, String note_FR) {
+    public TitleEntity(Long id, SectEntity sect, String descriptionEN, String descriptionFR, String noteEN, String noteFR) {
         this.id = id;
-        this.sect_id = sect_id;
-        this.description_EN = description_EN;
-        this.description_FR = description_FR;
-        this.note_EN = note_EN;
-        this.note_FR = note_FR;
+        this.sect = sect;
+        this.descriptionEN = descriptionEN;
+        this.descriptionFR = descriptionFR;
+        this.noteEN = noteEN;
+        this.noteFR = noteFR;
     }
 
     public boolean emptyObjectCheck() {
-        return (this.getDescription_EN() == null &&
-                this.getDescription_FR() == null &&
-                this.getNote_EN() == null &&
-                this.getNote_FR() == null);
+        return (this.getDescriptionEN() == null &&
+                this.getDescriptionFR() == null &&
+                this.getNoteEN() == null &&
+                this.getNoteFR() == null);
     }
 
     public List<StatusEntity> getStatus() {
@@ -62,43 +66,43 @@ public class TitleEntity {
         this.id = id;
     }
 
-    public SectEntity getSect_id() {
-        return sect_id;
+    public SectEntity getSect() {
+        return sect;
     }
 
-    public void setSect_id(SectEntity sect_id) {
-        this.sect_id = sect_id;
+    public void setSect(SectEntity sect) {
+        this.sect = sect;
     }
 
-    public String getDescription_EN() {
-        return description_EN;
+    public String getDescriptionEN() {
+        return descriptionEN;
     }
 
-    public void setDescription_EN(String description_EN) {
-        this.description_EN = description_EN;
+    public void setDescriptionEN(String descriptionEN) {
+        this.descriptionEN = descriptionEN;
     }
 
-    public String getDescription_FR() {
-        return description_FR;
+    public String getDescriptionFR() {
+        return descriptionFR;
     }
 
-    public void setDescription_FR(String description_FR) {
-        this.description_FR = description_FR;
+    public void setDescriptionFR(String descriptionFR) {
+        this.descriptionFR = descriptionFR;
     }
 
-    public String getNote_EN() {
-        return note_EN;
+    public String getNoteEN() {
+        return noteEN;
     }
 
-    public void setNote_EN(String note_EN) {
-        this.note_EN = note_EN;
+    public void setNoteEN(String noteEN) {
+        this.noteEN = noteEN;
     }
 
-    public String getNote_FR() {
-        return note_FR;
+    public String getNoteFR() {
+        return noteFR;
     }
 
-    public void setNote_FR(String note_FR) {
-        this.note_FR = note_FR;
+    public void setNoteFR(String noteFR) {
+        this.noteFR = noteFR;
     }
 }

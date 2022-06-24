@@ -83,7 +83,7 @@ public class TitleService {
                 .orElseThrow(IllegalArgumentException::new);
         titleRepository.findById(id)
                 .orElseThrow(IllegalArgumentException::new)
-                .setSect_id(sect);
+                .setSect(sect);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 

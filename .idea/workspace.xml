@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Feature - Add relation between Title &amp; Status">
+    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Feature - Use of JPA ManyToOne for TitleEntity">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/TitleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/TitleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/DTO/parameter/TitleDTO.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/TitleEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/TitleEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/parameter/TitleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/parameter/TitleService.java" afterDir="false" />
     </list>
@@ -238,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656107810762</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Feature - Use of JPA ManyToOne for TitleEntity">
+      <created>1656108922253</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1656108922253</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -284,7 +289,8 @@
     <MESSAGE value="Feature - Change exception for TitleService" />
     <MESSAGE value="Feature - Add services for Status" />
     <MESSAGE value="Feature - Add relation between Title &amp; Status" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature - Add relation between Title &amp; Status" />
+    <MESSAGE value="Feature - Use of JPA ManyToOne for TitleEntity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature - Use of JPA ManyToOne for TitleEntity" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
