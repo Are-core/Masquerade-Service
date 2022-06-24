@@ -1,12 +1,17 @@
 package com.masquerade.model.DTO.parameter;
 
 import com.masquerade.model.entity.parameter.SectEntity;
+import com.masquerade.model.entity.parameter.StatusEntity;
 import com.masquerade.model.entity.parameter.TitleEntity;
+
+import java.util.List;
 
 public class TitleDTO {
     private Long id;
 
     private SectEntity sect;
+
+    private List<StatusEntity> status;
 
     private String description_EN;
     private String description_FR;
@@ -15,17 +20,18 @@ public class TitleDTO {
 
     public TitleDTO() {}
 
-    public TitleDTO(Long id, SectEntity sect, String description_EN, String description_FR, String note_EN, String note_FR) {
+    public TitleDTO(Long id, SectEntity sect, String description_EN, String description_FR, String note_EN, String note_FR, List<StatusEntity> status) {
         this.id = id;
         this.sect = sect;
         this.description_EN = description_EN;
         this.description_FR = description_FR;
         this.note_EN = note_EN;
         this.note_FR = note_FR;
+        this.status = status;
     }
 
     public TitleDTO(TitleEntity title) {
-        this(title.getId(), null, title.getDescription_EN(), title.getDescription_FR(), title.getNote_EN(), title.getNote_FR());
+        this(title.getId(), null, title.getDescription_EN(), title.getDescription_FR(), title.getNote_EN(), title.getNote_FR(), title.getStatus());
     }
 
     public Long getId() {
@@ -74,5 +80,13 @@ public class TitleDTO {
 
     public void setNote_FR(String note_FR) {
         this.note_FR = note_FR;
+    }
+
+    public List<StatusEntity> getStatus() {
+        return status;
+    }
+
+    public void setStatus(List<StatusEntity> status) {
+        this.status = status;
     }
 }

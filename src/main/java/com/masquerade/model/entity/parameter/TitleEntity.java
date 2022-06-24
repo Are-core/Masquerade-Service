@@ -1,6 +1,7 @@
 package com.masquerade.model.entity.parameter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Table(name="title")
 @Entity
@@ -11,6 +12,13 @@ public class TitleEntity {
     private Long id;
 
     private Long sect_id;
+
+    @ManyToMany
+    @JoinTable(
+            name = "title_has_status",
+            joinColumns = @JoinColumn(name = "title_id"),
+            inverseJoinColumns = @JoinColumn(name = "status_id"))
+    private List<StatusEntity> status;
 
     private String description_EN;
     private String description_FR;
@@ -34,6 +42,14 @@ public class TitleEntity {
                 this.getDescription_FR() == null &&
                 this.getNote_EN() == null &&
                 this.getNote_FR() == null);
+    }
+
+    public List<StatusEntity> getStatus() {
+        return status;
+    }
+
+    public void setStatus(List<StatusEntity> status) {
+        this.status = status;
     }
 
     public Long getId() {
