@@ -4,42 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Modify - Change character entity to DTO">
+    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Chore - Change package structure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/CharacterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/CharacterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/ControllerAdvice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/ArchetypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/global/ArchetypeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/ClanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/global/ClanController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/JurisdictionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/parameter/JurisdictionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/SectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/global/SectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/StatusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/parameter/StatusController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/StatusTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/parameter/StatusTypeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/TitleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/global/TitleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/CharacterListItemDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/CharacterListItemDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/CharacterEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/characterSheet/CharacterEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/ArchetypeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/characterSheet/global/ArchetypeEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/ClanEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/characterSheet/global/ClanEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/JurisdictionEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/characterSheet/parameter/JurisdictionEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/SectEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/characterSheet/global/SectEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/StatusEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/characterSheet/parameter/StatusEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/StatusTypeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/characterSheet/parameter/StatusTypeEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/TitleEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/characterSheet/global/TitleEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/CharacterRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/characterSheet/CharacterRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/parameter/ArchetypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/characterSheet/parameter/ArchetypeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/parameter/ClanRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/characterSheet/parameter/ClanRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/parameter/JurisdictionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/characterSheet/parameter/JurisdictionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/parameter/SectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/characterSheet/parameter/SectRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/parameter/StatusRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/characterSheet/parameter/StatusRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/parameter/StatusTypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/characterSheet/parameter/StatusTypeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/parameter/TitleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/characterSheet/parameter/TitleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/CharacterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/CharacterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/parameter/ArchetypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/global/ArchetypeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/parameter/ClanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/global/ClanService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/parameter/JurisdictionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/parameter/JurisdictionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/parameter/SectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/global/SectService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/parameter/StatusService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/parameter/StatusService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/parameter/StatusTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/parameter/StatusTypeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/parameter/TitleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/global/TitleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/tools/Section.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/tools/Section.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -311,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656144236567</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Chore - Change package structure">
+      <created>1656146676814</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1656146676814</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -337,7 +310,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Feature - Sect methods added" />
     <MESSAGE value="Modify - Change Insert &amp; Update method for archetype service" />
     <MESSAGE value="Modify - Rename createArchetype function name&#10;Modify - Split RequestMapping with ServicePrefix" />
     <MESSAGE value="Modify - Change Add and Update method for a POST alternative&#10;Modify - Split RequestMapping with ServicePrefix" />
@@ -362,6 +334,7 @@
     <MESSAGE value="Chore - Export string for prefixes to an external class" />
     <MESSAGE value="Chore - Add Column name for entities &amp; Refactoring name" />
     <MESSAGE value="Modify - Change character entity to DTO" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modify - Change character entity to DTO" />
+    <MESSAGE value="Chore - Change package structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chore - Change package structure" />
   </component>
 </project>
