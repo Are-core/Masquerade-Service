@@ -4,16 +4,18 @@ public class Section {
 
     public static final String CrossOriginUrl = "http://localhost:4200";
 
-    private static final String ParameterPrefix = "/parameter";
+    private static final String CharacterSheetParameterPrefix = "/characterSheet";
 
 
-    public static final String StatusPrefix = ParameterPrefix;
-    public static final String ArchetypePrefix = ParameterPrefix;
-    public static final String ClanPrefix = ParameterPrefix;
-    public static final String JurisdictionPrefix = ParameterPrefix;
-    public static final String SectPrefix = ParameterPrefix;
-    public static final String StatusTypePrefix = ParameterPrefix;
-    public static final String TitlePrefix = ParameterPrefix;
-
+    /* CHARACTER SHEET */
     public static final String CharacterPrefix = "";
+
+    /* CHARACTER PARAMETERS */
+        public static final String StatusPrefix = CharacterSheetParameterPrefix;
+        public static final String ArchetypePrefix = CharacterSheetParameterPrefix;
+        public static final String ClanPrefix = CharacterSheetParameterPrefix;
+        public static final String JurisdictionPrefix = CharacterSheetParameterPrefix;
+        public static final String SectPrefix = CharacterSheetParameterPrefix;
+        public static final String StatusTypePrefix = CharacterSheetParameterPrefix;
+        public static final String TitlePrefix = CharacterSheetParameterPrefix;
 }

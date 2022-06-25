@@ -1,6 +1,6 @@
 package com.masquerade.model.dto;
 
-import com.masquerade.model.entity.CharacterEntity;
+import com.masquerade.model.entity.characterSheet.CharacterEntity;
 
 public class CharacterListItemDTO {
     private Long id;
