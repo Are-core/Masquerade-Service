@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class StatusEntity {
 
     @Id
-    @Column(nullable = false, unique = true, updatable = false)
+    @Column(nullable = false, unique = true, updatable = false, name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 

@@ -6,23 +6,27 @@ import javax.persistence.*;
 @Entity
 public class ArchetypeEntity {
     @Id
-    @Column(nullable = false, unique = true, updatable = false)
+    @Column(nullable = false, unique = true, updatable = false, name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String description_EN;
-    private String description_FR;
-    private String note_EN;
-    private String note_FR;
+    @Column(name = "description_EN")
+    private String descriptionEN;
+    @Column(name = "description_FR")
+    private String descriptionFR;
+    @Column(name = "note_EN")
+    private String noteEN;
+    @Column(name = "note_FR")
+    private String noteFR;
 
     public ArchetypeEntity() {
     }
 
     public ArchetypeEntity(String descriptionEN, String descriptionFR, String noteEN, String noteFR) {
-        this.description_EN = descriptionEN;
-        this.description_FR = descriptionFR;
-        this.note_EN = noteEN;
-        this.note_FR = noteFR;
+        this.descriptionEN = descriptionEN;
+        this.descriptionFR = descriptionFR;
+        this.noteEN = noteEN;
+        this.noteFR = noteFR;
     }
 
     public boolean emptyObjectCheck() {
@@ -40,27 +44,27 @@ public class ArchetypeEntity {
         this.id = id;
     }
 
-    public String getDescriptionEN() { return description_EN; }
+    public String getDescriptionEN() { return descriptionEN; }
 
     public void setDescriptionEN(String description) {
-        this.description_EN = description;
+        this.descriptionEN = description;
     }
 
-    public String getDescriptionFR() { return description_FR; }
+    public String getDescriptionFR() { return descriptionFR; }
 
     public void setDescriptionFR(String description) {
-        this.description_FR = description;
+        this.descriptionFR = description;
     }
 
-    public String getNoteEN() { return note_EN; }
+    public String getNoteEN() { return noteEN; }
 
     public void setNoteEN(String note) {
-        this.note_EN = note;
+        this.noteEN = note;
     }
 
-    public String getNoteFR() { return note_FR; }
+    public String getNoteFR() { return noteFR; }
 
     public void setNoteFR(String note) {
-        this.note_FR = note;
+        this.noteFR = note;
     }
 }

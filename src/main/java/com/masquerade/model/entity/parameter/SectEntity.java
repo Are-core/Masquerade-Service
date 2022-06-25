@@ -6,9 +6,11 @@ import javax.persistence.*;
 @Entity
 public class SectEntity {
     @Id
-    @Column(nullable = false, unique = true, updatable = false)
+    @Column(nullable = false, unique = true, updatable = false, name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "description")
     private String description;
 
     public SectEntity() {

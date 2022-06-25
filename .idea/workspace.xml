@@ -4,17 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Chore - StatusEntity : Renaming fields for java format + Adding ManyToOne">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/tools/Section.java" afterDir="false" />
+    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Chore - Export string for prefixes to an external class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/CharacterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/CharacterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/ArchetypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/ArchetypeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/ClanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/ClanController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/JurisdictionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/JurisdictionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/SectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/SectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/StatusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/StatusController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/StatusTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/StatusTypeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/TitleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/parameter/TitleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/CharacterEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/CharacterEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/ArchetypeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/ArchetypeEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/ClanEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/ClanEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/JurisdictionEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/JurisdictionEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/SectEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/SectEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/StatusEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/StatusEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/StatusTypeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/StatusTypeEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/TitleEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/TitleEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656110560286</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Chore - Export string for prefixes to an external class">
+      <created>1656142151468</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1656142151468</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -313,6 +319,7 @@
     <MESSAGE value="Feature - Use of JPA ManyToOne for TitleEntity" />
     <MESSAGE value="Chore - TitleEntity : Renaming fields for java format" />
     <MESSAGE value="Chore - StatusEntity : Renaming fields for java format + Adding ManyToOne" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chore - StatusEntity : Renaming fields for java format + Adding ManyToOne" />
+    <MESSAGE value="Chore - Export string for prefixes to an external class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chore - Export string for prefixes to an external class" />
   </component>
 </project>

@@ -6,29 +6,33 @@ import javax.persistence.*;
 @Entity
 public class ClanEntity {
     @Id
-    @Column(nullable = false, unique = true, updatable = false)
+    @Column(nullable = false, unique = true, updatable = false, name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String description_EN;
-    private String description_FR;
-    private String note_EN;
-    private String note_FR;
+    @Column(name = "description_EN")
+    private String descriptionEN;
+    @Column(name = "description_FR")
+    private String descriptionFR;
+    @Column(name = "note_EN")
+    private String noteEN;
+    @Column(name = "note_FR")
+    private String noteFR;
 
     public ClanEntity() {}
 
     public ClanEntity(String descriptionEN, String descriptionFR, String noteEN, String noteFR) {
-        this.description_EN = descriptionEN;
-        this.description_FR = descriptionFR;
-        this.note_EN = noteEN;
-        this.note_FR = noteFR;
+        this.descriptionEN = descriptionEN;
+        this.descriptionFR = descriptionFR;
+        this.noteEN = noteEN;
+        this.noteFR = noteFR;
     }
 
     public boolean emptyObjectCheck() {
-        return (this.getDescription_EN() == null &&
-                this.getDescription_FR() == null &&
-                this.getNote_EN() == null &&
-                this.getNote_FR() == null);
+        return (this.getDescriptionEN() == null &&
+                this.getDescriptionFR() == null &&
+                this.getNoteEN() == null &&
+                this.getNoteFR() == null);
     }
 
     public Long getId() {
@@ -39,35 +43,35 @@ public class ClanEntity {
         this.id = id;
     }
 
-    public String getDescription_EN() {
-        return description_EN;
+    public String getDescriptionEN() {
+        return descriptionEN;
     }
 
-    public void setDescription_EN(String description_EN) {
-        this.description_EN = description_EN;
+    public void setDescriptionEN(String descriptionEN) {
+        this.descriptionEN = descriptionEN;
     }
 
-    public String getDescription_FR() {
-        return description_FR;
+    public String getDescriptionFR() {
+        return descriptionFR;
     }
 
-    public void setDescription_FR(String description_FR) {
-        this.description_FR = description_FR;
+    public void setDescriptionFR(String descriptionFR) {
+        this.descriptionFR = descriptionFR;
     }
 
-    public String getNote_EN() {
-        return note_EN;
+    public String getNoteEN() {
+        return noteEN;
     }
 
-    public void setNote_EN(String note_EN) {
-        this.note_EN = note_EN;
+    public void setNoteEN(String noteEN) {
+        this.noteEN = noteEN;
     }
 
-    public String getNote_FR() {
-        return note_FR;
+    public String getNoteFR() {
+        return noteFR;
     }
 
-    public void setNote_FR(String note_FR) {
-        this.note_FR = note_FR;
+    public void setNoteFR(String noteFR) {
+        this.noteFR = noteFR;
     }
 }
