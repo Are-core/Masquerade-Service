@@ -1,21 +1,23 @@
-package com.masquerade.model.entity;
+package com.masquerade.model.dto;
 
-import javax.persistence.*;
+import com.masquerade.model.entity.CharacterEntity;
 
-@Table(name="character_sheet")
-@Entity
-public class SimpleCharacterEntity {
-    @Id
-    @Column(nullable = false, unique = true, updatable = false)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class CharacterListItemDTO {
     private Long id;
-
     private Boolean npc;
     private Boolean archived;
     private String player;
     private String name;
 
-    public SimpleCharacterEntity() {}
+    public CharacterListItemDTO() {}
+
+    public CharacterListItemDTO(CharacterEntity entity) {
+        this.id = entity.getId();
+        this.npc = entity.getNpc();
+        this.archived = entity.getArchived();
+        this.player = entity.getPlayer();
+        this.name = entity.getName();
+    }
 
     public Long getId() {
         return id;

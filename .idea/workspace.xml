@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Chore - Export string for prefixes to an external class">
+    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Chore - Add Column name for entities &amp; Refactoring name">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/CharacterListItemDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/CharacterEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/CharacterEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/ArchetypeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/ArchetypeEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/ClanEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/ClanEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/JurisdictionEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/JurisdictionEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/SectEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/SectEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/StatusEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/StatusEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/StatusTypeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/StatusTypeEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/TitleEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/parameter/TitleEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/CharacterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/CharacterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/CharacterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/CharacterService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656142151468</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Chore - Add Column name for entities &amp; Refactoring name">
+      <created>1656142885920</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1656142885920</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -320,6 +322,7 @@
     <MESSAGE value="Chore - TitleEntity : Renaming fields for java format" />
     <MESSAGE value="Chore - StatusEntity : Renaming fields for java format + Adding ManyToOne" />
     <MESSAGE value="Chore - Export string for prefixes to an external class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chore - Export string for prefixes to an external class" />
+    <MESSAGE value="Chore - Add Column name for entities &amp; Refactoring name" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chore - Add Column name for entities &amp; Refactoring name" />
   </component>
 </project>

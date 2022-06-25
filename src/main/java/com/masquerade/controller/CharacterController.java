@@ -1,8 +1,8 @@
 package com.masquerade.controller;
 
 import com.masquerade.exception.BadRequestException;
+import com.masquerade.model.dto.CharacterListItemDTO;
 import com.masquerade.model.entity.CharacterEntity;
-import com.masquerade.model.entity.SimpleCharacterEntity;
 import com.masquerade.service.CharacterService;
 import com.masquerade.tools.Section;
 import org.springframework.http.HttpStatus;
@@ -21,7 +21,7 @@ public class CharacterController {
     }
 
     @RequestMapping(value = Section.CharacterPrefix + "/getEntities",method = RequestMethod.GET)
-    public ResponseEntity<List<SimpleCharacterEntity>> getEntities() {
+    public ResponseEntity<List<CharacterListItemDTO>> getEntities() {
         return new ResponseEntity<>(characterService.getList(), HttpStatus.OK);
     }
 

@@ -1,29 +1,33 @@
 package com.masquerade.service;
 
 import com.masquerade.exception.BadRequestException;
+import com.masquerade.model.dto.CharacterListItemDTO;
 import com.masquerade.model.entity.CharacterEntity;
-import com.masquerade.model.entity.SimpleCharacterEntity;
 import com.masquerade.repository.CharacterRepository;
-import com.masquerade.repository.SimpleCharacterRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
 @Transactional
 public class CharacterService {
     private final CharacterRepository characterRepository;
-    private final SimpleCharacterRepository simpleCharacterRepository;
 
-    public CharacterService(CharacterRepository characterRepository, SimpleCharacterRepository simpleCharacterRepository) {
+    public CharacterService(CharacterRepository characterRepository) {
         this.characterRepository = characterRepository;
-        this.simpleCharacterRepository = simpleCharacterRepository;
     }
 
     @Transactional(readOnly = true)
-    public List<SimpleCharacterEntity> getList() {
-        return simpleCharacterRepository.findAll();
+    public List<CharacterListItemDTO> getList() {
+        List<CharacterEntity> list = characterRepository.findAll();
+        List<CharacterListItemDTO> simpleList = new ArrayList<>();
+        for (CharacterEntity character: list)
+        {
+            simpleList.add(new CharacterListItemDTO(character));
+        }
+        return simpleList;
     }
 
     @Transactional(readOnly = true)
