@@ -26,4 +26,5 @@ public class Section {
         /* SKILL */
         public static final String SkillPrefix = CharacterSheetParameterPrefix + "/skill";
         public static final String SkillSpecializationPrefix = CharacterSheetParameterPrefix + "/skill/specialization";
+        public static final String CharacterHasSkillPrefix = CharacterSheetParameterPrefix + "/skill";
 }

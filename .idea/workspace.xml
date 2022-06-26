@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Feature - Add Skill Specialization services">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/skill/SkillController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/characterSheet/skill/SkillEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/characterSheet/skill/SkillRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/skill/SkillService.java" afterDir="false" />
+    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Feature - Add Skill set for character service">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/skill/CharacterHasSkillController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/skill/CharacterSkillsDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/skill/DeclaredSkillDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/characterSheet/skill/CharacterHasSkillEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/characterSheet/skill/CharacterHasSkillKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/repository/characterSheet/skill/CharacterHasSkillRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/skill/CharacterHasSkillService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/exception/BadRequestException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/exception/BadRequestException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/exception/EntityRequestException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/exception/EntityRequestException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/tools/Section.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/tools/Section.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -296,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656147644263</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Feature - Add Skill services">
+      <created>1656251982497</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1656251982497</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -322,8 +332,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Modify - Rename createArchetype function name&#10;Modify - Split RequestMapping with ServicePrefix" />
-    <MESSAGE value="Modify - Change Add and Update method for a POST alternative&#10;Modify - Split RequestMapping with ServicePrefix" />
     <MESSAGE value="Feature - Set return HttpStatus to Archetype services" />
     <MESSAGE value="Feature - Set return HttpStatus to Sect services" />
     <MESSAGE value="Chore - Remove testing line" />
@@ -347,6 +355,34 @@
     <MESSAGE value="Modify - Change character entity to DTO" />
     <MESSAGE value="Chore - Change package structure" />
     <MESSAGE value="Modify - Rework service path prefixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modify - Rework service path prefixes" />
+    <MESSAGE value="Feature - Add Skill services" />
+    <MESSAGE value="Feature - Add Skill set for character service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature - Add Skill set for character service" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/skill/CharacterHasSkillService.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/skill/CharacterHasSkillService.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/skill/CharacterHasSkillService.java</url>
+          <line>94</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.masquerade.model.entity.characterSheet.skill.CharacterHasSkillKey" memberName="characterId" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
