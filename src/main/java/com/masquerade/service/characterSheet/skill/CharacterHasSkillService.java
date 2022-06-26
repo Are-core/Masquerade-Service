@@ -7,7 +7,6 @@ import com.masquerade.model.dto.skill.CharacterSkillsDTO;
 import com.masquerade.model.dto.skill.DeclaredSkillDTO;
 import com.masquerade.model.entity.characterSheet.CharacterEntity;
 import com.masquerade.model.entity.characterSheet.skill.CharacterHasSkillEntity;
-import com.masquerade.model.entity.characterSheet.skill.SkillEntity;
 import com.masquerade.repository.characterSheet.skill.CharacterHasSkillRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

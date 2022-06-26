@@ -22,6 +22,7 @@ public class Section {
         public static final String JurisdictionPrefix = CharacterSheetParameterPrefix + "/jurisdiction";
         public static final String StatusPrefix = CharacterSheetParameterPrefix + "/status";
         public static final String StatusTypePrefix = CharacterSheetParameterPrefix + "/status/type";
+        public static final String CharacterHasStatusPrefix = CharacterSheetParameterPrefix + "/status";
 
         /* SKILL */
         public static final String SkillPrefix = CharacterSheetParameterPrefix + "/skill";
