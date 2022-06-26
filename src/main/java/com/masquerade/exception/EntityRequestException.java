@@ -11,4 +11,9 @@ public class EntityRequestException extends Exception {
         String message = String.format(DOESNT_EXISTS, id);
         return new EntityRequestException(CODE_NOT_FOUND, message);
     }
+
+    public static EntityRequestException doesntExists(Long id, Long secondId) {
+        String message = String.format(DOESNT_EXISTS, id + " - " + secondId);
+        return new EntityRequestException(CODE_NOT_FOUND, message);
+    }
 }
