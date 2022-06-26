@@ -15,10 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static org.springframework.http.HttpStatus.NOT_FOUND;
@@ -112,5 +109,33 @@ public class CharacterHasSkillService {
             skillMap.add(character);
         }
         return skillMap;
+    }
+
+    @Transactional(readOnly = true)
+    public List<DeclaredSkillDTO> getCharacterSkillList(Long characterId) throws BadRequestException {
+        if(characterId == null){
+            throw BadRequestException.missingParameter();
+        }
+        try {
+            return getSkillList(characterHasSkillRepository.findByCharacterId(characterId), characterId);
+        }
+        catch (Exception e) {
+            throw new ResponseStatusException(NOT_FOUND, "Unable to find resource");
+        }
+    }
+
+    private List<DeclaredSkillDTO> getSkillList(List<CharacterHasSkillEntity> entities, Long characterId) {
+        Map<CharacterEntity, List<CharacterHasSkillEntity>> skillsGrouped =
+                entities.stream().collect(Collectors.groupingBy(CharacterHasSkillEntity::getCharacter));
+        for (Map.Entry<CharacterEntity, List<CharacterHasSkillEntity>> entry : skillsGrouped.entrySet()) {
+            if(Objects.equals(entry.getKey().getId(), characterId)) {
+                List<DeclaredSkillDTO> skillList = new ArrayList<>();
+                for (CharacterHasSkillEntity skill : entry.getValue()) {
+                    skillList.add(new DeclaredSkillDTO(skill.getSkill(), skill.getLevel(), skill.getSkillSpecialization()));
+                }
+                return skillList;
+            }
+        }
+        return null;
     }
 }
