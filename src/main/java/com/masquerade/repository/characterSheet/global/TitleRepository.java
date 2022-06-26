@@ -1,4 +1,4 @@
-package com.masquerade.repository.characterSheet.parameter;
+package com.masquerade.repository.characterSheet.global;
 
 import com.masquerade.model.entity.characterSheet.global.TitleEntity;
 import org.springframework.data.jpa.repository.JpaRepository;

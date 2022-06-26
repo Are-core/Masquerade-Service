@@ -5,7 +5,7 @@ import com.google.gson.reflect.TypeToken;
 import com.masquerade.exception.BadRequestException;
 import com.masquerade.exception.EntityRequestException;
 import com.masquerade.model.entity.characterSheet.global.ArchetypeEntity;
-import com.masquerade.repository.characterSheet.parameter.ArchetypeRepository;
+import com.masquerade.repository.characterSheet.global.ArchetypeRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

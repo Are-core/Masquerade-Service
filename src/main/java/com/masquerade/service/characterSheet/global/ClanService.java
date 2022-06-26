@@ -4,7 +4,7 @@ import com.google.gson.Gson;
 import com.masquerade.exception.BadRequestException;
 import com.masquerade.exception.EntityRequestException;
 import com.masquerade.model.entity.characterSheet.global.ClanEntity;
-import com.masquerade.repository.characterSheet.parameter.ClanRepository;
+import com.masquerade.repository.characterSheet.global.ClanRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
