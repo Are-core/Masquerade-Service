@@ -1,7 +1,8 @@
 package com.masquerade.service.characterSheet.skill;
 
 import com.masquerade.exception.BadRequestException;
-import com.masquerade.model.entity.characterSheet.CharacterEntity;
+import com.masquerade.exception.EntityRequestException;
+import com.masquerade.mocks.json.JsonMock;
 import com.masquerade.model.entity.characterSheet.skill.SkillSpecializationEntity;
 import com.masquerade.repository.characterSheet.skill.SkillSpecializationRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -10,6 +11,8 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,6 +49,8 @@ class SkillSpecializationServiceTest {
         list.add(skillSpe);
         Mockito.when(skillSpecializationRepository.findAll()).thenReturn(list);
         Mockito.when(skillSpecializationRepository.findById(1L)).thenReturn(Optional.of(skillSpe));
+        Mockito.when(skillSpecializationRepository.existsById(1L)).thenReturn(true);
+        Mockito.when(skillSpecializationRepository.existsById(5L)).thenReturn(false);
     }
 
     @Test
@@ -78,7 +83,7 @@ class SkillSpecializationServiceTest {
     @Test
     void getSkillSpecializationByIdWithIncorrectId()  {
         try {
-            SkillSpecializationEntity skillSpe = skillSpecializationService.getSkillSpecialization(8L);
+            skillSpecializationService.getSkillSpecialization(8L);
             fail();
         }
         catch (IllegalArgumentException i) {
@@ -102,14 +107,120 @@ class SkillSpecializationServiceTest {
     }
 
     @Test
-    void createSkillSpecialization() {
+    void createSkillSpecializationOK() {
+        try {
+            ResponseEntity<HttpStatus> status = skillSpecializationService.createSkillSpecialization(JsonMock.getSkillSpecializationJson());
+            assertSame(status.getStatusCode(), HttpStatus.CREATED);
+        } catch(Exception e) {
+            fail();
+        }
     }
 
     @Test
-    void removeSkillSpecialization() {
+    void createSkillSpecializationBadBody() {
+        try {
+            skillSpecializationService.createSkillSpecialization(JsonMock.getBadSkillSpecializationJson());
+            fail();
+        } catch (Exception e) {
+            assertTrue(true);
+        }
     }
 
     @Test
-    void updateSkillSpecialization() {
+    void createSkillSpecializationMissingBodyParameter() {
+        try {
+            skillSpecializationService.createSkillSpecialization(null);
+            fail();
+        } catch (BadRequestException e) {
+            assertTrue(true);
+        } catch (Exception e) {
+            fail();
+        }
+    }
+
+    @Test
+    void createSkillSpecializationEmptyBody() {
+        try {
+            skillSpecializationService.createSkillSpecialization("[]");
+            fail();
+        } catch (BadRequestException e) {
+            assertTrue(true);
+        } catch (Exception e) {
+            fail();
+        }
+    }
+
+    @Test
+    void removeSkillSpecializationOK() {
+        try {
+            ResponseEntity<HttpStatus> status = skillSpecializationService.removeSkillSpecialization(1L);
+            assertSame(status.getStatusCode(), HttpStatus.OK);
+        } catch (Exception e) {
+            fail();
+        }
+    }
+
+    @Test
+    void removeSkillSpecializationMissingId() {
+        try {
+            ResponseEntity<HttpStatus> status = skillSpecializationService.removeSkillSpecialization(null);
+            fail();
+        } catch (BadRequestException br) {
+            assertTrue(true);
+        } catch (Exception e) {
+            fail();
+        }
+    }
+
+    @Test
+    void removeSkillSpecializationBadId() {
+        try {
+            ResponseEntity<HttpStatus> status = skillSpecializationService.removeSkillSpecialization(9L);
+            assertSame(status.getStatusCode(), HttpStatus.NOT_FOUND);
+        } catch (Exception e) {
+            fail();
+        }
+    }
+
+    @Test
+    void updateSkillSpecializationOk() {
+        try {
+            ResponseEntity<HttpStatus> status = skillSpecializationService.updateSkillSpecialization(JsonMock.getExistingSkillSpecializationJson());
+            assertSame(status.getStatusCode(), HttpStatus.OK);
+        } catch(Exception e) {
+            fail();
+        }
+    }
+
+    @Test
+    void updateSkillSpecializationNullBody() {
+        try {
+            ResponseEntity<HttpStatus> status = skillSpecializationService.updateSkillSpecialization(null);
+            assertSame(status.getStatusCode(), HttpStatus.NO_CONTENT);
+        } catch(Exception e) {
+            fail();
+        }
+    }
+
+    @Test
+    void updateSkillSpecializationEmptyBody() {
+        try {
+            ResponseEntity<HttpStatus> status = skillSpecializationService.updateSkillSpecialization("{}");
+            assertSame(status.getStatusCode(), HttpStatus.NO_CONTENT);
+        } catch(Exception e) {
+            fail();
+        }
+    }
+
+    @Test
+    void updateSkillSpecializationNotExisting() {
+        try {
+            ResponseEntity<HttpStatus> status = skillSpecializationService.updateSkillSpecialization(JsonMock.getSkillSpecializationJson());
+            fail();
+        } catch (EntityRequestException ere) {
+            assertTrue(true);
+        } catch(Exception e) {
+            fail();
+        }
     }
 }

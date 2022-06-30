@@ -40,8 +40,10 @@ public class SkillSpecializationService {
             throw BadRequestException.missingParameter();
         }
         Gson gson = new Gson();
-        SkillSpecializationEntity specialization = gson.fromJson(rawBody, SkillSpecializationEntity.class);
-        if(specialization.emptyObjectCheck()) {
+        SkillSpecializationEntity specialization;
+        try {
+            specialization = gson.fromJson(rawBody, SkillSpecializationEntity.class);
+        } catch (Exception e) {
             throw BadRequestException.missingBody();
         }
         skillSpecializationRepository.save(specialization);
@@ -71,14 +73,12 @@ public class SkillSpecializationService {
         if(specialization.emptyObjectCheck()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
-        updateSkillSpecializationData(specialization);
-        return new ResponseEntity<>(HttpStatus.OK);
-    }
 
-    private void updateSkillSpecializationData(SkillSpecializationEntity specialization) throws EntityRequestException {
         if(!skillSpecializationRepository.existsById(specialization.getId())) {
             throw EntityRequestException.doesntExists(specialization.getId());
         }
         skillSpecializationRepository.save(specialization);
+
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }
