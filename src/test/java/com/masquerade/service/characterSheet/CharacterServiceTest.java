@@ -1,7 +1,7 @@
 package com.masquerade.service.characterSheet;
 
-import com.masquerade.exception.BadRequestException;
 import com.masquerade.model.dto.characterSheet.CharacterListItemDTO;
+import com.masquerade.model.dto.controller.ResponseDTO;
 import com.masquerade.model.entity.characterSheet.CharacterEntity;
 import com.masquerade.repository.characterSheet.CharacterRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -10,6 +10,7 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.http.HttpStatus;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,13 +70,23 @@ class CharacterServiceTest {
 
     @Test
     void characterListOk() {
-        List<CharacterListItemDTO> list = characterService.getList();
-        assertNotNull(list);
-        assertFalse(list.isEmpty());
-        assertEquals(2, list.size());
-        assertNotNull(list.get(0).getName());
-        assertNotNull(list.get(0).getPlayer());
-        verify(characterRepository, times(1)).findAll();
+        ResponseDTO response = characterService.getList();
+        if (response.getBody() instanceof List<?>) {
+            final List<?> listValue = (List<?>) response.getBody();
+            assertNotNull(listValue);
+            assertEquals(2, listValue.size());
+            if (listValue.get(0) instanceof CharacterListItemDTO) {
+                CharacterListItemDTO characterSheet = (CharacterListItemDTO) listValue.get(0);
+                assertNotNull(characterSheet);
+                assertNotNull(characterSheet.getName());
+                assertNotNull(characterSheet.getPlayer());
+                verify(characterRepository, times(1)).findAll();
+            } else {
+                fail();
+            }
+        } else {
+            fail();
+        }
     }
 
 
@@ -83,40 +94,42 @@ class CharacterServiceTest {
 
     @Test
     void getByIdOk()  {
-        try {
-            CharacterEntity entity = characterService.getById(5L);
-            assertNotNull(entity);
-            assertNotNull(entity.getName());
-            assertNotNull(entity.getPlayer());
-            verify(characterRepository, times(1)).findById(5L);
-        } catch (Exception e) {
+        ResponseDTO response = characterService.getById(5L);
+        if (response.getBody() instanceof Optional) {
+            final Optional<?> optionalValue = (Optional<?>) response.getBody();
+            if (optionalValue.isPresent() && optionalValue.get() instanceof CharacterEntity) {
+                CharacterEntity characterSheet = (CharacterEntity) optionalValue.get();
+                assertNotNull(characterSheet);
+                assertNotNull(characterSheet.getName());
+                assertNotNull(characterSheet.getPlayer());
+                verify(characterRepository, times(1)).findById(5L);
+            } else {
+                fail();
+            }
+        } else {
             fail();
         }
     }
 
     @Test
     void getByIdWithIncorrectId()  {
-        try {
-            CharacterEntity entity = characterService.getById(8L);
-            fail();
-        }
-        catch (IllegalArgumentException i) {
-            verify(characterRepository, times(1)).findById(8L);
-            assertTrue(true);
-        }
-        catch (Exception e) {
-            fail();
+        ResponseDTO response = characterService.getById(8L);
+        if (response.getBody() instanceof Optional) {
+            final Optional<?> optionalValue = (Optional<?>) response.getBody();
+            if (optionalValue.isEmpty()) {
+                verify(characterRepository, times(1)).findById(8L);
+                assertSame(response.getHttpStatus(), HttpStatus.OK);
+                assertSame(response.getBody(), Optional.empty());
+            } else {
+                fail();
+            }
         }
     }
 
     @Test
     void getByIdMissingParameter() {
-        try {
-            characterService.getById(null);
-            fail();
-        } catch (BadRequestException e) {
-            verify(characterRepository, times(0)).findById(any());
-            assertTrue(true);
-        }
+        ResponseDTO response = characterService.getById(null);
+        assertSame(response.getHttpStatus(), HttpStatus.BAD_REQUEST);
+        verify(characterRepository, times(0)).findById(any());
     }
 }

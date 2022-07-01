@@ -1,8 +1,11 @@
 package com.masquerade.model.entity.characterSheet.skill;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.persistence.*;
 
 @Table(name="skill_specialization")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @Entity
 public class SkillSpecializationEntity {
     @Id

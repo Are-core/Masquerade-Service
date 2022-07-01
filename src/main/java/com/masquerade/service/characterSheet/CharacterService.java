@@ -1,14 +1,15 @@
 package com.masquerade.service.characterSheet;
 
-import com.masquerade.exception.BadRequestException;
 import com.masquerade.model.dto.characterSheet.CharacterListItemDTO;
-import com.masquerade.model.entity.characterSheet.CharacterEntity;
+import com.masquerade.model.dto.controller.ResponseDTO;
 import com.masquerade.repository.characterSheet.CharacterRepository;
+import com.masquerade.tools.controller.Responses;
+import com.masquerade.tools.entity.EntityArguments;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional
@@ -20,22 +21,16 @@ public class CharacterService {
     }
 
     @Transactional(readOnly = true)
-    public List<CharacterListItemDTO> getList() {
-        List<CharacterEntity> list = characterRepository.findAll();
-        List<CharacterListItemDTO> simpleList = new ArrayList<>();
-        for (CharacterEntity character: list)
-        {
-            simpleList.add(new CharacterListItemDTO(character));
-        }
-        return simpleList;
+    public ResponseDTO getList() {
+        return new ResponseDTO(HttpStatus.OK, characterRepository.findAll().stream().
+                map(CharacterListItemDTO::new).collect(Collectors.toList()));
     }
 
     @Transactional(readOnly = true)
-    public CharacterEntity getById(Long id) throws BadRequestException {
+    public ResponseDTO getById(Long id) {
         if(id == null){
-            throw BadRequestException.missingParameter();
+            return Responses.MissingArgument(EntityArguments.idArgument);
         }
-        return characterRepository.findById(id)
-                .orElseThrow(IllegalArgumentException::new);
+        return new ResponseDTO(HttpStatus.OK,characterRepository.findById(id));
     }
 }

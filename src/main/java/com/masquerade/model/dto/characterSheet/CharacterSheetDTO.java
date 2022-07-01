@@ -1,6 +1,7 @@
 package com.masquerade.model.dto.characterSheet;
 
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.masquerade.model.dto.characterSheet.skill.DeclaredSkillDTO;
 import com.masquerade.model.entity.characterSheet.CharacterEntity;
 import com.masquerade.model.entity.characterSheet.global.ArchetypeEntity;
@@ -9,7 +10,9 @@ import com.masquerade.model.entity.characterSheet.global.SectEntity;
 import com.masquerade.model.entity.characterSheet.parameter.JurisdictionEntity;
 
 import java.util.List;
+import java.util.Optional;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class CharacterSheetDTO {
     private Long id;
 

@@ -8,6 +8,8 @@ import com.masquerade.model.dto.characterSheet.skill.DeclaredSkillDTO;
 import com.masquerade.model.entity.characterSheet.CharacterEntity;
 import com.masquerade.model.entity.characterSheet.skill.CharacterHasSkillEntity;
 import com.masquerade.repository.characterSheet.skill.CharacterHasSkillRepository;
+import com.masquerade.tools.controller.Responses;
+import com.masquerade.tools.entity.EntityArguments;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -111,9 +113,10 @@ public class CharacterHasSkillService {
     }
 
     @Transactional(readOnly = true)
-    public List<DeclaredSkillDTO> getCharacterSkillList(Long characterId) throws BadRequestException {
+    public List<DeclaredSkillDTO> getCharacterSkillList(Long characterId) {
         if(characterId == null){
-            throw BadRequestException.missingParameter();
+            return null;
+            //return Responses.MissingArgument(EntityArguments.characterIdArgument);
         }
         try {
             return getSkillList(characterHasSkillRepository.findByCharacterId(characterId), characterId);

@@ -1,7 +1,9 @@
 package com.masquerade.model.dto.characterSheet;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.masquerade.model.entity.characterSheet.CharacterEntity;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class CharacterListItemDTO {
     private Long id;
     private Boolean npc;

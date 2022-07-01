@@ -1,18 +1,17 @@
 package com.masquerade.controller.characterSheet;
 
-import com.masquerade.exception.BadRequestException;
-import com.masquerade.model.dto.characterSheet.CharacterListItemDTO;
 import com.masquerade.model.dto.characterSheet.CharacterSheetDTO;
 import com.masquerade.model.dto.characterSheet.skill.DeclaredSkillDTO;
+import com.masquerade.model.dto.controller.ResponseDTO;
+import com.masquerade.model.dto.controller.ResponseEntityDTO;
 import com.masquerade.model.entity.characterSheet.CharacterEntity;
 import com.masquerade.service.characterSheet.CharacterService;
 import com.masquerade.service.characterSheet.skill.CharacterHasSkillService;
 import com.masquerade.tools.controller.Section;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @CrossOrigin(origins = Section.CrossOriginUrl)
 @RestController
@@ -25,23 +24,30 @@ public class CharacterController {
         this.characterHasSkillService = characterHasSkillService;
     }
 
-    @RequestMapping(value = Section.CharacterPrefix + "/characters",method = RequestMethod.GET)
-    public ResponseEntity<List<CharacterListItemDTO>> getEntities() {
-        return new ResponseEntity<>(characterService.getList(), HttpStatus.OK);
+    @RequestMapping(value = Section.CharacterPrefix + "/characters", method = RequestMethod.GET)
+    public ResponseEntityDTO<ResponseDTO> getEntities() {
+        return new ResponseEntityDTO<>(characterService.getList());
     }
 
     @RequestMapping(method = RequestMethod.GET, path = Section.CharacterPrefix + "character/{id}")
-    public ResponseEntity<CharacterSheetDTO> get(@PathVariable Long id) throws BadRequestException {
-        return new ResponseEntity<>(setRelations(characterService.getById(id)), HttpStatus.OK);
+    public ResponseEntityDTO<ResponseDTO> get(@PathVariable Long id) {
+        return new ResponseEntityDTO<>(setRelations(characterService.getById(id), id));
     }
 
-    private CharacterSheetDTO setRelations(CharacterEntity character) throws BadRequestException {
-        CharacterSheetDTO characterSheet = new CharacterSheetDTO(character);
-        characterSheet.setSkills(getSkills(character.getId()));
-        return characterSheet;
+    private ResponseDTO setRelations(ResponseDTO character, Long id) {
+        if (character.getBody() instanceof Optional) {
+            final Optional<?> optionalValue = (Optional<?>) character.getBody();
+            if(optionalValue.isPresent() && optionalValue.get() instanceof CharacterEntity) {
+                CharacterSheetDTO characterSheet = new CharacterSheetDTO((CharacterEntity) optionalValue.get());
+                characterSheet.setSkills(getSkills(id));
+                character.setBody(characterSheet);
+                return character;
+            }
+        }
+        return null;
     }
 
-    private List<DeclaredSkillDTO> getSkills(Long characterId) throws BadRequestException {
+    private List<DeclaredSkillDTO> getSkills(Long characterId) {
         return characterHasSkillService.getCharacterSkillList(characterId);
     }
 }

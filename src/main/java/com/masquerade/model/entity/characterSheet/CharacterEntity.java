@@ -1,5 +1,6 @@
 package com.masquerade.model.entity.characterSheet;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.masquerade.model.entity.characterSheet.global.ArchetypeEntity;
 import com.masquerade.model.entity.characterSheet.global.ClanEntity;
 import com.masquerade.model.entity.characterSheet.global.SectEntity;
@@ -8,6 +9,7 @@ import com.masquerade.model.entity.characterSheet.parameter.JurisdictionEntity;
 import javax.persistence.*;
 
 @Table(name="character_sheet")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @Entity
 public class CharacterEntity {
     @Id
@@ -95,6 +97,42 @@ public class CharacterEntity {
     private JurisdictionEntity jurisdiction;
 
     public CharacterEntity() {}
+
+    public CharacterEntity(Long id, Boolean npc, Boolean archived, String player, String name, Integer physical, Boolean physicalstrength, Boolean physicaldexterity, Boolean physicalstamina, Integer social, Boolean socialcharisma, Boolean socialmanipulation, Boolean socialappearance, Integer mental, Boolean mentalperception, Boolean mentalintelligence, Boolean mentalwits, Integer generation, Integer blood, Integer willpower, Integer morality, Integer morality_merit, Integer healthy, Integer injured, Integer incapacitated, Integer beast, Integer madness, String note, ArchetypeEntity archetype, Integer bloodline_id, SectEntity sect, ClanEntity clan, JurisdictionEntity jurisdiction) {
+        this.id = id;
+        this.npc = npc;
+        this.archived = archived;
+        this.player = player;
+        this.name = name;
+        this.physical = physical;
+        this.physicalstrength = physicalstrength;
+        this.physicaldexterity = physicaldexterity;
+        this.physicalstamina = physicalstamina;
+        this.social = social;
+        this.socialcharisma = socialcharisma;
+        this.socialmanipulation = socialmanipulation;
+        this.socialappearance = socialappearance;
+        this.mental = mental;
+        this.mentalperception = mentalperception;
+        this.mentalintelligence = mentalintelligence;
+        this.mentalwits = mentalwits;
+        this.generation = generation;
+        this.blood = blood;
+        this.willpower = willpower;
+        this.morality = morality;
+        this.morality_merit = morality_merit;
+        this.healthy = healthy;
+        this.injured = injured;
+        this.incapacitated = incapacitated;
+        this.beast = beast;
+        this.madness = madness;
+        this.note = note;
+        this.archetype = archetype;
+        this.bloodline_id = bloodline_id;
+        this.sect = sect;
+        this.clan = clan;
+        this.jurisdiction = jurisdiction;
+    }
 
     public Long getId() {
         return id;

@@ -1,8 +1,7 @@
 package com.masquerade.service.characterSheet.skill;
 
-import com.masquerade.exception.BadRequestException;
-import com.masquerade.exception.EntityRequestException;
 import com.masquerade.mocks.json.JsonMock;
+import com.masquerade.model.dto.characterSheet.CharacterListItemDTO;
 import com.masquerade.model.dto.controller.ResponseDTO;
 import com.masquerade.model.entity.characterSheet.skill.SkillSpecializationEntity;
 import com.masquerade.repository.characterSheet.skill.SkillSpecializationRepository;
@@ -13,7 +12,6 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,13 +57,23 @@ class SkillSpecializationServiceTest {
     @Test
     void getSkillSpecializationsOK() {
         ResponseDTO response = skillSpecializationService.getSkillSpecializations();
-        List<SkillSpecializationEntity> list = (List<SkillSpecializationEntity>) response.getBody();
-        assertNotNull(list);
-        assertEquals(2, list.size());
-        assertNotNull(list.get(0).getDescriptionEN());
-        assertNotNull(list.get(0).getDescriptionFR());
-        verify(skillSpecializationRepository, times(1)).findAll();
-        assertSame(response.getHttpStatus(), HttpStatus.OK);
+        if (response.getBody() instanceof List<?>) {
+            final List<?> listValue = (List<?>) response.getBody();
+            assertNotNull(listValue);
+            assertEquals(2, listValue.size());
+            if (listValue.get(0) instanceof SkillSpecializationEntity) {
+                SkillSpecializationEntity entity = (SkillSpecializationEntity) listValue.get(0);
+                assertNotNull(entity.getDescriptionEN());
+                assertNotNull(entity.getDescriptionFR());
+                verify(skillSpecializationRepository, times(1)).findAll();
+                assertSame(response.getHttpStatus(), HttpStatus.OK);
+            } else {
+                fail();
+            }
+        }
+        else {
+            fail();
+        }
     }
 
     @Test
