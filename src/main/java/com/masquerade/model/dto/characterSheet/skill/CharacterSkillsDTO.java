@@ -1,4 +1,4 @@
-package com.masquerade.model.dto.skill;
+package com.masquerade.model.dto.characterSheet.skill;
 
 import java.util.List;
 

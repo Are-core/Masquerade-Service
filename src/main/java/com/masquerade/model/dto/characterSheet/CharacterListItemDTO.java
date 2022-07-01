@@ -1,4 +1,4 @@
-package com.masquerade.model.dto;
+package com.masquerade.model.dto.characterSheet;
 
 import com.masquerade.model.entity.characterSheet.CharacterEntity;
 

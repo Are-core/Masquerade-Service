@@ -1,7 +1,7 @@
 package com.masquerade.service.characterSheet;
 
 import com.masquerade.exception.BadRequestException;
-import com.masquerade.model.dto.CharacterListItemDTO;
+import com.masquerade.model.dto.characterSheet.CharacterListItemDTO;
 import com.masquerade.model.entity.characterSheet.CharacterEntity;
 import com.masquerade.repository.characterSheet.CharacterRepository;
 import org.junit.jupiter.api.BeforeEach;

@@ -1,7 +1,7 @@
-package com.masquerade.model.dto;
+package com.masquerade.model.dto.characterSheet;
 
 
-import com.masquerade.model.dto.skill.DeclaredSkillDTO;
+import com.masquerade.model.dto.characterSheet.skill.DeclaredSkillDTO;
 import com.masquerade.model.entity.characterSheet.CharacterEntity;
 import com.masquerade.model.entity.characterSheet.global.ArchetypeEntity;
 import com.masquerade.model.entity.characterSheet.global.ClanEntity;

@@ -1,8 +1,7 @@
 package com.masquerade.controller.characterSheet.parameter;
 
 import com.masquerade.exception.BadRequestException;
-import com.masquerade.model.dto.parameter.CharacterStatusDTO;
-import com.masquerade.model.dto.skill.CharacterSkillsDTO;
+import com.masquerade.model.dto.characterSheet.parameter.CharacterStatusDTO;
 import com.masquerade.service.characterSheet.parameter.CharacterHasStatusService;
 import com.masquerade.tools.Section;
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,4 @@
-package com.masquerade.model.dto.skill;
+package com.masquerade.model.dto.characterSheet.skill;
 
 import com.masquerade.model.entity.characterSheet.skill.SkillEntity;
 import com.masquerade.model.entity.characterSheet.skill.SkillSpecializationEntity;

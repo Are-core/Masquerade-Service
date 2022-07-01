@@ -1,8 +1,8 @@
 package com.masquerade.service.characterSheet.parameter;
 
 import com.masquerade.exception.BadRequestException;
-import com.masquerade.model.dto.parameter.CharacterStatusDTO;
-import com.masquerade.model.dto.parameter.DeclaredStatusDTO;
+import com.masquerade.model.dto.characterSheet.parameter.CharacterStatusDTO;
+import com.masquerade.model.dto.characterSheet.parameter.DeclaredStatusDTO;
 import com.masquerade.model.entity.characterSheet.CharacterEntity;
 import com.masquerade.model.entity.characterSheet.parameter.CharacterHasStatusEntity;
 import com.masquerade.repository.characterSheet.parameter.CharacterHasStatusRepository;

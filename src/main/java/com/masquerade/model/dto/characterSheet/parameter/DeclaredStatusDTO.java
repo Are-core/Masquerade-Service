@@ -1,6 +1,5 @@
-package com.masquerade.model.dto.parameter;
+package com.masquerade.model.dto.characterSheet.parameter;
 
-import com.masquerade.model.dto.CharacterListItemDTO;
 import com.masquerade.model.entity.characterSheet.global.SectEntity;
 import com.masquerade.model.entity.characterSheet.parameter.StatusEntity;
 import com.masquerade.model.entity.characterSheet.parameter.StatusTypeEntity;

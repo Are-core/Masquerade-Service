@@ -1,4 +1,4 @@
-package com.masquerade.model.dto.parameter;
+package com.masquerade.model.dto.characterSheet.parameter;
 
 import java.util.List;
 

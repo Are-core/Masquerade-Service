@@ -1,9 +1,9 @@
 package com.masquerade.controller.characterSheet;
 
 import com.masquerade.exception.BadRequestException;
-import com.masquerade.model.dto.CharacterListItemDTO;
-import com.masquerade.model.dto.CharacterSheetDTO;
-import com.masquerade.model.dto.skill.DeclaredSkillDTO;
+import com.masquerade.model.dto.characterSheet.CharacterListItemDTO;
+import com.masquerade.model.dto.characterSheet.CharacterSheetDTO;
+import com.masquerade.model.dto.characterSheet.skill.DeclaredSkillDTO;
 import com.masquerade.model.entity.characterSheet.CharacterEntity;
 import com.masquerade.service.characterSheet.CharacterService;
 import com.masquerade.service.characterSheet.skill.CharacterHasSkillService;
@@ -12,7 +12,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @CrossOrigin(origins = Section.CrossOriginUrl)
