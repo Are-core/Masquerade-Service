@@ -3,7 +3,7 @@ package com.masquerade.controller.characterSheet.parameter;
 import com.masquerade.exception.BadRequestException;
 import com.masquerade.model.dto.characterSheet.parameter.CharacterStatusDTO;
 import com.masquerade.service.characterSheet.parameter.CharacterHasStatusService;
-import com.masquerade.tools.Section;
+import com.masquerade.tools.controller.Section;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;

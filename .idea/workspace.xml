@@ -4,22 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Feature - Set firsts JUnit tests">
+    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Chore - Moved DTO corresponding to characterSheet to sub folder">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/controller/ResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/controller/ResponseEntityDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/tools/controller/Responses.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/tools/entity/EntityArguments.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/CharacterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/CharacterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/global/ArchetypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/global/ArchetypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/global/ClanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/global/ClanController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/global/SectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/global/SectController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/global/TitleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/global/TitleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/parameter/CharacterHasStatusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/parameter/CharacterHasStatusController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/parameter/JurisdictionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/parameter/JurisdictionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/parameter/StatusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/parameter/StatusController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/parameter/StatusTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/parameter/StatusTypeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/skill/CharacterHasSkillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/skill/CharacterHasSkillController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/CharacterListItemDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/characterSheet/CharacterListItemDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/CharacterSheetDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/characterSheet/CharacterSheetDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/parameter/CharacterStatusDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/characterSheet/parameter/CharacterStatusDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/parameter/DeclaredStatusDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/characterSheet/parameter/DeclaredStatusDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/skill/CharacterSkillsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/characterSheet/skill/CharacterSkillsDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/skill/DeclaredSkillDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/characterSheet/skill/DeclaredSkillDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/CharacterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/CharacterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/parameter/CharacterHasStatusService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/parameter/CharacterHasStatusService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/skill/CharacterHasSkillService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/skill/CharacterHasSkillService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/masquerade/service/characterSheet/CharacterServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/service/characterSheet/CharacterServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/skill/SkillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/skill/SkillController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/skill/SkillSpecializationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/skill/SkillSpecializationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/skill/SkillSpecializationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/skill/SkillSpecializationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/tools/Section.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/tools/controller/Section.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ressources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/masquerade/service/characterSheet/skill/SkillSpecializationServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/service/characterSheet/skill/SkillSpecializationServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,11 +98,16 @@
       <recent name="com.masquerade.service.characterSheet" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in Masquerade-service (4)">
-    <configuration name="All in Masquerade-service (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.MasqueradeApplication">
+    <configuration name="MasqueradeApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.masquerade.MasqueradeApplication" />
       <module name="Masquerade-service" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.masquerade.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -124,7 +136,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SkillSpecializationServiceTest.updateSkillSpecializationEmptyBody" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SkillSpecializationServiceTest.getSkillSpecializationsOK" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Masquerade-service" />
       <extension name="coverage">
         <pattern>
@@ -134,7 +146,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.masquerade.service.characterSheet.skill" />
       <option name="MAIN_CLASS_NAME" value="com.masquerade.service.characterSheet.skill.SkillSpecializationServiceTest" />
-      <option name="METHOD_NAME" value="updateSkillSpecializationEmptyBody" />
+      <option name="METHOD_NAME" value="getSkillSpecializationsOK" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -142,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MasqueradeApplication" />
+        <item itemvalue="JUnit.SkillSpecializationServiceTest.getSkillSpecializationsOK" />
         <item itemvalue="JUnit.All in Masquerade-service (4)" />
         <item itemvalue="JUnit.All in Masquerade-service" />
         <item itemvalue="JUnit.All in Masquerade-service (2)" />
-        <item itemvalue="JUnit.SkillSpecializationServiceTest.updateSkillSpecializationEmptyBody" />
-        <item itemvalue="JUnit.All in Masquerade-service (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -404,7 +416,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656539173780</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Chore - Moved DTO corresponding to characterSheet to sub folder">
+      <created>1656668043831</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1656668043832</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -430,7 +449,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Modify - Remove unused search_by_name functions" />
     <MESSAGE value="Feature - Add clan service" />
     <MESSAGE value="Feature - Add Title service" />
     <MESSAGE value="Chore - Remove unused import" />
@@ -455,9 +473,19 @@
     <MESSAGE value="Feature - Add CharacterStatus getter service" />
     <MESSAGE value="Feature - Update dependencies" />
     <MESSAGE value="Feature - Set firsts JUnit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature - Set firsts JUnit tests" />
+    <MESSAGE value="Chore - Moved DTO corresponding to characterSheet to sub folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chore - Moved DTO corresponding to characterSheet to sub folder" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/masquerade/service/characterSheet/skill/SkillSpecializationServiceTest.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="com.masquerade.exception.BadRequestException" memberName="cause" />

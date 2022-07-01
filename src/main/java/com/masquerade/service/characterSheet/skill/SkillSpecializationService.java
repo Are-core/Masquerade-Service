@@ -1,16 +1,16 @@
 package com.masquerade.service.characterSheet.skill;
 
 import com.google.gson.Gson;
-import com.masquerade.exception.BadRequestException;
-import com.masquerade.exception.EntityRequestException;
+import com.masquerade.model.dto.controller.ResponseDTO;
 import com.masquerade.model.entity.characterSheet.skill.SkillSpecializationEntity;
 import com.masquerade.repository.characterSheet.skill.SkillSpecializationRepository;
+import com.masquerade.tools.controller.Responses;
+import com.masquerade.tools.entity.EntityArguments;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
+import java.util.Optional;
 
 @Service
 @Transactional
@@ -22,63 +22,69 @@ public class SkillSpecializationService {
     }
 
     @Transactional(readOnly = true)
-    public List<SkillSpecializationEntity> getSkillSpecializations() {
-        return skillSpecializationRepository.findAll();
+    public ResponseDTO getSkillSpecializations() {
+        try {
+            return new ResponseDTO(HttpStatus.OK, skillSpecializationRepository.findAll());
+        } catch (Exception e) {
+            return Responses.ResponseNotFound;
+        }
     }
 
     @Transactional(readOnly = true)
-    public SkillSpecializationEntity getSkillSpecialization(Long id) throws BadRequestException {
+    public ResponseDTO getSkillSpecialization(Long id) {
         if(id == null){
-            throw BadRequestException.missingParameter();
+            return Responses.MissingArgument(EntityArguments.idArgument);
         }
-        return skillSpecializationRepository.findById(id)
-                .orElseThrow(IllegalArgumentException::new);
+        try {
+            Optional<SkillSpecializationEntity> entries = skillSpecializationRepository.findById(id);
+            if(entries.isEmpty()) {
+                return Responses.ResponseNoContent;
+            }
+            return new ResponseDTO(HttpStatus.OK, entries);
+        } catch (Exception e) {
+            return Responses.ResponseNotFound;
+        }
     }
 
-    public ResponseEntity<HttpStatus> createSkillSpecialization(String rawBody) throws BadRequestException {
-        if(rawBody == null) {
-            throw BadRequestException.missingParameter();
-        }
+    public ResponseDTO createSkillSpecialization(String rawBody) {
         Gson gson = new Gson();
         SkillSpecializationEntity specialization;
         try {
             specialization = gson.fromJson(rawBody, SkillSpecializationEntity.class);
+            //Prevent Updating if id is not null
+            specialization.setId(null);
+            specialization = skillSpecializationRepository.save(specialization);
         } catch (Exception e) {
-            throw BadRequestException.missingBody();
+            return Responses.ResponseBadRequest;
         }
-        skillSpecializationRepository.save(specialization);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        return new ResponseDTO(HttpStatus.CREATED, specialization);
     }
 
-    public ResponseEntity<HttpStatus> removeSkillSpecialization(Long id) throws BadRequestException {
+    public ResponseDTO removeSkillSpecialization(Long id) {
         if(id == null) {
-            throw BadRequestException.missingParameter();
+            return Responses.MissingArgument(EntityArguments.idArgument);
         }
         try {
-            skillSpecializationRepository.delete(skillSpecializationRepository.findById(id)
-                    .orElseThrow(IllegalArgumentException::new));
+            Optional<SkillSpecializationEntity> entity = skillSpecializationRepository.findById(id);
+            if(entity.isEmpty()) {
+                return Responses.ResponseNoContent;
+            }
+            skillSpecializationRepository.delete(entity.get());
+            return new ResponseDTO(HttpStatus.OK, entity.get());
         }
         catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            return Responses.ResponseNoContent;
         }
-        return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    public ResponseEntity<HttpStatus> updateSkillSpecialization(final String rawBody) throws EntityRequestException {
-        if(rawBody == null) {
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    public ResponseDTO updateSkillSpecialization(final String rawBody) {
+        try {
+            Gson gson = new Gson();
+            SkillSpecializationEntity specialization = gson.fromJson(rawBody, SkillSpecializationEntity.class);
+            specialization = skillSpecializationRepository.save(specialization);
+            return new ResponseDTO(HttpStatus.OK, specialization);
+        } catch (Exception e) {
+            return Responses.ResponseBadRequest;
         }
-        Gson gson = new Gson();
-        final SkillSpecializationEntity specialization = gson.fromJson(rawBody, SkillSpecializationEntity.class);
-        if(specialization.emptyObjectCheck()) {
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-        }
-
-        if(!skillSpecializationRepository.existsById(specialization.getId())) {
-            throw EntityRequestException.doesntExists(specialization.getId());
-        }
-        skillSpecializationRepository.save(specialization);
-
-        return new ResponseEntity<>(HttpStatus.OK);
     }
 }

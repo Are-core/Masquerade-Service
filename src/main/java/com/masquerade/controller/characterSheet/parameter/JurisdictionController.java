@@ -5,7 +5,7 @@ import com.masquerade.exception.BadRequestException;
 import com.masquerade.exception.EntityRequestException;
 import com.masquerade.model.entity.characterSheet.parameter.JurisdictionEntity;
 import com.masquerade.service.characterSheet.parameter.JurisdictionService;
-import com.masquerade.tools.Section;
+import com.masquerade.tools.controller.Section;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
