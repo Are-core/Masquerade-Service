@@ -52,9 +52,8 @@ class SkillSpecializationServiceTest {
         Mockito.when(skillSpecializationRepository.findById(1L)).thenReturn(Optional.of(skillSpe));
         Mockito.when(skillSpecializationRepository.existsById(1L)).thenReturn(true);
         Mockito.when(skillSpecializationRepository.existsById(5L)).thenReturn(false);
-        SkillSpecializationEntity newSkillSpe = skillSpe;
-        newSkillSpe.setId(null);
-        Mockito.when(skillSpecializationRepository.save(newSkillSpe)).thenReturn(skillSpe);
+        skillSpe.setId(null);
+        Mockito.when(skillSpecializationRepository.save(skillSpe)).thenReturn(skillSpe);
     }
 
     @Test

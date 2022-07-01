@@ -23,11 +23,7 @@ public class SkillSpecializationService {
 
     @Transactional(readOnly = true)
     public ResponseDTO getSkillSpecializations() {
-        try {
-            return new ResponseDTO(HttpStatus.OK, skillSpecializationRepository.findAll());
-        } catch (Exception e) {
-            return Responses.ResponseNotFound;
-        }
+        return new ResponseDTO(HttpStatus.OK, skillSpecializationRepository.findAll());
     }
 
     @Transactional(readOnly = true)
@@ -35,15 +31,11 @@ public class SkillSpecializationService {
         if(id == null){
             return Responses.MissingArgument(EntityArguments.idArgument);
         }
-        try {
-            Optional<SkillSpecializationEntity> entries = skillSpecializationRepository.findById(id);
-            if(entries.isEmpty()) {
-                return Responses.ResponseNoContent;
-            }
-            return new ResponseDTO(HttpStatus.OK, entries.get());
-        } catch (Exception e) {
-            return Responses.ResponseNotFound;
+        Optional<SkillSpecializationEntity> entries = skillSpecializationRepository.findById(id);
+        if(entries.isEmpty()) {
+            return Responses.ResponseNoContent;
         }
+        return new ResponseDTO(HttpStatus.OK, entries.get());
     }
 
     public ResponseDTO createSkillSpecialization(String rawBody) {
@@ -64,17 +56,12 @@ public class SkillSpecializationService {
         if(id == null) {
             return Responses.MissingArgument(EntityArguments.idArgument);
         }
-        try {
-            Optional<SkillSpecializationEntity> entity = skillSpecializationRepository.findById(id);
-            if(entity.isEmpty()) {
-                return Responses.ResponseNoContent;
-            }
-            skillSpecializationRepository.delete(entity.get());
-            return new ResponseDTO(HttpStatus.OK, entity.get());
-        }
-        catch (Exception e) {
+        Optional<SkillSpecializationEntity> entity = skillSpecializationRepository.findById(id);
+        if(entity.isEmpty()) {
             return Responses.ResponseNoContent;
         }
+        skillSpecializationRepository.delete(entity.get());
+        return new ResponseDTO(HttpStatus.OK, entity.get());
     }
 
     public ResponseDTO updateSkillSpecialization(final String rawBody) {
