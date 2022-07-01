@@ -52,6 +52,9 @@ class SkillSpecializationServiceTest {
         Mockito.when(skillSpecializationRepository.findById(1L)).thenReturn(Optional.of(skillSpe));
         Mockito.when(skillSpecializationRepository.existsById(1L)).thenReturn(true);
         Mockito.when(skillSpecializationRepository.existsById(5L)).thenReturn(false);
+        SkillSpecializationEntity newSkillSpe = skillSpe;
+        newSkillSpe.setId(null);
+        Mockito.when(skillSpecializationRepository.save(newSkillSpe)).thenReturn(skillSpe);
     }
 
     @Test
@@ -60,23 +63,22 @@ class SkillSpecializationServiceTest {
         List<SkillSpecializationEntity> list = (List<SkillSpecializationEntity>) response.getBody();
         assertNotNull(list);
         assertEquals(2, list.size());
-        assertNotNull(list.get(0).getId());
         assertNotNull(list.get(0).getDescriptionEN());
         assertNotNull(list.get(0).getDescriptionFR());
-        assertEquals(1L, (long) list.get(0).getId());
         verify(skillSpecializationRepository, times(1)).findAll();
+        assertSame(response.getHttpStatus(), HttpStatus.OK);
     }
 
-    /*@Test
+    @Test
     void getSkillSpecializationByIdOK() {
         try {
-            SkillSpecializationEntity skillSpe = skillSpecializationService.getSkillSpecialization(1L);
+            ResponseDTO response = skillSpecializationService.getSkillSpecialization(1L);
+            SkillSpecializationEntity skillSpe = (SkillSpecializationEntity) response.getBody();
             assertNotNull(skillSpe);
-            assertNotNull(skillSpe.getId());
             assertNotNull(skillSpe.getDescriptionEN());
             assertNotNull(skillSpe.getDescriptionFR());
-            assertEquals(1L, (long) skillSpe.getId());
             verify(skillSpecializationRepository, times(1)).findById(1L);
+            assertSame(response.getHttpStatus(), HttpStatus.OK);
         } catch (Exception e) {
             fail();
         }
@@ -85,12 +87,9 @@ class SkillSpecializationServiceTest {
     @Test
     void getSkillSpecializationByIdWithIncorrectId()  {
         try {
-            skillSpecializationService.getSkillSpecialization(8L);
-            fail();
-        }
-        catch (IllegalArgumentException i) {
+            ResponseDTO response = skillSpecializationService.getSkillSpecialization(8L);
             verify(skillSpecializationRepository, times(1)).findById(8L);
-            assertTrue(true);
+            assertSame(response.getHttpStatus(), HttpStatus.NO_CONTENT);
         }
         catch (Exception e) {
             fail();
@@ -100,19 +99,20 @@ class SkillSpecializationServiceTest {
     @Test
     void getSkillSpecializationByIdMissingParameter() {
         try {
-            skillSpecializationService.getSkillSpecialization(null);
-            fail();
-        } catch (BadRequestException e) {
+            ResponseDTO response = skillSpecializationService.getSkillSpecialization(null);
             verify(skillSpecializationRepository, times(0)).findById(any());
-            assertTrue(true);
+            assertSame(response.getHttpStatus(), HttpStatus.BAD_REQUEST);
+        } catch (Exception e) {
+            fail();
         }
     }
 
     @Test
     void createSkillSpecializationOK() {
         try {
-            ResponseEntity<HttpStatus> status = skillSpecializationService.createSkillSpecialization(JsonMock.getSkillSpecializationJson());
-            assertSame(status.getStatusCode(), HttpStatus.CREATED);
+            ResponseDTO response = skillSpecializationService.createSkillSpecialization(JsonMock.getExistingSkillSpecializationJson());
+            assertSame(response.getHttpStatus(), HttpStatus.CREATED);
+            verify(skillSpecializationRepository, times(1)).save(any());
         } catch(Exception e) {
             fail();
         }
@@ -121,20 +121,20 @@ class SkillSpecializationServiceTest {
     @Test
     void createSkillSpecializationBadBody() {
         try {
-            skillSpecializationService.createSkillSpecialization(JsonMock.getBadSkillSpecializationJson());
-            fail();
+            ResponseDTO response = skillSpecializationService.createSkillSpecialization(JsonMock.getBadSkillSpecializationJson());
+            verify(skillSpecializationRepository, times(0)).save(any());
+            assertSame(response.getHttpStatus(), HttpStatus.BAD_REQUEST);
         } catch (Exception e) {
-            assertTrue(true);
+            fail();
         }
     }
 
     @Test
     void createSkillSpecializationMissingBodyParameter() {
         try {
-            skillSpecializationService.createSkillSpecialization(null);
-            fail();
-        } catch (BadRequestException e) {
-            assertTrue(true);
+            ResponseDTO response = skillSpecializationService.createSkillSpecialization(null);
+            verify(skillSpecializationRepository, times(0)).save(any());
+            assertSame(response.getHttpStatus(), HttpStatus.BAD_REQUEST);
         } catch (Exception e) {
             fail();
         }
@@ -143,10 +143,9 @@ class SkillSpecializationServiceTest {
     @Test
     void createSkillSpecializationEmptyBody() {
         try {
-            skillSpecializationService.createSkillSpecialization("[]");
-            fail();
-        } catch (BadRequestException e) {
-            assertTrue(true);
+            ResponseDTO response = skillSpecializationService.createSkillSpecialization("[]");
+            verify(skillSpecializationRepository, times(0)).save(any());
+            assertSame(response.getHttpStatus(), HttpStatus.BAD_REQUEST);
         } catch (Exception e) {
             fail();
         }
@@ -155,8 +154,10 @@ class SkillSpecializationServiceTest {
     @Test
     void removeSkillSpecializationOK() {
         try {
-            ResponseEntity<HttpStatus> status = skillSpecializationService.removeSkillSpecialization(1L);
-            assertSame(status.getStatusCode(), HttpStatus.OK);
+            ResponseDTO response = skillSpecializationService.removeSkillSpecialization(1L);
+            verify(skillSpecializationRepository, times(1)).findById(any());
+            verify(skillSpecializationRepository, times(1)).delete(any());
+            assertSame(response.getHttpStatus(), HttpStatus.OK);
         } catch (Exception e) {
             fail();
         }
@@ -165,10 +166,10 @@ class SkillSpecializationServiceTest {
     @Test
     void removeSkillSpecializationMissingId() {
         try {
-            ResponseEntity<HttpStatus> status = skillSpecializationService.removeSkillSpecialization(null);
-            fail();
-        } catch (BadRequestException br) {
-            assertTrue(true);
+            ResponseDTO response = skillSpecializationService.removeSkillSpecialization(null);
+            verify(skillSpecializationRepository, times(0)).findById(any());
+            verify(skillSpecializationRepository, times(0)).delete(any());
+            assertSame(response.getHttpStatus(), HttpStatus.BAD_REQUEST);
         } catch (Exception e) {
             fail();
         }
@@ -177,8 +178,10 @@ class SkillSpecializationServiceTest {
     @Test
     void removeSkillSpecializationBadId() {
         try {
-            ResponseEntity<HttpStatus> status = skillSpecializationService.removeSkillSpecialization(9L);
-            assertSame(status.getStatusCode(), HttpStatus.NOT_FOUND);
+            ResponseDTO response = skillSpecializationService.removeSkillSpecialization(9L);
+            verify(skillSpecializationRepository, times(1)).findById(any());
+            verify(skillSpecializationRepository, times(0)).delete(any());
+            assertSame(response.getHttpStatus(), HttpStatus.NO_CONTENT);
         } catch (Exception e) {
             fail();
         }
@@ -187,8 +190,9 @@ class SkillSpecializationServiceTest {
     @Test
     void updateSkillSpecializationOk() {
         try {
-            ResponseEntity<HttpStatus> status = skillSpecializationService.updateSkillSpecialization(JsonMock.getExistingSkillSpecializationJson());
-            assertSame(status.getStatusCode(), HttpStatus.OK);
+            ResponseDTO response = skillSpecializationService.updateSkillSpecialization(JsonMock.getExistingSkillSpecializationJson());
+            verify(skillSpecializationRepository, times(1)).save(any());
+            assertSame(response.getHttpStatus(), HttpStatus.OK);
         } catch(Exception e) {
             fail();
         }
@@ -197,8 +201,9 @@ class SkillSpecializationServiceTest {
     @Test
     void updateSkillSpecializationNullBody() {
         try {
-            ResponseEntity<HttpStatus> status = skillSpecializationService.updateSkillSpecialization(null);
-            assertSame(status.getStatusCode(), HttpStatus.NO_CONTENT);
+            ResponseDTO response = skillSpecializationService.updateSkillSpecialization(null);
+            verify(skillSpecializationRepository, times(0)).save(any());
+            assertSame(response.getHttpStatus(), HttpStatus.BAD_REQUEST);
         } catch(Exception e) {
             fail();
         }
@@ -207,8 +212,9 @@ class SkillSpecializationServiceTest {
     @Test
     void updateSkillSpecializationEmptyBody() {
         try {
-            ResponseEntity<HttpStatus> status = skillSpecializationService.updateSkillSpecialization("{}");
-            assertSame(status.getStatusCode(), HttpStatus.NO_CONTENT);
+            ResponseDTO response = skillSpecializationService.updateSkillSpecialization("{}");
+            verify(skillSpecializationRepository, times(0)).save(any());
+            assertSame(response.getHttpStatus(), HttpStatus.BAD_REQUEST);
         } catch(Exception e) {
             fail();
         }
@@ -217,12 +223,11 @@ class SkillSpecializationServiceTest {
     @Test
     void updateSkillSpecializationNotExisting() {
         try {
-            ResponseEntity<HttpStatus> status = skillSpecializationService.updateSkillSpecialization(JsonMock.getSkillSpecializationJson());
-            fail();
-        } catch (EntityRequestException ere) {
-            assertTrue(true);
+            ResponseDTO response = skillSpecializationService.updateSkillSpecialization(JsonMock.getSkillSpecializationJson());
+            verify(skillSpecializationRepository, times(0)).save(any());
+            assertSame(response.getHttpStatus(), HttpStatus.BAD_REQUEST);
         } catch(Exception e) {
             fail();
         }
-    }*/
+    }
 }

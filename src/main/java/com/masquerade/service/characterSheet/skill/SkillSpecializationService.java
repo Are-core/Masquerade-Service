@@ -40,7 +40,7 @@ public class SkillSpecializationService {
             if(entries.isEmpty()) {
                 return Responses.ResponseNoContent;
             }
-            return new ResponseDTO(HttpStatus.OK, entries);
+            return new ResponseDTO(HttpStatus.OK, entries.get());
         } catch (Exception e) {
             return Responses.ResponseNotFound;
         }
@@ -81,6 +81,9 @@ public class SkillSpecializationService {
         try {
             Gson gson = new Gson();
             SkillSpecializationEntity specialization = gson.fromJson(rawBody, SkillSpecializationEntity.class);
+            if(specialization == null || specialization.emptyObjectCheck() || !skillSpecializationRepository.existsById(specialization.getId())) {
+                return Responses.ResponseBadRequest;
+            }
             specialization = skillSpecializationRepository.save(specialization);
             return new ResponseDTO(HttpStatus.OK, specialization);
         } catch (Exception e) {
