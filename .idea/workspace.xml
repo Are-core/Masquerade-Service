@@ -4,63 +4,460 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1c20cc1-6b67-4454-929b-ad7c0b38b878" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Chore - Character : Set new response for service &amp; Fix JUnit for new Response format">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/CharacterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/CharacterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/characterSheet/CharacterListItemDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/characterSheet/CharacterListItemDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/characterSheet/CharacterSheetDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/characterSheet/CharacterSheetDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/characterSheet/CharacterEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/characterSheet/CharacterEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/characterSheet/skill/SkillSpecializationEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/characterSheet/skill/SkillSpecializationEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/CharacterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/CharacterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/skill/CharacterHasSkillService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/skill/CharacterHasSkillService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/tools/entity/EntityArguments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/tools/entity/EntityArguments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/masquerade/service/characterSheet/CharacterServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/service/characterSheet/CharacterServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/masquerade/service/characterSheet/skill/SkillSpecializationServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/service/characterSheet/skill/SkillSpecializationServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="nullreturn" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="29OO43MwE5ep6JVEpOMVD3jxktk" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2AQhHHuyMCg8TlKGHEsMPg5OwGm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
-  <component name="RunManager">
-    <configuration name="Tomcat 9.0.63" type="com.poratu.idea.plugins.tomcat" factoryName="SMART_TOMCAT_FACTORY">
-      <option name="adminPort" value="8005" />
-      <option name="contextPath" value="/Masquerade-service" />
-      <option name="docBase" value="C:\Users\Arekor\IdeaProjects\Masquerade-service\src\main\webapp" />
-      <option name="envOptions">
-        <map />
-      </option>
-      <option name="passParentEnvironmentVariables" value="true" />
-      <option name="port" value="8080" />
-      <option name="tomcatInfo">
-        <TomcatInfo>
-          <option name="name" value="Apache Tomcat/9.0.63" />
-          <option name="number" value="0" />
-          <option name="path" value="D:\Programmation\Tomcat\apache-tomcat-9.0.63" />
-          <option name="version" value="9.0.63.0" />
-        </TomcatInfo>
-      </option>
-      <option name="vmOptions" value="" />
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.masquerade.service.characterSheet.skill" />
+      <recent name="com.masquerade.service.characterSheet" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.All in Masquerade-service">
+    <configuration name="All in Masquerade-service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Masquerade-service" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CharacterServiceTest.characterListOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Masquerade-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.masquerade.service.characterSheet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.masquerade.service.characterSheet" />
+      <option name="MAIN_CLASS_NAME" value="com.masquerade.service.characterSheet.CharacterServiceTest" />
+      <option name="METHOD_NAME" value="characterListOk" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CharacterServiceTest.getByIdOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Masquerade-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.masquerade.service.characterSheet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.masquerade.service.characterSheet" />
+      <option name="MAIN_CLASS_NAME" value="com.masquerade.service.characterSheet.CharacterServiceTest" />
+      <option name="METHOD_NAME" value="getByIdOk" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CharacterServiceTest.getByIdWithIncorrectId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Masquerade-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.masquerade.service.characterSheet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.masquerade.service.characterSheet" />
+      <option name="MAIN_CLASS_NAME" value="com.masquerade.service.characterSheet.CharacterServiceTest" />
+      <option name="METHOD_NAME" value="getByIdWithIncorrectId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SkillSpecializationServiceTest.getSkillSpecializationsOK" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Masquerade-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.masquerade.service.characterSheet.skill.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.masquerade.service.characterSheet.skill" />
+      <option name="MAIN_CLASS_NAME" value="com.masquerade.service.characterSheet.skill.SkillSpecializationServiceTest" />
+      <option name="METHOD_NAME" value="getSkillSpecializationsOK" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in Masquerade-service" />
+        <item itemvalue="JUnit.SkillSpecializationServiceTest.getSkillSpecializationsOK" />
+        <item itemvalue="JUnit.CharacterServiceTest.characterListOk" />
+        <item itemvalue="JUnit.CharacterServiceTest.getByIdOk" />
+        <item itemvalue="JUnit.CharacterServiceTest.getByIdWithIncorrectId" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="Feature - Archived added to Character list entity">
+      <created>1654518964350</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1654518964350</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Feature - Sect methods added">
+      <created>1654521597404</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1654521597404</updated>
+    </task>
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e1c20cc1-6b67-4454-929b-ad7c0b38b878" name="Changes" comment="" />
-      <created>1652980470810</created>
+      <changelist id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Fix - Change IsNull method to avoid getting read has a field" />
+      <created>1654947632401</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1652980470810</updated>
+      <updated>1654947632401</updated>
     </task>
+    <task id="LOCAL-00003" summary="Modify - Change Insert &amp; Update method for archetype service">
+      <created>1655029698651</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1655029698651</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Modify - Rename createArchetype function name&#10;Modify - Split RequestMapping with ServicePrefix">
+      <created>1655032067746</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1655032067746</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Modify - Change Add and Update method for a POST alternative&#10;Modify - Split RequestMapping with ServicePrefix">
+      <created>1655032107485</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1655032107485</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Feature - Set return HttpStatus to Archetype services">
+      <created>1655033681651</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1655033681651</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Feature - Set return HttpStatus to Sect services">
+      <created>1655034007390</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1655034007390</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Chore - Remove testing line">
+      <created>1655037171883</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1655037171883</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Feature - Add Jurisdiction service">
+      <created>1655037187773</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1655037187773</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Modify - Remove unused search_by_name functions">
+      <created>1655042328545</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1655042328545</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Feature - Add clan service">
+      <created>1655042351060</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1655042351060</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Feature - Add Title service">
+      <created>1656095429152</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1656095429152</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Chore - Remove unused import">
+      <created>1656095487817</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1656095487817</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Chore - Add package for Entities&#10;Feature - Add Sect data in Titles">
+      <created>1656096969237</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1656096969237</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Feature - Split sect search into a method">
+      <created>1656097940746</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1656097940746</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Feature - Add status service : getList">
+      <created>1656099046602</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1656099046602</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Feature - Add sect update for titles">
+      <created>1656099568510</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1656099568510</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Feature - Change exception for TitleService">
+      <created>1656099939039</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1656099939039</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Feature - Add services for Status">
+      <created>1656102465456</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1656102465456</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Feature - Add relation between Title &amp; Status">
+      <created>1656107810762</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1656107810762</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Feature - Use of JPA ManyToOne for TitleEntity">
+      <created>1656108922253</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1656108922253</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Chore - TitleEntity : Renaming fields for java format">
+      <created>1656109583969</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1656109583969</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Chore - StatusEntity : Renaming fields for java format + Adding ManyToOne">
+      <created>1656110560286</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1656110560286</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Chore - Export string for prefixes to an external class">
+      <created>1656142151468</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1656142151468</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Chore - Add Column name for entities &amp; Refactoring name">
+      <created>1656142885920</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1656142885920</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Modify - Change character entity to DTO">
+      <created>1656144236567</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1656144236567</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Chore - Change package structure">
+      <created>1656146676814</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1656146676814</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Modify - Rework service path prefixes">
+      <created>1656147644263</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1656147644263</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Feature - Add Skill services">
+      <created>1656251982497</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1656251982497</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Feature - Add Skill set for character service">
+      <created>1656261096526</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1656261096526</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Feature - Add Skill set for character service">
+      <created>1656261103883</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1656261103883</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Feature - Add to character sheet :&#10; - archetype&#10; - sect&#10; - clan&#10; - jurisdiction&#10; - skills">
+      <created>1656274651294</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1656274651294</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Feature - Add CharacterStatus getter service">
+      <created>1656277337478</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1656277337478</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Feature - Update dependencies">
+      <created>1656533024416</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1656533024416</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Feature - Set firsts JUnit tests">
+      <created>1656539173780</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1656539173780</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Chore - Moved DTO corresponding to characterSheet to sub folder">
+      <created>1656668043831</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1656668043832</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Feature - SkillSpecialization : Set new response for service">
+      <created>1656677337874</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1656677337874</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Chore - SkillSpecialization : Remove unnecessary catches">
+      <created>1656697673298</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1656697673298</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -72,5 +469,52 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Chore - Add package for Entities&#10;Feature - Add Sect data in Titles" />
+    <MESSAGE value="Feature - Split sect search into a method" />
+    <MESSAGE value="Feature - Add status service : getList" />
+    <MESSAGE value="Feature - Add sect update for titles" />
+    <MESSAGE value="Feature - Change exception for TitleService" />
+    <MESSAGE value="Feature - Add services for Status" />
+    <MESSAGE value="Feature - Add relation between Title &amp; Status" />
+    <MESSAGE value="Feature - Use of JPA ManyToOne for TitleEntity" />
+    <MESSAGE value="Chore - TitleEntity : Renaming fields for java format" />
+    <MESSAGE value="Chore - StatusEntity : Renaming fields for java format + Adding ManyToOne" />
+    <MESSAGE value="Chore - Export string for prefixes to an external class" />
+    <MESSAGE value="Chore - Add Column name for entities &amp; Refactoring name" />
+    <MESSAGE value="Modify - Change character entity to DTO" />
+    <MESSAGE value="Chore - Change package structure" />
+    <MESSAGE value="Modify - Rework service path prefixes" />
+    <MESSAGE value="Feature - Add Skill services" />
+    <MESSAGE value="Feature - Add Skill set for character service" />
+    <MESSAGE value="Feature - Add to character sheet :&#10; - archetype&#10; - sect&#10; - clan&#10; - jurisdiction&#10; - skills" />
+    <MESSAGE value="Feature - Add CharacterStatus getter service" />
+    <MESSAGE value="Feature - Update dependencies" />
+    <MESSAGE value="Feature - Set firsts JUnit tests" />
+    <MESSAGE value="Chore - Moved DTO corresponding to characterSheet to sub folder" />
+    <MESSAGE value="Feature - SkillSpecialization : Set new response for service" />
+    <MESSAGE value="Chore - SkillSpecialization : Remove unnecessary catches" />
+    <MESSAGE value="Chore - Character : Set new response for service &amp; Fix JUnit for new Response format" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chore - Character : Set new response for service &amp; Fix JUnit for new Response format" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.masquerade.exception.BadRequestException" memberName="cause" />
+        <PinnedItemInfo parentTag="com.masquerade.model.entity.characterSheet.skill.CharacterHasSkillKey" memberName="characterId" />
+        <PinnedItemInfo parentTag="java.util.Optional" memberName="value" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Masquerade_service$SkillSpecializationServiceTest_updateSkillSpecializationEmptyBody.ic" NAME="SkillSpecializationServiceTest.updateSkillSpecializationEmptyBody Coverage Results" MODIFIED="1656627481571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.service.characterSheet.skill.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$All_in_Masquerade_service__4_.ic" NAME="All in Masquerade-service (4) Coverage Results" MODIFIED="1656627634422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Masquerade_service$All_in_Masquerade_service__1_.ic" NAME="All in Masquerade-service (1) Coverage Results" MODIFIED="1656697083732" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Masquerade_service$All_in_Masquerade_service.ic" NAME="All in Masquerade-service Coverage Results" MODIFIED="1656708239854" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Masquerade_service$All_in_Masquerade_service__3_.ic" NAME="All in Masquerade-service (3) Coverage Results" MODIFIED="1656627398150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Masquerade_service$All_in_Masquerade_service__2_.ic" NAME="All in Masquerade-service (2) Coverage Results" MODIFIED="1656627487932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
