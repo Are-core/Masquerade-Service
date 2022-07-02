@@ -1,9 +1,11 @@
 package com.masquerade.model.dto.characterSheet.parameter;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.masquerade.model.entity.characterSheet.global.SectEntity;
 import com.masquerade.model.entity.characterSheet.parameter.StatusEntity;
 import com.masquerade.model.entity.characterSheet.parameter.StatusTypeEntity;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class DeclaredStatusDTO extends StatusEntity {
     private Long entity;
 

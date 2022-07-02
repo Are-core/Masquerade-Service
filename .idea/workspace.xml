@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Feature - CharacterListItemDTO : Add JUnit test">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/model/dto/characterSheet/parameter/CharacterStatusDTOTest.java" afterDir="false" />
+    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Feature - CharacterSheetDTO : Add missing JUnit test">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/model/dto/characterSheet/parameter/DeclaredStatusDTOTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/characterSheet/parameter/CharacterStatusDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/characterSheet/parameter/CharacterStatusDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/masquerade/model/dto/characterSheet/CharacterSheetDTOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/model/dto/characterSheet/CharacterSheetDTOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/characterSheet/parameter/DeclaredStatusDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/characterSheet/parameter/DeclaredStatusDTO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,21 +86,6 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.Junit tests">
-    <configuration name="ArchetypeEntityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Masquerade-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.masquerade.model.entity.characterSheet.global.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.masquerade.model.entity.characterSheet.global" />
-      <option name="MAIN_CLASS_NAME" value="com.masquerade.model.entity.characterSheet.global.ArchetypeEntityTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CharacterListItemDTOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Masquerade-service" />
       <extension name="coverage">
@@ -163,6 +147,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DeclaredStatusDTOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Masquerade-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.masquerade.model.dto.characterSheet.parameter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.masquerade.model.dto.characterSheet.parameter" />
+      <option name="MAIN_CLASS_NAME" value="com.masquerade.model.dto.characterSheet.parameter.DeclaredStatusDTOTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Junit tests" type="JUnit" factoryName="JUnit">
       <module name="Masquerade-service" />
       <extension name="coverage">
@@ -187,19 +186,19 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.Junit tests" />
-      <item itemvalue="JUnit.ArchetypeEntityTest" />
       <item itemvalue="JUnit.CharacterListItemDTOTest" />
       <item itemvalue="JUnit.CharacterSheetDTOTest" />
       <item itemvalue="JUnit.CharacterStatusDTOTest" />
       <item itemvalue="JUnit.CharacterStatusDTOTest.testStatus" />
+      <item itemvalue="JUnit.DeclaredStatusDTOTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DeclaredStatusDTOTest" />
         <item itemvalue="JUnit.CharacterStatusDTOTest.testStatus" />
         <item itemvalue="JUnit.CharacterStatusDTOTest" />
         <item itemvalue="JUnit.CharacterListItemDTOTest" />
         <item itemvalue="JUnit.CharacterSheetDTOTest" />
-        <item itemvalue="JUnit.ArchetypeEntityTest" />
       </list>
     </recent_temporary>
   </component>
@@ -211,20 +210,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654947632401</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Feature - Add Jurisdiction service">
-      <created>1655037187773</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1655037187773</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Modify - Remove unused search_by_name functions">
-      <created>1655042328545</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1655042328545</updated>
     </task>
     <task id="LOCAL-00011" summary="Feature - Add clan service">
       <created>1655042351060</created>
@@ -555,7 +540,21 @@
       <option name="project" value="LOCAL" />
       <updated>1656778304725</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Feature - CharacterStatusDTO : Add JUnit test">
+      <created>1656779219641</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1656779219641</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Feature - CharacterSheetDTO : Add missing JUnit test">
+      <created>1656779240558</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1656779240558</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -581,8 +580,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Feature - Add CharacterStatus getter service" />
-    <MESSAGE value="Feature - Update dependencies" />
     <MESSAGE value="Feature - Set firsts JUnit tests" />
     <MESSAGE value="Chore - Moved DTO corresponding to characterSheet to sub folder" />
     <MESSAGE value="Feature - SkillSpecialization : Set new response for service" />
@@ -606,7 +603,9 @@
     <MESSAGE value="Feature - ArchetypeEntity : Add JUnit test" />
     <MESSAGE value="Feature - CharacterSheetDTO : Add JUnit test" />
     <MESSAGE value="Feature - CharacterListItemDTO : Add JUnit test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature - CharacterListItemDTO : Add JUnit test" />
+    <MESSAGE value="Feature - CharacterStatusDTO : Add JUnit test" />
+    <MESSAGE value="Feature - CharacterSheetDTO : Add missing JUnit test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature - CharacterSheetDTO : Add missing JUnit test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -646,7 +645,7 @@
       <FILTER>com.masquerade.tools.controller.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Masquerade_service$All_in_Masquerade_service__2_.ic" NAME="All in Masquerade-service (2) Coverage Results" MODIFIED="1656757904292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/Masquerade_service$Junit_tests.ic" NAME="Junit tests Coverage Results" MODIFIED="1656779147815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Masquerade_service$Junit_tests.ic" NAME="Junit tests Coverage Results" MODIFIED="1656783005533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <EXCLUDED_FILTER>com.masquerade.tools.controller.Section</EXCLUDED_FILTER>
       <EXCLUDED_FILTER>com.masquerade.tools.entity.EntityArguments</EXCLUDED_FILTER>
     </SUITE>
@@ -683,6 +682,9 @@
     </SUITE>
     <SUITE FILE_PATH="coverage/Masquerade_service$SectEntityTest.ic" NAME="SectEntityTest Coverage Results" MODIFIED="1656773922232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.masquerade.model.entity.characterSheet.global.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$DeclaredStatusDTOTest.ic" NAME="DeclaredStatusDTOTest Coverage Results" MODIFIED="1656782922899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.model.dto.characterSheet.parameter.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Masquerade_service$ArchetypeEntityTest.ic" NAME="ArchetypeEntityTest Coverage Results" MODIFIED="1656775327555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.masquerade.model.entity.characterSheet.global.*</FILTER>
