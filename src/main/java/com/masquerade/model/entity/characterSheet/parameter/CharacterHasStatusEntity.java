@@ -2,7 +2,6 @@ package com.masquerade.model.entity.characterSheet.parameter;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.masquerade.model.entity.characterSheet.CharacterEntity;
-import com.masquerade.model.entity.characterSheet.skill.SkillEntity;
 
 import javax.persistence.*;
 

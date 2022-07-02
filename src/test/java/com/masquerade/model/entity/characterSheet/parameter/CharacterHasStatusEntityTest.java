@@ -1,7 +1,6 @@
 package com.masquerade.model.entity.characterSheet.parameter;
 
 import com.masquerade.model.entity.characterSheet.CharacterEntity;
-import com.masquerade.model.entity.characterSheet.skill.SkillEntity;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
