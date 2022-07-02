@@ -259,6 +259,15 @@ class CharacterSheetDTOTest {
     }
 
     @Test
+    public void testSect() {
+        SectEntity sect = new SectEntity();
+        sect.setId(6L);
+        characterSheetDTO.setSect(sect);
+        assertNotNull(characterSheetDTO.getSect());
+        assertEquals(6L, characterSheetDTO.getSect().getId());
+    }
+
+    @Test
     public void testArchetype() {
         ArchetypeEntity archetype = new ArchetypeEntity();
         archetype.setId(6L);
