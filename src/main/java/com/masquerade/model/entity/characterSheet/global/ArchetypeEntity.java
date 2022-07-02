@@ -1,8 +1,11 @@
 package com.masquerade.model.entity.characterSheet.global;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.persistence.*;
 
 @Table(name="archetype")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @Entity
 public class ArchetypeEntity {
     @Id
@@ -29,11 +32,20 @@ public class ArchetypeEntity {
         this.noteFR = noteFR;
     }
 
+    public ArchetypeEntity(Long id, String descriptionEN, String descriptionFR, String noteEN, String noteFR) {
+        this(descriptionEN, descriptionFR, noteEN, noteFR);
+        this.id = id;
+    }
+
     public boolean emptyObjectCheck() {
         return (this.getDescriptionEN() == null &&
                 this.getDescriptionFR() == null &&
                 this.getNoteEN() == null &&
                 this.getNoteFR() == null);
+    }
+
+    public boolean isUpdatable() {
+        return this.id != null && this.id > 0L;
     }
 
     public Long getId() {
