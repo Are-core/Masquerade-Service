@@ -1,10 +1,12 @@
 package com.masquerade.model.entity.characterSheet.parameter;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.masquerade.model.entity.characterSheet.global.SectEntity;
 
 import javax.persistence.*;
 
-@Table(name="status")
+@Table(name = "status")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @Entity
 public class StatusEntity {
 
@@ -29,16 +31,21 @@ public class StatusEntity {
     @Column(name = "note_FR")
     private String noteFR;
 
-    public StatusEntity() {}
+    public StatusEntity() {
+    }
 
-    public StatusEntity(Long id, SectEntity sect, StatusTypeEntity statusType, String descriptionEN, String descriptionFR, String noteEN, String noteFR) {
-        this.id = id;
+    public StatusEntity(SectEntity sect, StatusTypeEntity statusType, String descriptionEN, String descriptionFR, String noteEN, String noteFR) {
         this.sect = sect;
         this.statusType = statusType;
         this.descriptionEN = descriptionEN;
         this.descriptionFR = descriptionFR;
         this.noteEN = noteEN;
         this.noteFR = noteFR;
+    }
+
+    public StatusEntity(Long id, SectEntity sect, StatusTypeEntity statusType, String descriptionEN, String descriptionFR, String noteEN, String noteFR) {
+        this(sect, statusType, descriptionEN, descriptionFR, noteEN, noteFR);
+        this.id = id;
     }
 
     public boolean emptyObjectCheck() {
@@ -56,11 +63,11 @@ public class StatusEntity {
         this.id = id;
     }
 
-    public SectEntity getSect_id() {
+    public SectEntity getSect() {
         return sect;
     }
 
-    public void setSect_id(SectEntity sect_id) {
+    public void setSect(SectEntity sect_id) {
         this.sect = sect_id;
     }
 

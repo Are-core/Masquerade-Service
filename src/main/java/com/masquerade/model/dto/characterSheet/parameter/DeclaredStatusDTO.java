@@ -17,7 +17,7 @@ public class DeclaredStatusDTO extends StatusEntity {
     }
 
     public DeclaredStatusDTO(StatusEntity status, Long entity) {
-        super(status.getId(), status.getSect_id(), status.getStatusType(), status.getDescriptionEN(), status.getDescriptionFR(), status.getNoteEN(), status.getNoteFR());
+        super(status.getId(), status.getSect(), status.getStatusType(), status.getDescriptionEN(), status.getDescriptionFR(), status.getNoteEN(), status.getNoteFR());
         this.entity = entity;
     }
 

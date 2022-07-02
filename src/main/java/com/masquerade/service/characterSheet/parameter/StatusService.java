@@ -94,7 +94,7 @@ public class StatusService {
                 .orElseThrow(IllegalArgumentException::new);
         statusRepository.findById(id)
                 .orElseThrow(IllegalArgumentException::new)
-                .setSect_id(sect);
+                .setSect(sect);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 

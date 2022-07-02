@@ -95,13 +95,13 @@ class SkillEntityTest {
     }
 
     @Test
-    void tesNoteEN() {
+    void testNoteEN() {
         skillEntity.setNoteEN("text");
         assertEquals("text", skillEntity.getNoteEN());
     }
 
     @Test
-    void tesNoteFR() {
+    void testNoteFR() {
         skillEntity.setNoteFR("text");
         assertEquals("text", skillEntity.getNoteFR());
     }
