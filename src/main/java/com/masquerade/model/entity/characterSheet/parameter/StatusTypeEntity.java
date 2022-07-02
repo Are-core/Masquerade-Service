@@ -1,8 +1,11 @@
 package com.masquerade.model.entity.characterSheet.parameter;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.persistence.*;
 
 @Table(name="status_type")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @Entity
 public class StatusTypeEntity {
     @Id
@@ -26,6 +29,11 @@ public class StatusTypeEntity {
         this.descriptionFR = descriptionFR;
         this.noteEN = noteEN;
         this.noteFR = noteFR;
+    }
+
+    public StatusTypeEntity(Long id, String descriptionEN, String descriptionFR, String noteEN, String noteFR) {
+        this(descriptionEN, descriptionFR, noteEN, noteFR);
+        this.id = id;
     }
 
     public boolean emptyObjectCheck() {
