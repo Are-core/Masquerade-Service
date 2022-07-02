@@ -20,11 +20,13 @@ public class Responses {
 
     public static ResponseDTO MissingArguments(List<String> arguments) {
         ResponseDTO response = new ResponseDTO(HttpStatus.BAD_REQUEST);
-        StringJoiner str = new StringJoiner(" - ", "","");
-        for(String argument: arguments) {
-            str.add(argument);
+        if(arguments != null && !arguments.isEmpty()) {
+            StringJoiner str = new StringJoiner(" - ", "", "");
+            for (String argument : arguments) {
+                str.add(argument);
+            }
+            response.setMessage(String.format("%s : missing argument%s", str, arguments.size() > 1 ? "s" : ""));
         }
-        response.setMessage(String.format("%s : missing argument%s", str, arguments.size()>1? "s" : ""));
         return response;
     }
 

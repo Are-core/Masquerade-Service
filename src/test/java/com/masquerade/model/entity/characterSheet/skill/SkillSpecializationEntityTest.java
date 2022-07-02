@@ -30,7 +30,6 @@ class SkillSpecializationEntityTest {
                 fail();
             }
         }
-        assertTrue(true);
     }
 
     /* Constructor */
