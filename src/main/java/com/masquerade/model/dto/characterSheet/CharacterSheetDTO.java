@@ -21,26 +21,26 @@ public class CharacterSheetDTO {
     private String name;
 
     private Integer physical;
-    private Boolean physicalstrength;
-    private Boolean physicaldexterity;
-    private Boolean physicalstamina;
+    private Boolean physicalStrength;
+    private Boolean physicalDexterity;
+    private Boolean physicalStamina;
 
     private Integer social;
-    private Boolean socialcharisma;
-    private Boolean socialmanipulation;
-    private Boolean socialappearance;
+    private Boolean socialCharisma;
+    private Boolean socialManipulation;
+    private Boolean socialAppearance;
 
     private Integer mental;
-    private Boolean mentalperception;
-    private Boolean mentalintelligence;
-    private Boolean mentalwits;
+    private Boolean mentalPerception;
+    private Boolean mentalIntelligence;
+    private Boolean mentalWits;
 
     private Integer generation;
     private Integer blood;
     private Integer willpower;
 
     private Integer morality;
-    private Integer morality_merit;
+    private Integer moralityMerit;
 
     private Integer healthy;
     private Integer injured;
@@ -52,7 +52,7 @@ public class CharacterSheetDTO {
 
     private ArchetypeEntity archetype;
 
-    private Integer bloodline_id;
+    private Integer bloodlineId;
 
     private SectEntity sect;
 
@@ -65,29 +65,29 @@ public class CharacterSheetDTO {
     public CharacterSheetDTO() {
     }
 
-    public CharacterSheetDTO(Long id, Boolean npc, Boolean archived, String player, String name, Integer physical, Boolean physicalstrength, Boolean physicaldexterity, Boolean physicalstamina, Integer social, Boolean socialcharisma, Boolean socialmanipulation, Boolean socialappearance, Integer mental, Boolean mentalperception, Boolean mentalintelligence, Boolean mentalwits, Integer generation, Integer blood, Integer willpower, Integer morality, Integer morality_merit, Integer healthy, Integer injured, Integer incapacitated, Integer beast, Integer madness, String note, ArchetypeEntity archetype, Integer bloodline_id, SectEntity sect, ClanEntity clan, JurisdictionEntity jurisdiction, List<DeclaredSkillDTO> skills) {
+    public CharacterSheetDTO(Long id, Boolean npc, Boolean archived, String player, String name, Integer physical, Boolean physicalStrength, Boolean physicalDexterity, Boolean physicalStamina, Integer social, Boolean socialCharisma, Boolean socialManipulation, Boolean socialAppearance, Integer mental, Boolean mentalPerception, Boolean mentalIntelligence, Boolean mentalWits, Integer generation, Integer blood, Integer willpower, Integer morality, Integer moralityMerit, Integer healthy, Integer injured, Integer incapacitated, Integer beast, Integer madness, String note, ArchetypeEntity archetype, Integer bloodlineId, SectEntity sect, ClanEntity clan, JurisdictionEntity jurisdiction, List<DeclaredSkillDTO> skills) {
         this.id = id;
         this.npc = npc;
         this.archived = archived;
         this.player = player;
         this.name = name;
         this.physical = physical;
-        this.physicalstrength = physicalstrength;
-        this.physicaldexterity = physicaldexterity;
-        this.physicalstamina = physicalstamina;
+        this.physicalStrength = physicalStrength;
+        this.physicalDexterity = physicalDexterity;
+        this.physicalStamina = physicalStamina;
         this.social = social;
-        this.socialcharisma = socialcharisma;
-        this.socialmanipulation = socialmanipulation;
-        this.socialappearance = socialappearance;
+        this.socialCharisma = socialCharisma;
+        this.socialManipulation = socialManipulation;
+        this.socialAppearance = socialAppearance;
         this.mental = mental;
-        this.mentalperception = mentalperception;
-        this.mentalintelligence = mentalintelligence;
-        this.mentalwits = mentalwits;
+        this.mentalPerception = mentalPerception;
+        this.mentalIntelligence = mentalIntelligence;
+        this.mentalWits = mentalWits;
         this.generation = generation;
         this.blood = blood;
         this.willpower = willpower;
         this.morality = morality;
-        this.morality_merit = morality_merit;
+        this.moralityMerit = moralityMerit;
         this.healthy = healthy;
         this.injured = injured;
         this.incapacitated = incapacitated;
@@ -95,7 +95,7 @@ public class CharacterSheetDTO {
         this.madness = madness;
         this.note = note;
         this.archetype = archetype;
-        this.bloodline_id = bloodline_id;
+        this.bloodlineId = bloodlineId;
         this.sect = sect;
         this.clan = clan;
         this.jurisdiction = jurisdiction;
@@ -109,22 +109,22 @@ public class CharacterSheetDTO {
         this.player = character.getPlayer();
         this.name = character.getName();
         this.physical = character.getPhysical();
-        this.physicalstrength = character.getPhysicalStrength();
-        this.physicaldexterity = character.getPhysicalDexterity();
-        this.physicalstamina = character.getPhysicalStamina();
+        this.physicalStrength = character.getPhysicalStrength();
+        this.physicalDexterity = character.getPhysicalDexterity();
+        this.physicalStamina = character.getPhysicalStamina();
         this.social = character.getSocial();
-        this.socialcharisma = character.getSocialCharisma();
-        this.socialmanipulation = character.getSocialManipulation();
-        this.socialappearance = character.getSocialAppearance();
+        this.socialCharisma = character.getSocialCharisma();
+        this.socialManipulation = character.getSocialManipulation();
+        this.socialAppearance = character.getSocialAppearance();
         this.mental = character.getMental();
-        this.mentalperception = character.getMentalPerception();
-        this.mentalintelligence = character.getMentalIntelligence();
-        this.mentalwits = character.getMentalWits();
+        this.mentalPerception = character.getMentalPerception();
+        this.mentalIntelligence = character.getMentalIntelligence();
+        this.mentalWits = character.getMentalWits();
         this.generation = character.getGeneration();
         this.blood = character.getBlood();
         this.willpower = character.getWillpower();
         this.morality = character.getMorality();
-        this.morality_merit = character.getMoralityMerit();
+        this.moralityMerit = character.getMoralityMerit();
         this.healthy = character.getHealthy();
         this.injured = character.getInjured();
         this.incapacitated = character.getIncapacitated();
@@ -132,7 +132,7 @@ public class CharacterSheetDTO {
         this.madness = character.getMadness();
         this.note = character.getNote();
         this.archetype = character.getArchetype();
-        this.bloodline_id = character.getBloodline();
+        this.bloodlineId = character.getBloodline();
         this.sect = character.getSect();
         this.clan = character.getClan();
         this.jurisdiction = character.getJurisdiction();
@@ -186,28 +186,28 @@ public class CharacterSheetDTO {
         this.physical = physical;
     }
 
-    public Boolean getPhysicalstrength() {
-        return physicalstrength;
+    public Boolean getPhysicalStrength() {
+        return physicalStrength;
     }
 
-    public void setPhysicalstrength(Boolean physicalstrength) {
-        this.physicalstrength = physicalstrength;
+    public void setPhysicalStrength(Boolean physicalStrength) {
+        this.physicalStrength = physicalStrength;
     }
 
-    public Boolean getPhysicaldexterity() {
-        return physicaldexterity;
+    public Boolean getPhysicalDexterity() {
+        return physicalDexterity;
     }
 
-    public void setPhysicaldexterity(Boolean physicaldexterity) {
-        this.physicaldexterity = physicaldexterity;
+    public void setPhysicalDexterity(Boolean physicalDexterity) {
+        this.physicalDexterity = physicalDexterity;
     }
 
-    public Boolean getPhysicalstamina() {
-        return physicalstamina;
+    public Boolean getPhysicalStamina() {
+        return physicalStamina;
     }
 
-    public void setPhysicalstamina(Boolean physicalstamina) {
-        this.physicalstamina = physicalstamina;
+    public void setPhysicalStamina(Boolean physicalStamina) {
+        this.physicalStamina = physicalStamina;
     }
 
     public Integer getSocial() {
@@ -218,28 +218,28 @@ public class CharacterSheetDTO {
         this.social = social;
     }
 
-    public Boolean getSocialcharisma() {
-        return socialcharisma;
+    public Boolean getSocialCharisma() {
+        return socialCharisma;
     }
 
-    public void setSocialcharisma(Boolean socialcharisma) {
-        this.socialcharisma = socialcharisma;
+    public void setSocialCharisma(Boolean socialCharisma) {
+        this.socialCharisma = socialCharisma;
     }
 
-    public Boolean getSocialmanipulation() {
-        return socialmanipulation;
+    public Boolean getSocialManipulation() {
+        return socialManipulation;
     }
 
-    public void setSocialmanipulation(Boolean socialmanipulation) {
-        this.socialmanipulation = socialmanipulation;
+    public void setSocialManipulation(Boolean socialManipulation) {
+        this.socialManipulation = socialManipulation;
     }
 
-    public Boolean getSocialappearance() {
-        return socialappearance;
+    public Boolean getSocialAppearance() {
+        return socialAppearance;
     }
 
-    public void setSocialappearance(Boolean socialappearance) {
-        this.socialappearance = socialappearance;
+    public void setSocialAppearance(Boolean socialAppearance) {
+        this.socialAppearance = socialAppearance;
     }
 
     public Integer getMental() {
@@ -250,28 +250,28 @@ public class CharacterSheetDTO {
         this.mental = mental;
     }
 
-    public Boolean getMentalperception() {
-        return mentalperception;
+    public Boolean getMentalPerception() {
+        return mentalPerception;
     }
 
-    public void setMentalperception(Boolean mentalperception) {
-        this.mentalperception = mentalperception;
+    public void setMentalPerception(Boolean mentalPerception) {
+        this.mentalPerception = mentalPerception;
     }
 
-    public Boolean getMentalintelligence() {
-        return mentalintelligence;
+    public Boolean getMentalIntelligence() {
+        return mentalIntelligence;
     }
 
-    public void setMentalintelligence(Boolean mentalintelligence) {
-        this.mentalintelligence = mentalintelligence;
+    public void setMentalIntelligence(Boolean mentalIntelligence) {
+        this.mentalIntelligence = mentalIntelligence;
     }
 
-    public Boolean getMentalwits() {
-        return mentalwits;
+    public Boolean getMentalWits() {
+        return mentalWits;
     }
 
-    public void setMentalwits(Boolean mentalwits) {
-        this.mentalwits = mentalwits;
+    public void setMentalWits(Boolean mentalWits) {
+        this.mentalWits = mentalWits;
     }
 
     public Integer getGeneration() {
@@ -306,12 +306,12 @@ public class CharacterSheetDTO {
         this.morality = morality;
     }
 
-    public Integer getMorality_merit() {
-        return morality_merit;
+    public Integer getMoralityMerit() {
+        return moralityMerit;
     }
 
-    public void setMorality_merit(Integer morality_merit) {
-        this.morality_merit = morality_merit;
+    public void setMoralityMerit(Integer moralityMerit) {
+        this.moralityMerit = moralityMerit;
     }
 
     public Integer getHealthy() {
@@ -370,12 +370,12 @@ public class CharacterSheetDTO {
         this.archetype = archetype;
     }
 
-    public Integer getBloodline_id() {
-        return bloodline_id;
+    public Integer getBloodlineId() {
+        return bloodlineId;
     }
 
-    public void setBloodline_id(Integer bloodline_id) {
-        this.bloodline_id = bloodline_id;
+    public void setBloodlineId(Integer bloodlineId) {
+        this.bloodlineId = bloodlineId;
     }
 
     public SectEntity getSect() {
