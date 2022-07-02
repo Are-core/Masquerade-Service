@@ -1,8 +1,11 @@
 package com.masquerade.model.entity.characterSheet.parameter;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.persistence.*;
 
 @Table(name="jurisdiction")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @Entity
 public class JurisdictionEntity {
     @Id
@@ -19,9 +22,17 @@ public class JurisdictionEntity {
     public JurisdictionEntity(String description) {
         this.description = description;
     }
+    public JurisdictionEntity(Long id, String description) {
+        this(description);
+        this.id = id;
+    }
 
     public boolean emptyObjectCheck() {
         return (this.getDescription() == null);
+    }
+
+    public boolean isUpdatable() {
+        return this.id != null && this.id > 0L;
     }
 
     public Long getId() {

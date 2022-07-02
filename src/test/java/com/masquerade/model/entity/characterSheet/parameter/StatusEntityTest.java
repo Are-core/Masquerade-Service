@@ -84,6 +84,14 @@ class StatusEntityTest {
         assertFalse(statusEntity.emptyObjectCheck());
     }
 
+    @Test
+    public void testIsUpdatable() {
+        statusEntity.setId(null);
+        assertFalse(statusEntity.isUpdatable());
+        statusEntity.setId(2L);
+        assertTrue(statusEntity.isUpdatable());
+    }
+
     /* Setters / Getters */
     @Test
     void testId() {

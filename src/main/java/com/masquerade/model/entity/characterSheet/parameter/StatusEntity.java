@@ -55,6 +55,10 @@ public class StatusEntity {
                 this.getNoteFR() == null);
     }
 
+    public boolean isUpdatable() {
+        return this.id != null && this.id > 0L;
+    }
+
     public Long getId() {
         return id;
     }
