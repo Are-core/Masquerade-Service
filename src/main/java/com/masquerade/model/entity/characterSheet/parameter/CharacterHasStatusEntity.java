@@ -1,11 +1,13 @@
 package com.masquerade.model.entity.characterSheet.parameter;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.masquerade.model.entity.characterSheet.CharacterEntity;
 import com.masquerade.model.entity.characterSheet.skill.SkillEntity;
 
 import javax.persistence.*;
 
 @Table(name="character_has_status")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @Entity
 public class CharacterHasStatusEntity {
     @EmbeddedId
@@ -25,6 +27,11 @@ public class CharacterHasStatusEntity {
     private Long entityId;
 
     public CharacterHasStatusEntity() {
+    }
+
+    public CharacterHasStatusEntity(Long characterId, Long statusId, Long entityId) {
+        this.id = new CharacterHasStatusKey(characterId, statusId);
+        this.entityId = entityId;
     }
 
     public CharacterHasStatusEntity(CharacterHasStatusKey id, Long entityId) {

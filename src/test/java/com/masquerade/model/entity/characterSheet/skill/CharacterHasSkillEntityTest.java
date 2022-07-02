@@ -49,6 +49,14 @@ class CharacterHasSkillEntityTest {
         assertNotNull(characterHasSkillEntity.getSkill());
         assertNotNull(characterHasSkillEntity.getSkillSpecialization());
         assertNotNull(characterHasSkillEntity.getLevel());
+
+        characterHasSkillEntity = new CharacterHasSkillEntity(1L, 2L, new CharacterEntity(), new SkillEntity(), 0, new SkillSpecializationEntity());
+        assertEquals(2L, characterHasSkillEntity.getId().skillId);
+        assertEquals(1L, characterHasSkillEntity.getId().characterId);
+        assertNotNull(characterHasSkillEntity.getCharacter());
+        assertNotNull(characterHasSkillEntity.getSkill());
+        assertNotNull(characterHasSkillEntity.getSkillSpecialization());
+        assertNotNull(characterHasSkillEntity.getLevel());
     }
 
     /* Methods */

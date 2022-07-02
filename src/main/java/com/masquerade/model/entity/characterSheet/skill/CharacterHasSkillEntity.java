@@ -32,6 +32,14 @@ public class CharacterHasSkillEntity {
     public CharacterHasSkillEntity() {
     }
 
+    public CharacterHasSkillEntity(Long characterId, Long skillId, CharacterEntity character, SkillEntity skill, Integer level, SkillSpecializationEntity skillSpecialization) {
+        this.id = new CharacterHasSkillKey(characterId, skillId);
+        this.character = character;
+        this.skill = skill;
+        this.level = level;
+        this.skillSpecialization = skillSpecialization;
+    }
+
     public CharacterHasSkillEntity(CharacterHasSkillKey id, CharacterEntity character, SkillEntity skill, Integer level, SkillSpecializationEntity skillSpecialization) {
         this.id = id;
         this.character = character;
