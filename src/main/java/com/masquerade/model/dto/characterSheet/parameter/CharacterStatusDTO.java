@@ -1,7 +1,10 @@
 package com.masquerade.model.dto.characterSheet.parameter;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.util.List;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class CharacterStatusDTO {
     private Long id;
     private String name;
@@ -16,8 +19,7 @@ public class CharacterStatusDTO {
     }
 
     public CharacterStatusDTO(Long id, String name, List<DeclaredStatusDTO> status) {
-        this.id = id;
-        this.name = name;
+        this(id, name);
         this.status = status;
     }
 
