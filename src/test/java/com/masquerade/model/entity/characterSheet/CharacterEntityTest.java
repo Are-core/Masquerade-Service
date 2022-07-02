@@ -29,7 +29,9 @@ class CharacterEntityTest {
         for (Field field : fields) {
             field.setAccessible(true);
             try {
-                assertNull(field.get(character));
+                if(!field.getName().equals("__$lineHits$__")) {
+                    assertNull(field.get(character));
+                }
             } catch (Exception e) {
                 fail();
             }

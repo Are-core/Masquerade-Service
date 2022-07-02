@@ -3,6 +3,8 @@ package com.masquerade.model.entity.characterSheet.skill;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.lang.reflect.Field;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class SkillSpecializationEntityTest {
@@ -12,6 +14,23 @@ class SkillSpecializationEntityTest {
     @BeforeEach
     public void setUp() {
         skillSpecialization = new SkillSpecializationEntity();
+    }
+
+    @Test
+    public void testNullFields()  {
+        setUp();
+        Field[] fields = skillSpecialization.getClass().getDeclaredFields();
+        for (Field field : fields) {
+            field.setAccessible(true);
+            try {
+                if(!field.getName().equals("__$lineHits$__")) {
+                    assertNull(field.get(skillSpecialization));
+                }
+            } catch (Exception e) {
+                fail();
+            }
+        }
+        assertTrue(true);
     }
 
     /* Constructor */
