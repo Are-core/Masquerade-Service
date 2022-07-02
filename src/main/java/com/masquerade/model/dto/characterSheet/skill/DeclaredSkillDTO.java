@@ -1,11 +1,15 @@
 package com.masquerade.model.dto.characterSheet.skill;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.masquerade.model.entity.characterSheet.skill.SkillEntity;
 import com.masquerade.model.entity.characterSheet.skill.SkillSpecializationEntity;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class DeclaredSkillDTO extends SkillEntity {
     private Integer level;
     private SkillSpecializationEntity specialization;
+
+    public DeclaredSkillDTO() {}
 
     public DeclaredSkillDTO(Long id, Integer costId, String descriptionEN, String descriptionFR, Boolean isDuplicable, Boolean hasSpecialization, String noteEN, String noteFR, Integer level, SkillSpecializationEntity specialization) {
         super(id, costId, descriptionEN, descriptionFR, isDuplicable, hasSpecialization, noteEN, noteFR);

@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Feature - DeclaredStatusDTO : Add JUnit test">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/model/dto/characterSheet/skill/CharacterSkillsDTOTest.java" afterDir="false" />
+    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Feature - CharacterSkillsDTO : Add JUnit test">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/model/dto/characterSheet/skill/DeclaredSkillDTOTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/characterSheet/skill/CharacterSkillsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/characterSheet/skill/CharacterSkillsDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/characterSheet/skill/DeclaredSkillDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/characterSheet/skill/DeclaredSkillDTO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,13 +210,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654947632401</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Feature - Add Title service">
-      <created>1656095429152</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1656095429152</updated>
     </task>
     <task id="LOCAL-00013" summary="Chore - Remove unused import">
       <created>1656095487817</created>
@@ -554,7 +547,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656783153000</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="Feature - CharacterSkillsDTO : Add JUnit test">
+      <created>1656783943458</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1656783943459</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -580,7 +580,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Chore - Moved DTO corresponding to characterSheet to sub folder" />
     <MESSAGE value="Feature - SkillSpecialization : Set new response for service" />
     <MESSAGE value="Chore - SkillSpecialization : Remove unnecessary catches" />
     <MESSAGE value="Chore - Character : Set new response for service &amp; Fix JUnit for new Response format" />
@@ -605,7 +604,8 @@
     <MESSAGE value="Feature - CharacterStatusDTO : Add JUnit test" />
     <MESSAGE value="Feature - CharacterSheetDTO : Add missing JUnit test" />
     <MESSAGE value="Feature - DeclaredStatusDTO : Add JUnit test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature - DeclaredStatusDTO : Add JUnit test" />
+    <MESSAGE value="Feature - CharacterSkillsDTO : Add JUnit test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature - CharacterSkillsDTO : Add JUnit test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
