@@ -1,11 +1,13 @@
 package com.masquerade.model.entity.characterSheet.global;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.masquerade.model.entity.characterSheet.parameter.StatusEntity;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Table(name="title")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @Entity
 public class TitleEntity {
     @Id
@@ -36,8 +38,7 @@ public class TitleEntity {
     public TitleEntity() {
     }
 
-    public TitleEntity(Long id, SectEntity sect, String descriptionEN, String descriptionFR, String noteEN, String noteFR) {
-        this.id = id;
+    public TitleEntity(SectEntity sect, String descriptionEN, String descriptionFR, String noteEN, String noteFR) {
         this.sect = sect;
         this.descriptionEN = descriptionEN;
         this.descriptionFR = descriptionFR;
@@ -45,11 +46,20 @@ public class TitleEntity {
         this.noteFR = noteFR;
     }
 
+    public TitleEntity(Long id, SectEntity sect, String descriptionEN, String descriptionFR, String noteEN, String noteFR) {
+        this(sect, descriptionEN, descriptionFR, noteEN, noteFR);
+        this.id = id;
+    }
+
     public boolean emptyObjectCheck() {
         return (this.getDescriptionEN() == null &&
                 this.getDescriptionFR() == null &&
                 this.getNoteEN() == null &&
                 this.getNoteFR() == null);
+    }
+
+    public boolean isUpdatable() {
+        return this.id != null && this.id > 0L;
     }
 
     public List<StatusEntity> getStatus() {
