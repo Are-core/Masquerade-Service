@@ -19,8 +19,7 @@ public class CharacterSkillsDTO {
     }
 
     public CharacterSkillsDTO(Long id, String name, List<DeclaredSkillDTO> skills) {
-        this.id = id;
-        this.name = name;
+        this(id, name);
         this.skills = skills;
     }
 
