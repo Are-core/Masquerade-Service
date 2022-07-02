@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Feature - DeclaredSkillDTO : Add JUnit test">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/model/dto/controller/ResponseDTOTest.java" afterDir="false" />
+    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Feature - ResponseDTO : Add JUnit test">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/model/dto/controller/ResponseEntityDTOTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -209,13 +209,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654947632401</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Chore - Add package for Entities&#10;Feature - Add Sect data in Titles">
-      <created>1656096969237</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1656096969237</updated>
     </task>
     <task id="LOCAL-00015" summary="Feature - Split sect search into a method">
       <created>1656097940746</created>
@@ -553,7 +546,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656784592328</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Feature - ResponseDTO : Add JUnit test">
+      <created>1656785138905</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1656785138905</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -579,7 +579,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Chore - SkillSpecialization : Remove unnecessary catches" />
     <MESSAGE value="Chore - Character : Set new response for service &amp; Fix JUnit for new Response format" />
     <MESSAGE value="Chore - Character &amp; SkillSpecialization entities : JUnit" />
     <MESSAGE value="Fix - Character &amp; SkillSpecialization entities : Object null check fixed" />
@@ -604,7 +603,8 @@
     <MESSAGE value="Feature - DeclaredStatusDTO : Add JUnit test" />
     <MESSAGE value="Feature - CharacterSkillsDTO : Add JUnit test" />
     <MESSAGE value="Feature - DeclaredSkillDTO : Add JUnit test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature - DeclaredSkillDTO : Add JUnit test" />
+    <MESSAGE value="Feature - ResponseDTO : Add JUnit test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature - ResponseDTO : Add JUnit test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -644,7 +644,7 @@
       <FILTER>com.masquerade.tools.controller.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Masquerade_service$All_in_Masquerade_service__2_.ic" NAME="All in Masquerade-service (2) Coverage Results" MODIFIED="1656757904292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/Masquerade_service$Junit_tests.ic" NAME="Junit tests Coverage Results" MODIFIED="1656784559183" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Masquerade_service$Junit_tests.ic" NAME="Junit tests Coverage Results" MODIFIED="1656785573026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <EXCLUDED_FILTER>com.masquerade.tools.controller.Section</EXCLUDED_FILTER>
       <EXCLUDED_FILTER>com.masquerade.tools.entity.EntityArguments</EXCLUDED_FILTER>
     </SUITE>
