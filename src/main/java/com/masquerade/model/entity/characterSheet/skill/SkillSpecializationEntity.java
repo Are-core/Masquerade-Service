@@ -37,7 +37,7 @@ public class SkillSpecializationEntity {
     }
 
     public boolean isUpdatable() {
-        return !emptyObjectCheck() && this.id != null && this.id > 0L;
+        return this.id != null && this.id > 0L;
     }
 
     public Long getId() {

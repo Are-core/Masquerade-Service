@@ -1,9 +1,12 @@
 package com.masquerade.model.entity.characterSheet.skill;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.persistence.*;
 import java.util.List;
 
 @Table(name="skill")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @Entity
 public class SkillEntity {
     @Id
@@ -56,6 +59,10 @@ public class SkillEntity {
                 this.getNoteEN() == null &&
                 this.getNoteFR() == null &&
                 this.getCostId() == null );
+    }
+
+    public boolean isUpdatable() {
+        return this.id != null && this.id > 0L;
     }
 
     public Long getId() {

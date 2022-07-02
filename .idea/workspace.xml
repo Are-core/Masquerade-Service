@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Feature - Application : Add JUnit test">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/tools/controller/ResponsesTest.java" afterDir="false" />
+    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Feature - Response : Add JUnit test">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/model/entity/characterSheet/skill/SkillEntityTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/tools/controller/Responses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/tools/controller/Responses.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/masquerade/model/entity/characterSheet/skill/SkillSpecializationEntityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/model/entity/characterSheet/skill/SkillSpecializationEntityTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/characterSheet/skill/SkillEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/characterSheet/skill/SkillEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/characterSheet/skill/SkillSpecializationEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/characterSheet/skill/SkillSpecializationEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,26 +76,38 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.masquerade.model.entity.characterSheet.skill" />
       <recent name="com.masquerade.tools.controller" />
       <recent name="com.masquerade" />
-      <recent name="com.masquerade.model.entity.characterSheet.skill" />
       <recent name="com.masquerade.model.entity.characterSheet" />
       <recent name="com.masquerade.service.characterSheet.skill" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="All in Masquerade-service" type="JUnit" factoryName="JUnit">
+  <component name="RunManager" selected="Application.MasqueradeApplication">
+    <configuration name="MasqueradeApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.masquerade.MasqueradeApplication" />
       <module name="Masquerade-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.masquerade.tools.controller.Section" />
+          <option name="PATTERN" value="com.masquerade.*" />
           <option name="ENABLED" value="true" />
-          <option name="INCLUDE" value="false" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in Masquerade-service (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Masquerade-service" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in Masquerade-service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Masquerade-service" />
+      <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -123,9 +135,52 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SkillEntityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Masquerade-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.masquerade.model.entity.characterSheet.skill.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.masquerade.model.entity.characterSheet.skill" />
+      <option name="MAIN_CLASS_NAME" value="com.masquerade.model.entity.characterSheet.skill.SkillEntityTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SkillEntityTest.testUpdatable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Masquerade-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.masquerade.model.entity.characterSheet.skill.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.masquerade.model.entity.characterSheet.skill" />
+      <option name="MAIN_CLASS_NAME" value="com.masquerade.model.entity.characterSheet.skill.SkillEntityTest" />
+      <option name="METHOD_NAME" value="testUpdatable" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.MasqueradeApplication" />
+      <item itemvalue="JUnit.Junit tests" />
+      <item itemvalue="JUnit.All in Masquerade-service" />
+      <item itemvalue="JUnit.All in Masquerade-service (1)" />
+      <item itemvalue="JUnit.SkillEntityTest" />
+      <item itemvalue="JUnit.SkillEntityTest.testUpdatable" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MasqueradeApplication" />
+        <item itemvalue="JUnit.All in Masquerade-service (1)" />
+        <item itemvalue="JUnit.SkillEntityTest" />
         <item itemvalue="JUnit.All in Masquerade-service" />
+        <item itemvalue="JUnit.SkillEntityTest.testUpdatable" />
       </list>
     </recent_temporary>
   </component>
@@ -432,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656757964039</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Feature - Response : Add JUnit test">
+      <created>1656759602562</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1656759602562</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -458,7 +520,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Feature - Add sect update for titles" />
     <MESSAGE value="Feature - Change exception for TitleService" />
     <MESSAGE value="Feature - Add services for Status" />
     <MESSAGE value="Feature - Add relation between Title &amp; Status" />
@@ -483,7 +544,8 @@
     <MESSAGE value="Chore - Character &amp; SkillSpecialization entities : JUnit" />
     <MESSAGE value="Fix - Character &amp; SkillSpecialization entities : Object null check fixed" />
     <MESSAGE value="Feature - Application : Add JUnit test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature - Application : Add JUnit test" />
+    <MESSAGE value="Feature - Response : Add JUnit test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature - Response : Add JUnit test" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
@@ -505,6 +567,10 @@
       <FILTER>com.masquerade.tools.controller.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Masquerade_service$All_in_Masquerade_service__2_.ic" NAME="All in Masquerade-service (2) Coverage Results" MODIFIED="1656757904292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Masquerade_service$Junit_tests.ic" NAME="Junit tests Coverage Results" MODIFIED="1656760932453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <EXCLUDED_FILTER>com.masquerade.tools.controller.Section</EXCLUDED_FILTER>
+      <EXCLUDED_FILTER>com.masquerade.tools.entity.EntityArguments</EXCLUDED_FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/Masquerade_service$SkillSpecializationEntityTest.ic" NAME="SkillSpecializationEntityTest Coverage Results" MODIFIED="1656755543170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.masquerade.model.entity.characterSheet.skill.*</FILTER>
     </SUITE>
@@ -512,6 +578,9 @@
       <FILTER>com.masquerade.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Masquerade_service$SkillSpecializationEntityTest_testNullFields.ic" NAME="SkillSpecializationEntityTest.testNullFields Coverage Results" MODIFIED="1656757605945" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.model.entity.characterSheet.skill.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$SkillEntityTest.ic" NAME="SkillEntityTest Coverage Results" MODIFIED="1656761714423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.masquerade.model.entity.characterSheet.skill.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Masquerade_service$SkillSpecializationServiceTest_updateSkillSpecializationEmptyBody.ic" NAME="SkillSpecializationServiceTest.updateSkillSpecializationEmptyBody Coverage Results" MODIFIED="1656627481571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -525,6 +594,9 @@
     <SUITE FILE_PATH="coverage/Masquerade_service$All_in_Masquerade_service__3_.ic" NAME="All in Masquerade-service (3) Coverage Results" MODIFIED="1656627398150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Masquerade_service$ResponsesTest.ic" NAME="ResponsesTest Coverage Results" MODIFIED="1656758552390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.masquerade.tools.controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$SkillEntityTest_testUpdatable.ic" NAME="SkillEntityTest.testUpdatable Coverage Results" MODIFIED="1656760231533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.model.entity.characterSheet.skill.*</FILTER>
     </SUITE>
   </component>
 </project>
