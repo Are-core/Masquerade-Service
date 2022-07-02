@@ -10,7 +10,6 @@ import com.masquerade.model.entity.characterSheet.global.SectEntity;
 import com.masquerade.model.entity.characterSheet.parameter.JurisdictionEntity;
 
 import java.util.List;
-import java.util.Optional;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class CharacterSheetDTO {
@@ -110,22 +109,22 @@ public class CharacterSheetDTO {
         this.player = character.getPlayer();
         this.name = character.getName();
         this.physical = character.getPhysical();
-        this.physicalstrength = character.getPhysicalstrength();
-        this.physicaldexterity = character.getPhysicaldexterity();
-        this.physicalstamina = character.getPhysicalstamina();
+        this.physicalstrength = character.getPhysicalStrength();
+        this.physicaldexterity = character.getPhysicalDexterity();
+        this.physicalstamina = character.getPhysicalStamina();
         this.social = character.getSocial();
-        this.socialcharisma = character.getSocialcharisma();
-        this.socialmanipulation = character.getSocialmanipulation();
-        this.socialappearance = character.getSocialappearance();
+        this.socialcharisma = character.getSocialCharisma();
+        this.socialmanipulation = character.getSocialManipulation();
+        this.socialappearance = character.getSocialAppearance();
         this.mental = character.getMental();
-        this.mentalperception = character.getMentalperception();
-        this.mentalintelligence = character.getMentalintelligence();
-        this.mentalwits = character.getMentalwits();
+        this.mentalperception = character.getMentalPerception();
+        this.mentalintelligence = character.getMentalIntelligence();
+        this.mentalwits = character.getMentalWits();
         this.generation = character.getGeneration();
         this.blood = character.getBlood();
         this.willpower = character.getWillpower();
         this.morality = character.getMorality();
-        this.morality_merit = character.getMorality_merit();
+        this.morality_merit = character.getMoralityMerit();
         this.healthy = character.getHealthy();
         this.injured = character.getInjured();
         this.incapacitated = character.getIncapacitated();
@@ -133,7 +132,7 @@ public class CharacterSheetDTO {
         this.madness = character.getMadness();
         this.note = character.getNote();
         this.archetype = character.getArchetype();
-        this.bloodline_id = character.getBloodline_id();
+        this.bloodline_id = character.getBloodline();
         this.sect = character.getSect();
         this.clan = character.getClan();
         this.jurisdiction = character.getJurisdiction();

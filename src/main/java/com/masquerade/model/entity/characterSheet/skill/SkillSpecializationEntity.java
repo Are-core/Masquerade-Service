@@ -26,9 +26,18 @@ public class SkillSpecializationEntity {
         this.descriptionFR = descriptionFR;
     }
 
+    public SkillSpecializationEntity(Long id, String descriptionEN, String descriptionFR) {
+        this(descriptionEN, descriptionFR);
+        this.id = id;
+    }
+
     public boolean emptyObjectCheck() {
         return (this.getDescriptionEN() == null &&
                 this.getDescriptionFR() == null);
+    }
+
+    public boolean isUpdatable() {
+        return !emptyObjectCheck() && this.id != null && this.id > 0L;
     }
 
     public Long getId() {

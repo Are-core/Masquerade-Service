@@ -29,29 +29,29 @@ public class CharacterEntity {
     @Column(name = "physical")
     private Integer physical;
     @Column(name = "physicalstrength")
-    private Boolean physicalstrength;
+    private Boolean physicalStrength;
     @Column(name = "physicaldexterity")
-    private Boolean physicaldexterity;
+    private Boolean physicalDexterity;
     @Column(name = "physicalstamina")
-    private Boolean physicalstamina;
+    private Boolean physicalStamina;
 
     @Column(name = "social")
     private Integer social;
     @Column(name = "socialcharisma")
-    private Boolean socialcharisma;
+    private Boolean socialCharisma;
     @Column(name = "socialmanipulation")
-    private Boolean socialmanipulation;
+    private Boolean socialManipulation;
     @Column(name = "socialappearance")
-    private Boolean socialappearance;
+    private Boolean socialAppearance;
 
     @Column(name = "mental")
     private Integer mental;
     @Column(name = "mentalperception")
-    private Boolean mentalperception;
+    private Boolean mentalPerception;
     @Column(name = "mentalintelligence")
-    private Boolean mentalintelligence;
+    private Boolean mentalIntelligence;
     @Column(name = "mentalwits")
-    private Boolean mentalwits;
+    private Boolean mentalWits;
 
     @Column(name = "generation")
     private Integer generation;
@@ -63,7 +63,7 @@ public class CharacterEntity {
     @Column(name = "morality")
     private Integer morality;
     @Column(name = "morality_merit")
-    private Integer morality_merit;
+    private Integer moralityMerit;
 
     @Column(name = "healthy")
     private Integer healthy;
@@ -83,7 +83,7 @@ public class CharacterEntity {
     @JoinColumn(name="archetype_id")
     private ArchetypeEntity archetype;
     @Column(name = "bloodline_id")
-    private Integer bloodline_id;
+    private Integer bloodline;
 
     @ManyToOne
     @JoinColumn(name="sect_id")
@@ -98,29 +98,29 @@ public class CharacterEntity {
 
     public CharacterEntity() {}
 
-    public CharacterEntity(Long id, Boolean npc, Boolean archived, String player, String name, Integer physical, Boolean physicalstrength, Boolean physicaldexterity, Boolean physicalstamina, Integer social, Boolean socialcharisma, Boolean socialmanipulation, Boolean socialappearance, Integer mental, Boolean mentalperception, Boolean mentalintelligence, Boolean mentalwits, Integer generation, Integer blood, Integer willpower, Integer morality, Integer morality_merit, Integer healthy, Integer injured, Integer incapacitated, Integer beast, Integer madness, String note, ArchetypeEntity archetype, Integer bloodline_id, SectEntity sect, ClanEntity clan, JurisdictionEntity jurisdiction) {
+    public CharacterEntity(Long id, Boolean npc, Boolean archived, String player, String name, Integer physical, Boolean physicalStrength, Boolean physicalDexterity, Boolean physicalStamina, Integer social, Boolean socialCharisma, Boolean socialManipulation, Boolean socialAppearance, Integer mental, Boolean mentalPerception, Boolean mentalIntelligence, Boolean mentalWits, Integer generation, Integer blood, Integer willpower, Integer morality, Integer moralityMerit, Integer healthy, Integer injured, Integer incapacitated, Integer beast, Integer madness, String note, ArchetypeEntity archetype, Integer bloodline, SectEntity sect, ClanEntity clan, JurisdictionEntity jurisdiction) {
         this.id = id;
         this.npc = npc;
         this.archived = archived;
         this.player = player;
         this.name = name;
         this.physical = physical;
-        this.physicalstrength = physicalstrength;
-        this.physicaldexterity = physicaldexterity;
-        this.physicalstamina = physicalstamina;
+        this.physicalStrength = physicalStrength;
+        this.physicalDexterity = physicalDexterity;
+        this.physicalStamina = physicalStamina;
         this.social = social;
-        this.socialcharisma = socialcharisma;
-        this.socialmanipulation = socialmanipulation;
-        this.socialappearance = socialappearance;
+        this.socialCharisma = socialCharisma;
+        this.socialManipulation = socialManipulation;
+        this.socialAppearance = socialAppearance;
         this.mental = mental;
-        this.mentalperception = mentalperception;
-        this.mentalintelligence = mentalintelligence;
-        this.mentalwits = mentalwits;
+        this.mentalPerception = mentalPerception;
+        this.mentalIntelligence = mentalIntelligence;
+        this.mentalWits = mentalWits;
         this.generation = generation;
         this.blood = blood;
         this.willpower = willpower;
         this.morality = morality;
-        this.morality_merit = morality_merit;
+        this.moralityMerit = moralityMerit;
         this.healthy = healthy;
         this.injured = injured;
         this.incapacitated = incapacitated;
@@ -128,7 +128,7 @@ public class CharacterEntity {
         this.madness = madness;
         this.note = note;
         this.archetype = archetype;
-        this.bloodline_id = bloodline_id;
+        this.bloodline = bloodline;
         this.sect = sect;
         this.clan = clan;
         this.jurisdiction = jurisdiction;
@@ -174,28 +174,28 @@ public class CharacterEntity {
         this.physical = physical;
     }
 
-    public Boolean getPhysicalstrength() {
-        return physicalstrength;
+    public Boolean getPhysicalStrength() {
+        return physicalStrength;
     }
 
-    public void setPhysicalstrength(Boolean physicalstrength) {
-        this.physicalstrength = physicalstrength;
+    public void setPhysicalStrength(Boolean physicalStrength) {
+        this.physicalStrength = physicalStrength;
     }
 
-    public Boolean getPhysicaldexterity() {
-        return physicaldexterity;
+    public Boolean getPhysicalDexterity() {
+        return physicalDexterity;
     }
 
-    public void setPhysicaldexterity(Boolean physicaldexterity) {
-        this.physicaldexterity = physicaldexterity;
+    public void setPhysicalDexterity(Boolean physicalDexterity) {
+        this.physicalDexterity = physicalDexterity;
     }
 
-    public Boolean getPhysicalstamina() {
-        return physicalstamina;
+    public Boolean getPhysicalStamina() {
+        return physicalStamina;
     }
 
-    public void setPhysicalstamina(Boolean physicalstamina) {
-        this.physicalstamina = physicalstamina;
+    public void setPhysicalStamina(Boolean physicalStamina) {
+        this.physicalStamina = physicalStamina;
     }
 
     public Integer getSocial() {
@@ -206,28 +206,28 @@ public class CharacterEntity {
         this.social = social;
     }
 
-    public Boolean getSocialcharisma() {
-        return socialcharisma;
+    public Boolean getSocialCharisma() {
+        return socialCharisma;
     }
 
-    public void setSocialcharisma(Boolean socialcharisma) {
-        this.socialcharisma = socialcharisma;
+    public void setSocialCharisma(Boolean socialCharisma) {
+        this.socialCharisma = socialCharisma;
     }
 
-    public Boolean getSocialmanipulation() {
-        return socialmanipulation;
+    public Boolean getSocialManipulation() {
+        return socialManipulation;
     }
 
-    public void setSocialmanipulation(Boolean socialmanipulation) {
-        this.socialmanipulation = socialmanipulation;
+    public void setSocialManipulation(Boolean socialManipulation) {
+        this.socialManipulation = socialManipulation;
     }
 
-    public Boolean getSocialappearance() {
-        return socialappearance;
+    public Boolean getSocialAppearance() {
+        return socialAppearance;
     }
 
-    public void setSocialappearance(Boolean socialappearance) {
-        this.socialappearance = socialappearance;
+    public void setSocialAppearance(Boolean socialAppearance) {
+        this.socialAppearance = socialAppearance;
     }
 
     public Integer getMental() {
@@ -238,28 +238,28 @@ public class CharacterEntity {
         this.mental = mental;
     }
 
-    public Boolean getMentalperception() {
-        return mentalperception;
+    public Boolean getMentalPerception() {
+        return mentalPerception;
     }
 
-    public void setMentalperception(Boolean mentalperception) {
-        this.mentalperception = mentalperception;
+    public void setMentalPerception(Boolean mentalPerception) {
+        this.mentalPerception = mentalPerception;
     }
 
-    public Boolean getMentalintelligence() {
-        return mentalintelligence;
+    public Boolean getMentalIntelligence() {
+        return mentalIntelligence;
     }
 
-    public void setMentalintelligence(Boolean mentalintelligence) {
-        this.mentalintelligence = mentalintelligence;
+    public void setMentalIntelligence(Boolean mentalIntelligence) {
+        this.mentalIntelligence = mentalIntelligence;
     }
 
-    public Boolean getMentalwits() {
-        return mentalwits;
+    public Boolean getMentalWits() {
+        return mentalWits;
     }
 
-    public void setMentalwits(Boolean mentalwits) {
-        this.mentalwits = mentalwits;
+    public void setMentalWits(Boolean mentalWits) {
+        this.mentalWits = mentalWits;
     }
 
     public Integer getGeneration() {
@@ -294,12 +294,10 @@ public class CharacterEntity {
         this.morality = morality;
     }
 
-    public Integer getMorality_merit() {
-        return morality_merit;
-    }
+    public Integer getMoralityMerit() { return moralityMerit; }
 
-    public void setMorality_merit(Integer morality_merit) {
-        this.morality_merit = morality_merit;
+    public void setMoralityMerit(Integer moralityMerit) {
+        this.moralityMerit = moralityMerit;
     }
 
     public Integer getHealthy() {
@@ -350,12 +348,12 @@ public class CharacterEntity {
         this.note = note;
     }
 
-    public Integer getBloodline_id() {
-        return bloodline_id;
+    public Integer getBloodline() {
+        return bloodline;
     }
 
-    public void setBloodline_id(Integer bloodline_id) {
-        this.bloodline_id = bloodline_id;
+    public void setBloodline(Integer bloodline) {
+        this.bloodline = bloodline;
     }
 
     public ClanEntity getClan() {

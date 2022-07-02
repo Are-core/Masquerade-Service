@@ -1,7 +1,6 @@
 package com.masquerade.service.characterSheet.skill;
 
 import com.masquerade.mocks.json.JsonMock;
-import com.masquerade.model.dto.characterSheet.CharacterListItemDTO;
 import com.masquerade.model.dto.controller.ResponseDTO;
 import com.masquerade.model.entity.characterSheet.skill.SkillSpecializationEntity;
 import com.masquerade.repository.characterSheet.skill.SkillSpecializationRepository;
@@ -220,6 +219,17 @@ class SkillSpecializationServiceTest {
     void updateSkillSpecializationEmptyBody() {
         try {
             ResponseDTO response = skillSpecializationService.updateSkillSpecialization("{}");
+            verify(skillSpecializationRepository, times(0)).save(any());
+            assertSame(response.getHttpStatus(), HttpStatus.BAD_REQUEST);
+        } catch(Exception e) {
+            fail();
+        }
+    }
+
+    @Test
+    void updateSkillSpecializationBadBody() {
+        try {
+            ResponseDTO response = skillSpecializationService.updateSkillSpecialization(JsonMock.getBadSkillSpecializationJson());
             verify(skillSpecializationRepository, times(0)).save(any());
             assertSame(response.getHttpStatus(), HttpStatus.BAD_REQUEST);
         } catch(Exception e) {
