@@ -1,10 +1,12 @@
 package com.masquerade.model.entity.characterSheet.skill;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.masquerade.model.entity.characterSheet.CharacterEntity;
 
 import javax.persistence.*;
 
 @Table(name="character_has_skill")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @Entity
 public class CharacterHasSkillEntity {
     @EmbeddedId
@@ -21,13 +23,16 @@ public class CharacterHasSkillEntity {
     private SkillEntity skill;
 
     @Column(name = "level")
-    private int level;
+    private Integer level;
 
     @ManyToOne
     @JoinColumn(name="skill_specialization_id")
     private SkillSpecializationEntity skillSpecialization;
 
-    public CharacterHasSkillEntity(CharacterHasSkillKey id, CharacterEntity character, SkillEntity skill, int level, SkillSpecializationEntity skillSpecialization) {
+    public CharacterHasSkillEntity() {
+    }
+
+    public CharacterHasSkillEntity(CharacterHasSkillKey id, CharacterEntity character, SkillEntity skill, Integer level, SkillSpecializationEntity skillSpecialization) {
         this.id = id;
         this.character = character;
         this.skill = skill;
@@ -44,10 +49,7 @@ public class CharacterHasSkillEntity {
     }
 
     public boolean emptyObjectCheck() {
-        return (this.character == null || this.skill == null);
-    }
-
-    public CharacterHasSkillEntity() {
+        return (this.id == null || this.character == null || this.skill == null);
     }
 
     public CharacterHasSkillKey getId() {
@@ -74,11 +76,11 @@ public class CharacterHasSkillEntity {
         this.skill = skill;
     }
 
-    public int getLevel() {
+    public Integer getLevel() {
         return level;
     }
 
-    public void setLevel(int level) {
+    public void setLevel(Integer level) {
         this.level = level;
     }
 
