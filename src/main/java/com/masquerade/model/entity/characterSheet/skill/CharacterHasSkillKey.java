@@ -7,10 +7,10 @@ import java.io.Serializable;
 @Embeddable
 public class CharacterHasSkillKey implements Serializable {
     @Column(name = "character_id")
-    Long characterId;
+    public Long characterId;
 
     @Column(name = "skill_id")
-    Long skillId;
+    public Long skillId;
 
     public CharacterHasSkillKey() {
     }

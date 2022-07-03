@@ -70,4 +70,77 @@ public class JsonMock {
                 "    }";
     }
 
+    static public String getCharacterSkill() {
+        return "{\n" +
+                "    \"character\": {\n" +
+                "        \"id\": 2\n" +
+                "    },\n" +
+                "    \"skill\": {\n" +
+                "        \"id\": 1\n" +
+                "    },\n" +
+                "    \"level\":5\n" +
+                "}";
+    }
+
+    static public String getBadCharacterSkill() {
+        return "{\n" +
+                "    \"character\": {\n" +
+                "        \"id\": 2\n" +
+                "    '\n" +
+                "    \"skill\"\n" +
+                "        \"id\": 1\n" +
+                "    },\n" +
+                "    \"level\":5\n" +
+                "}";
+    }
+
+    static public String getMissingIdCharacterSkill() {
+        return "{\n" +
+                "    \"level\":5\n" +
+                "}";
+    }
+
+    static public String getSkillCharacter() {
+        return "{\n" +
+                "\t\"character\": {\n" +
+                "\t\t\"id\": 2\n" +
+                "\t},\n" +
+                "\t\"skill\": {\n" +
+                "\t\t\"id\": 1\n" +
+                "\t},\n" +
+                "\t\"level\": 5\n" +
+                "}";
+    }
+
+    static public String getNoMatchSkillCharacter() {
+        return "{\n" +
+                "\t\"character\": {\n" +
+                "\t\t\"id\": 8\n" +
+                "\t},\n" +
+                "\t\"skill\": {\n" +
+                "\t\t\"id\": 1\n" +
+                "\t},\n" +
+                "\t\"level\": 5\n" +
+                "}";
+    }
+
+    static public String getSkillCharacterMissingId() {
+        return "{\n" +
+                "\t\"character\": {\n" +
+                "\t\t\"id\": 2\n" +
+                "\t},\n" +
+                "\t\"level\": 5\n" +
+                "}";
+    }
+
+    static public String getBadSkillCharacter() {
+        return "{\n" +
+                "\t\"character\": {\n" +
+                "\t\t\"id\": 2\n" +
+                "\t},\n" +
+                "\t\"skill\": {\n" +
+                "\t\t\"id\": 1\n" +
+                "\t\"level\": 5\n" +
+                "}";
+    }
 }

@@ -39,6 +39,9 @@ public class SkillSpecializationService {
     }
 
     public ResponseDTO createSkillSpecialization(String rawBody) {
+        if(rawBody == null) {
+            return Responses.MissingArgument(EntityArguments.JsonArgument);
+        }
         Gson gson = new Gson();
         SkillSpecializationEntity specialization;
         try {

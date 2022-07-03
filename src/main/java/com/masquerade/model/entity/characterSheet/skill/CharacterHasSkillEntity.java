@@ -52,12 +52,16 @@ public class CharacterHasSkillEntity {
         if(emptyObjectCheck()) {
             return true;
         }
-        this.id = new CharacterHasSkillKey(this.character.getId(), this.skill.getId());
+        try {
+            this.id = new CharacterHasSkillKey(this.character.getId(), this.skill.getId());
+        } catch (Exception e) {
+            return true;
+        }
         return false;
     }
 
     public boolean emptyObjectCheck() {
-        return (this.id == null || this.character == null || this.skill == null);
+        return this.id == null && this.character == null && this.skill == null;
     }
 
     public CharacterHasSkillKey getId() {
