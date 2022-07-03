@@ -1,13 +1,10 @@
 package com.masquerade.controller.characterSheet.skill;
 
-import com.masquerade.exception.EntityRequestException;
 import com.masquerade.model.dto.controller.ResponseDTO;
 import com.masquerade.model.dto.controller.ResponseEntityDTO;
 import com.masquerade.service.characterSheet.skill.SkillService;
 import com.masquerade.tools.controller.Section;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @CrossOrigin(origins = Section.CrossOriginUrl)
 @RestController

@@ -192,4 +192,34 @@ public class JsonMock {
                 "\t\"updatable\": true\n" +
                 "}";
     }
+
+    static public String getStatusType() {
+        return "{\n" +
+                "            \"id\": 1,\n" +
+                "            \"descriptionEN\": \"Abiding\",\n" +
+                "            \"descriptionFR\": \"none\",\n" +
+                "            \"noteEN\": \"Abiding status traits are usually earned by holding a position within a sect. So long as a vampire continues to hold that position, abiding status refreshes at the beginning of each game session. If a character loses a sect position during a game, any unspent abiding status she was carrying from that position is immediately removed (she cannot expend it as she is losing the position). Even if the character has more than one sect position, she does not gain the second position’s abiding status during this game. Also, when a character gains a new sect position, she does not gain that position’s abiding status until the beginning of the next game.\",\n" +
+                "            \"noteFR\": \"none\"\n" +
+                "        }";
+    }
+
+    static public String getNotExistingStatusType() {
+        return "{\n" +
+                "            \"id\": 8,\n" +
+                "            \"descriptionEN\": \"Abiding\",\n" +
+                "            \"descriptionFR\": \"none\",\n" +
+                "            \"noteEN\": \"Abiding status traits are usually earned by holding a position within a sect. So long as a vampire continues to hold that position, abiding status refreshes at the beginning of each game session. If a character loses a sect position during a game, any unspent abiding status she was carrying from that position is immediately removed (she cannot expend it as she is losing the position). Even if the character has more than one sect position, she does not gain the second position’s abiding status during this game. Also, when a character gains a new sect position, she does not gain that position’s abiding status until the beginning of the next game.\",\n" +
+                "            \"noteFR\": \"none\"\n" +
+                "        }";
+    }
+
+    static public String getBadStatusType() {
+        return "{\n" +
+                "            \"id\": 8,\n" +
+                "            \"descriptionEN\": \"Abiding\",\n" +
+                "            \"descripti\n" +
+                "            \"noteEN\": \"Abiding status traits are usually earned by holding a position within a sect. So long as a vampire continues to hold that position, abiding status refreshes at the beginning of each game session. If a character loses a sect position during a game, any unspent abiding status she was carrying from that position is immediately removed (she cannot expend it as she is losing the position). Even if the character has more than one sect position, she does not gain the second position’s abiding status during this game. Also, when a character gains a new sect position, she does not gain that position’s abiding status until the beginning of the next game.\",\n" +
+                "            \"noteFR\": \"none\"\n" +
+                "        }";
+    }
 }
