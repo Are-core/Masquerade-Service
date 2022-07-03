@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Feature - StatusService : Add JUnit test">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/service/characterSheet/parameter/StatusTypeServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/masquerade/service/characterSheet/parameter/StatusServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/service/characterSheet/parameter/StatusServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -212,13 +211,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654947632401</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Feature - Add services for Status">
-      <created>1656102465456</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1656102465456</updated>
     </task>
     <task id="LOCAL-00020" summary="Feature - Add relation between Title &amp; Status">
       <created>1656107810762</created>
@@ -556,7 +548,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656865224593</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Feature - StatusService : Add JUnit test">
+      <created>1656865548857</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1656865548857</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
