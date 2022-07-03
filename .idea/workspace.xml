@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Feature - ResponseDTO : Add JUnit test">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/model/dto/controller/ResponseEntityDTOTest.java" afterDir="false" />
+    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Feature - ResponseEntityDTO : Add JUnit test">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/service/characterSheet/skill/SkillServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/skill/SkillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/skill/SkillController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/skill/SkillService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/skill/SkillService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/skill/SkillSpecializationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/skill/SkillSpecializationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/masquerade/mocks/json/JsonMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/mocks/json/JsonMock.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,90 +81,14 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.masquerade.service.characterSheet.skill" />
       <recent name="com.masquerade.model.dto.controller" />
       <recent name="com.masquerade.model.dto.characterSheet.skill" />
       <recent name="com.masquerade.model.dto.characterSheet.parameter" />
       <recent name="com.masquerade.model.dto.characterSheet" />
-      <recent name="com.masquerade.model.entity.characterSheet.global" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.Junit tests">
-    <configuration name="CharacterListItemDTOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Masquerade-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.masquerade.model.dto.characterSheet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.masquerade.model.dto.characterSheet" />
-      <option name="MAIN_CLASS_NAME" value="com.masquerade.model.dto.characterSheet.CharacterListItemDTOTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CharacterSheetDTOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Masquerade-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.masquerade.model.dto.characterSheet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.masquerade.model.dto.characterSheet" />
-      <option name="MAIN_CLASS_NAME" value="com.masquerade.model.dto.characterSheet.CharacterSheetDTOTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CharacterStatusDTOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Masquerade-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.masquerade.model.dto.characterSheet.parameter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.masquerade.model.dto.characterSheet.parameter" />
-      <option name="MAIN_CLASS_NAME" value="com.masquerade.model.dto.characterSheet.parameter.CharacterStatusDTOTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CharacterStatusDTOTest.testStatus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Masquerade-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.masquerade.model.dto.characterSheet.parameter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.masquerade.model.dto.characterSheet.parameter" />
-      <option name="MAIN_CLASS_NAME" value="com.masquerade.model.dto.characterSheet.parameter.CharacterStatusDTOTest" />
-      <option name="METHOD_NAME" value="testStatus" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DeclaredStatusDTOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Masquerade-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.masquerade.model.dto.characterSheet.parameter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.masquerade.model.dto.characterSheet.parameter" />
-      <option name="MAIN_CLASS_NAME" value="com.masquerade.model.dto.characterSheet.parameter.DeclaredStatusDTOTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Junit tests" type="JUnit" factoryName="JUnit">
       <module name="Masquerade-service" />
       <extension name="coverage">
@@ -183,21 +111,100 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SkillServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Masquerade-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.masquerade.service.characterSheet.skill.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.masquerade.service.characterSheet.skill" />
+      <option name="MAIN_CLASS_NAME" value="com.masquerade.service.characterSheet.skill.SkillServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SkillServiceTest.testCreateSkillMissingParameter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Masquerade-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.masquerade.service.characterSheet.skill.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.masquerade.service.characterSheet.skill" />
+      <option name="MAIN_CLASS_NAME" value="com.masquerade.service.characterSheet.skill.SkillServiceTest" />
+      <option name="METHOD_NAME" value="testCreateSkillMissingParameter" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SkillServiceTest.testRemoveSkillOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Masquerade-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.masquerade.service.characterSheet.skill.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.masquerade.service.characterSheet.skill" />
+      <option name="MAIN_CLASS_NAME" value="com.masquerade.service.characterSheet.skill.SkillServiceTest" />
+      <option name="METHOD_NAME" value="testRemoveSkillOk" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SkillServiceTest.testUpdateSkillDoesNotExist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Masquerade-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.masquerade.service.characterSheet.skill.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.masquerade.service.characterSheet.skill" />
+      <option name="MAIN_CLASS_NAME" value="com.masquerade.service.characterSheet.skill.SkillServiceTest" />
+      <option name="METHOD_NAME" value="testUpdateSkillDoesNotExist" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SkillServiceTest.testUpdateSkillOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Masquerade-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.masquerade.service.characterSheet.skill.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.masquerade.service.characterSheet.skill" />
+      <option name="MAIN_CLASS_NAME" value="com.masquerade.service.characterSheet.skill.SkillServiceTest" />
+      <option name="METHOD_NAME" value="testUpdateSkillOk" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="JUnit.Junit tests" />
-      <item itemvalue="JUnit.CharacterListItemDTOTest" />
-      <item itemvalue="JUnit.CharacterSheetDTOTest" />
-      <item itemvalue="JUnit.CharacterStatusDTOTest" />
-      <item itemvalue="JUnit.CharacterStatusDTOTest.testStatus" />
-      <item itemvalue="JUnit.DeclaredStatusDTOTest" />
+      <item itemvalue="JUnit.SkillServiceTest" />
+      <item itemvalue="JUnit.SkillServiceTest.testCreateSkillMissingParameter" />
+      <item itemvalue="JUnit.SkillServiceTest.testRemoveSkillOk" />
+      <item itemvalue="JUnit.SkillServiceTest.testUpdateSkillDoesNotExist" />
+      <item itemvalue="JUnit.SkillServiceTest.testUpdateSkillOk" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DeclaredStatusDTOTest" />
-        <item itemvalue="JUnit.CharacterStatusDTOTest.testStatus" />
-        <item itemvalue="JUnit.CharacterStatusDTOTest" />
-        <item itemvalue="JUnit.CharacterListItemDTOTest" />
-        <item itemvalue="JUnit.CharacterSheetDTOTest" />
+        <item itemvalue="JUnit.SkillServiceTest" />
+        <item itemvalue="JUnit.SkillServiceTest.testUpdateSkillDoesNotExist" />
+        <item itemvalue="JUnit.SkillServiceTest.testUpdateSkillOk" />
+        <item itemvalue="JUnit.SkillServiceTest.testRemoveSkillOk" />
+        <item itemvalue="JUnit.SkillServiceTest.testCreateSkillMissingParameter" />
       </list>
     </recent_temporary>
   </component>
@@ -209,13 +216,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654947632401</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Feature - Split sect search into a method">
-      <created>1656097940746</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1656097940746</updated>
     </task>
     <task id="LOCAL-00016" summary="Feature - Add status service : getList">
       <created>1656099046602</created>
@@ -553,7 +553,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656785138905</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Feature - ResponseEntityDTO : Add JUnit test">
+      <created>1656785623647</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1656785623647</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -579,7 +586,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Chore - Character : Set new response for service &amp; Fix JUnit for new Response format" />
     <MESSAGE value="Chore - Character &amp; SkillSpecialization entities : JUnit" />
     <MESSAGE value="Fix - Character &amp; SkillSpecialization entities : Object null check fixed" />
     <MESSAGE value="Feature - Application : Add JUnit test" />
@@ -604,7 +610,8 @@
     <MESSAGE value="Feature - CharacterSkillsDTO : Add JUnit test" />
     <MESSAGE value="Feature - DeclaredSkillDTO : Add JUnit test" />
     <MESSAGE value="Feature - ResponseDTO : Add JUnit test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature - ResponseDTO : Add JUnit test" />
+    <MESSAGE value="Feature - ResponseEntityDTO : Add JUnit test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature - ResponseEntityDTO : Add JUnit test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -631,6 +638,9 @@
     <SUITE FILE_PATH="coverage/Masquerade_service$ClanEntityTest.ic" NAME="ClanEntityTest Coverage Results" MODIFIED="1656774553674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.masquerade.model.entity.characterSheet.global.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$SkillServiceTest.ic" NAME="SkillServiceTest Coverage Results" MODIFIED="1656843002475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.service.characterSheet.skill.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/Masquerade_service$StatusTypeEntityTest.ic" NAME="StatusTypeEntityTest Coverage Results" MODIFIED="1656764794348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.masquerade.model.entity.characterSheet.parameter.*</FILTER>
     </SUITE>
@@ -644,7 +654,7 @@
       <FILTER>com.masquerade.tools.controller.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Masquerade_service$All_in_Masquerade_service__2_.ic" NAME="All in Masquerade-service (2) Coverage Results" MODIFIED="1656757904292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/Masquerade_service$Junit_tests.ic" NAME="Junit tests Coverage Results" MODIFIED="1656785573026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Masquerade_service$Junit_tests.ic" NAME="Junit tests Coverage Results" MODIFIED="1656843015585" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <EXCLUDED_FILTER>com.masquerade.tools.controller.Section</EXCLUDED_FILTER>
       <EXCLUDED_FILTER>com.masquerade.tools.entity.EntityArguments</EXCLUDED_FILTER>
     </SUITE>

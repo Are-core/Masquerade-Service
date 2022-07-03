@@ -1,19 +1,16 @@
 package com.masquerade.service.characterSheet.skill;
 
 import com.google.gson.Gson;
-import com.masquerade.exception.BadRequestException;
-import com.masquerade.exception.EntityRequestException;
+import com.masquerade.model.dto.controller.ResponseDTO;
 import com.masquerade.model.entity.characterSheet.skill.SkillEntity;
 import com.masquerade.repository.characterSheet.skill.SkillRepository;
+import com.masquerade.tools.controller.Responses;
+import com.masquerade.tools.entity.EntityArguments;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.server.ResponseStatusException;
 
-import java.util.List;
-
-import static org.springframework.http.HttpStatus.NOT_FOUND;
+import java.util.Optional;
 
 @Service
 @Transactional
@@ -25,68 +22,65 @@ public class SkillService {
     }
 
     @Transactional(readOnly = true)
-    public List<SkillEntity> getSkills() {
-        return skillRepository.findAll();
+    public ResponseDTO getSkills() {
+        return new ResponseDTO(HttpStatus.OK,skillRepository.findAll());
     }
 
     @Transactional(readOnly = true)
-    public SkillEntity getSkill(Long id) throws BadRequestException {
+    public ResponseDTO getSkill(Long id) {
         if(id == null){
-            throw BadRequestException.missingParameter();
+            return Responses.MissingArgument(EntityArguments.idArgument);
         }
-        try {
-            return skillRepository.findById(id)
-                    .orElseThrow(IllegalArgumentException::new);
+        Optional<SkillEntity> entries = skillRepository.findById(id);
+        if(entries.isEmpty()) {
+            return Responses.ResponseNoContent;
         }
-        catch (Exception e) {
-            throw new ResponseStatusException(NOT_FOUND, "Unable to find resource");
-        }
+        return new ResponseDTO(HttpStatus.OK, entries.get());
     }
 
-    public ResponseEntity<HttpStatus> createSkill(String rawBody) throws BadRequestException {
+    public ResponseDTO createSkill(String rawBody) {
         if(rawBody == null) {
-            throw BadRequestException.missingParameter();
+            return Responses.MissingArgument(EntityArguments.JsonArgument);
         }
-        Gson gson = new Gson();
-        SkillEntity skill = gson.fromJson(rawBody, SkillEntity.class);
-        if(skill.emptyObjectCheck()) {
-            throw BadRequestException.missingBody();
+        SkillEntity skill;
+        try {
+            Gson gson = new Gson();
+            skill = gson.fromJson(rawBody, SkillEntity.class);
+            //TODO use isUpdatable() and manage exception
+            skill.setId(null);
+            skill = skillRepository.save(skill);
+        } catch (Exception e) {
+            return Responses.ResponseBadRequest;
         }
-        skillRepository.save(skill);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        return new ResponseDTO(HttpStatus.CREATED, skill);
     }
 
-    public ResponseEntity<HttpStatus> removeSkill(Long id) throws BadRequestException {
+    public ResponseDTO removeSkill(Long id) {
         if(id == null) {
-            throw BadRequestException.missingParameter();
+            return Responses.MissingArgument(EntityArguments.idArgument);
+        }
+        Optional<SkillEntity> entity = skillRepository.findById(id);
+        if(entity.isEmpty()) {
+            return Responses.ResponseNoContent;
+        }
+        skillRepository.delete(entity.get());
+        return new ResponseDTO(HttpStatus.OK, entity.get());
+    }
+
+    public ResponseDTO updateSkill (String rawBody) {
+        if(rawBody == null) {
+            return Responses.MissingArgument(EntityArguments.JsonArgument);
         }
         try {
-            skillRepository.delete(skillRepository.findById(id)
-                    .orElseThrow(IllegalArgumentException::new));
+            Gson gson = new Gson();
+            SkillEntity skill = gson.fromJson(rawBody, SkillEntity.class);
+            if(skill == null || skill.emptyObjectCheck() || !skillRepository.existsById(skill.getId())) {
+                return Responses.ResponseBadRequest;
+            }
+            skill = skillRepository.save(skill);
+            return new ResponseDTO(HttpStatus.OK, skill);
+        } catch (Exception e) {
+            return Responses.ResponseBadRequest;
         }
-        catch (Exception e) {
-            return new ResponseEntity<>(NOT_FOUND);
-        }
-        return new ResponseEntity<>(HttpStatus.OK);
-    }
-
-    public ResponseEntity<HttpStatus> updateSkill (String rawBody) throws EntityRequestException {
-        if(rawBody == null) {
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-        }
-        Gson gson = new Gson();
-        final SkillEntity skill = gson.fromJson(rawBody, SkillEntity.class);
-        if(skill.emptyObjectCheck()) {
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-        }
-        updateSkillData(skill);
-        return new ResponseEntity<>(HttpStatus.OK);
-    }
-
-    private void updateSkillData(SkillEntity skill) throws EntityRequestException {
-        if(!skillRepository.existsById(skill.getId())) {
-            throw EntityRequestException.doesntExists(skill.getId());
-        }
-        skillRepository.save(skill);
     }
 }

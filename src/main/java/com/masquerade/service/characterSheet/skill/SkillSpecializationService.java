@@ -65,6 +65,10 @@ public class SkillSpecializationService {
     }
 
     public ResponseDTO updateSkillSpecialization(final String rawBody) {
+        //TODO Check JUnit for rawBody = null
+        if(rawBody == null) {
+            return Responses.MissingArgument(EntityArguments.JsonArgument);
+        }
         try {
             Gson gson = new Gson();
             SkillSpecializationEntity specialization = gson.fromJson(rawBody, SkillSpecializationEntity.class);
