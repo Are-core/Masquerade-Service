@@ -1,15 +1,10 @@
 package com.masquerade.controller.characterSheet.parameter;
 
-import com.masquerade.exception.BadRequestException;
-import com.masquerade.exception.EntityRequestException;
-import com.masquerade.model.entity.characterSheet.parameter.StatusEntity;
+import com.masquerade.model.dto.controller.ResponseDTO;
+import com.masquerade.model.dto.controller.ResponseEntityDTO;
 import com.masquerade.service.characterSheet.parameter.StatusService;
 import com.masquerade.tools.controller.Section;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @CrossOrigin(origins = Section.CrossOriginUrl)
 @RestController
@@ -22,37 +17,27 @@ public class StatusController {
     }
 
     @RequestMapping(value = Section.StatusPrefix + "/getStatus",method = RequestMethod.GET)
-    public ResponseEntity<List<StatusEntity>> getStatus() {
-        return new ResponseEntity<>(statusService.getStatus(), HttpStatus.OK);
+    public ResponseEntityDTO<ResponseDTO> getStatus() {
+        return new ResponseEntityDTO<>(statusService.getStatus());
     }
 
     @RequestMapping(value = Section.StatusPrefix + "/getStatusById",method = RequestMethod.GET)
-    public ResponseEntity<StatusEntity> getStatusById(Long id) throws BadRequestException {
-        return new ResponseEntity<>(statusService.getStatus(id), HttpStatus.OK);
+    public ResponseEntityDTO<ResponseDTO> getStatusById(Long id) {
+        return new ResponseEntityDTO<>(statusService.getStatus(id));
     }
 
     @PostMapping(value = Section.StatusPrefix + "/createStatus", consumes = "application/json", produces = "application/json")
-    public ResponseEntity<HttpStatus> createStatus(@RequestBody String rawBody) throws BadRequestException {
-        return statusService.createStatus(rawBody);
+    public ResponseEntityDTO<ResponseDTO> createStatus(@RequestBody String rawBody) {
+        return new ResponseEntityDTO<>(statusService.createStatus(rawBody));
     }
 
     @PostMapping(value = Section.StatusPrefix + "/updateStatus", consumes = "application/json", produces = "application/json")
-    public ResponseEntity<HttpStatus> updateStatus(@RequestBody String rawBody) throws EntityRequestException {
-        return statusService.updateStatus(rawBody);
+    public ResponseEntityDTO<ResponseDTO> updateStatus(@RequestBody String rawBody) {
+        return new ResponseEntityDTO<>(statusService.updateStatus(rawBody));
     }
 
     @RequestMapping(value = Section.StatusPrefix + "/removeStatus",method = RequestMethod.DELETE)
-    public ResponseEntity<HttpStatus> removeStatus(Long id) throws BadRequestException {
-        return statusService.removeStatus(id);
-    }
-
-    @RequestMapping(value = Section.StatusPrefix + "/updateStatusSect",method = RequestMethod.POST)
-    public ResponseEntity<HttpStatus> updateStatusSect(Long id, Long sectId) throws BadRequestException {
-        return statusService.updateStatusSect(id, sectId);
-    }
-
-    @RequestMapping(value = Section.StatusPrefix + "/updateStatusType",method = RequestMethod.POST)
-    public ResponseEntity<HttpStatus> updateStatusType(Long id, Long typeId) throws BadRequestException {
-        return statusService.updateStatusType(id, typeId);
+    public ResponseEntityDTO<ResponseDTO> removeStatus(Long id) {
+        return new ResponseEntityDTO<>(statusService.removeStatus(id));
     }
 }

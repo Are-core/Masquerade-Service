@@ -143,4 +143,53 @@ public class JsonMock {
                 "\t\"level\": 5\n" +
                 "}";
     }
+
+    static public String getStatus() {
+        return "{\n" +
+                "\t\"id\": 69,\n" +
+                "\t\"sect\": {\n" +
+                "\t\t\"id\": 2\n" +
+                "\t},\n" +
+                "\t\"statusType\": {\n" +
+                "\t\t\"id\": 3\n" +
+                "\t},\n" +
+                "\t\"descriptionEN\": \"TEST a\",\n" +
+                "\t\"descriptionFR\": \"none\",\n" +
+                "\t\"noteEN\": \"none\",\n" +
+                "\t\"noteFR\": \"none\",\n" +
+                "\t\"updatable\": true\n" +
+                "}";
+    }
+
+    static public String getNotExistingStatus() {
+        return "{\n" +
+                "\t\"id\": 70,\n" +
+                "\t\"sect\": {\n" +
+                "\t\t\"id\": 2\n" +
+                "\t},\n" +
+                "\t\"statusType\": {\n" +
+                "\t\t\"id\": 3\n" +
+                "\t},\n" +
+                "\t\"descriptionEN\": \"TEST a\",\n" +
+                "\t\"descriptionFR\": \"none\",\n" +
+                "\t\"noteEN\": \"none\",\n" +
+                "\t\"noteFR\": \"none\",\n" +
+                "\t\"updatable\": true\n" +
+                "}";
+    }
+
+    static public String getBadStatus() {
+        return "{\n" +
+                "\t\"id\": 69,\n" +
+                "\t\"sect\": {\n" +
+                "\t\t\"id\": 2\n" +
+                "\t},\n" +
+                "\t\"statusType\": \n" +
+                "\t\"descriptionEN\": \"TEST a\",\n" +
+                "\t\"descriptionFR\": \"none\",\n" +
+                "\t\"noteEN\": \"none\",\n" +
+                "\t\"noteFR\": \"none\",\n" +
+                "\t\"updatable\": true\n" +
+                "}";
+    }
 }

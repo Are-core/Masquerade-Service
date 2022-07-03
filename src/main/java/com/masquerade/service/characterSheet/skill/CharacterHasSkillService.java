@@ -92,8 +92,7 @@ public class CharacterHasSkillService {
             if (!characterHasSkillRepository.existsByCharacterIdAndSkillId(skill.getId().characterId, skill.getId().skillId)) {
                 return Responses.ResponseNoContent;
             }
-            skill = characterHasSkillRepository.save(skill);
-            return new ResponseDTO(HttpStatus.OK, skill);
+            return new ResponseDTO(HttpStatus.OK, characterHasSkillRepository.save(skill));
         } catch (Exception e) {
             return Responses.ResponseBadRequest;
         }

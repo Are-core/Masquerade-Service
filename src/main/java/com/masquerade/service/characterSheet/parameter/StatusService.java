@@ -2,111 +2,94 @@ package com.masquerade.service.characterSheet.parameter;
 
 import com.google.gson.Gson;
 import com.masquerade.exception.BadRequestException;
-import com.masquerade.exception.EntityRequestException;
+import com.masquerade.model.dto.controller.ResponseDTO;
 import com.masquerade.model.entity.characterSheet.global.SectEntity;
 import com.masquerade.model.entity.characterSheet.parameter.StatusEntity;
 import com.masquerade.model.entity.characterSheet.parameter.StatusTypeEntity;
+import com.masquerade.model.entity.characterSheet.skill.CharacterHasSkillEntity;
 import com.masquerade.repository.characterSheet.global.SectRepository;
 import com.masquerade.repository.characterSheet.parameter.StatusRepository;
 import com.masquerade.repository.characterSheet.parameter.StatusTypeRepository;
+import com.masquerade.tools.controller.Responses;
+import com.masquerade.tools.entity.EntityArguments;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Transactional
 public class StatusService {
     private final StatusRepository statusRepository;
-    private final StatusTypeRepository statusTypeRepository;
-    private final SectRepository sectRepository;
 
-    public StatusService(StatusRepository statusRepository, StatusTypeRepository statusTypeRepository, SectRepository sectRepository) {
+    public StatusService(StatusRepository statusRepository) {
         this.statusRepository = statusRepository;
-        this.statusTypeRepository = statusTypeRepository;
-        this.sectRepository = sectRepository;
     }
 
     @Transactional(readOnly = true)
-    public List<StatusEntity> getStatus() {
-        return statusRepository.findAll();
+    public ResponseDTO getStatus() {
+        return new ResponseDTO(HttpStatus.OK, statusRepository.findAll());
     }
 
     @Transactional(readOnly = true)
-    public StatusEntity getStatus(Long id) throws BadRequestException {
+    public ResponseDTO getStatus(Long id) {
         if(id == null){
-            throw BadRequestException.missingParameter();
+            return Responses.MissingArgument(EntityArguments.idArgument);
         }
-        return statusRepository.findById(id)
-                .orElseThrow(IllegalArgumentException::new);
+        Optional<StatusEntity> entries = statusRepository.findById(id);
+        if(entries.isEmpty()) {
+            return Responses.ResponseNoContent;
+        }
+        return new ResponseDTO(HttpStatus.OK, entries.get());
     }
 
-    public ResponseEntity<HttpStatus> createStatus(String rawBody) throws BadRequestException {
+    public ResponseDTO createStatus(String rawBody) {
         if(rawBody == null) {
-            throw BadRequestException.missingParameter();
+            return Responses.MissingArgument(EntityArguments.JsonArgument);
         }
-        Gson gson = new Gson();
-        StatusEntity status = gson.fromJson(rawBody, StatusEntity.class);
-        if(status.emptyObjectCheck()) {
-            throw BadRequestException.missingBody();
+        StatusEntity status;
+        try {
+            Gson gson = new Gson();
+            status = gson.fromJson(rawBody, StatusEntity.class);
+            status.setId(null);
+            return new ResponseDTO(HttpStatus.CREATED, statusRepository.save(status));
+        } catch(Exception e) {
+            return Responses.ResponseBadRequest;
         }
-        status.setId(null);
-        statusRepository.save(status);
-        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
-    public ResponseEntity<HttpStatus> updateStatus(final String rawBody) throws EntityRequestException {
+    public ResponseDTO updateStatus(final String rawBody) {
         if(rawBody == null) {
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            return Responses.MissingArgument(EntityArguments.JsonArgument);
         }
-        Gson gson = new Gson();
-        final StatusEntity status = gson.fromJson(rawBody, StatusEntity.class);
-        if(status.emptyObjectCheck()) {
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        try {
+            Gson gson = new Gson();
+            StatusEntity status = gson.fromJson(rawBody, StatusEntity.class);
+            if(status == null || status.emptyObjectCheck()) {
+                return Responses.ResponseBadRequest;
+            }
+            if(!statusRepository.existsById(status.getId())) {
+                return Responses.ResponseNoContent;
+            }
+            return new ResponseDTO(HttpStatus.OK, statusRepository.save(status));
+        } catch ( Exception e) {
+            return Responses.ResponseBadRequest;
         }
-        updateStatusData(status);
-        return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    private void updateStatusData(StatusEntity status) throws EntityRequestException {
-        if(!statusRepository.existsById(status.getId())) {
-            throw EntityRequestException.doesntExists(status.getId());
-        }
-        statusRepository.save(status);
-    }
-
-    public ResponseEntity<HttpStatus> removeStatus(Long id) throws BadRequestException {
+    public ResponseDTO removeStatus(Long id) {
         if(id == null) {
-            throw BadRequestException.missingParameter();
+            return Responses.MissingArgument(EntityArguments.idArgument);
         }
-        statusRepository.delete(statusRepository.findById(id)
-                .orElseThrow(IllegalArgumentException::new));
-        return new ResponseEntity<>(HttpStatus.OK);
-    }
-
-    public ResponseEntity<HttpStatus> updateStatusSect(Long id, Long sect_id) throws BadRequestException {
-        if(id == null || sect_id == null) {
-            throw BadRequestException.missingParameter();
+        Optional<StatusEntity> entity = statusRepository.findById(id);
+        if (entity.isEmpty()) {
+            return Responses.ResponseNoContent;
         }
-        SectEntity sect = sectRepository.findById(sect_id)
-                .orElseThrow(IllegalArgumentException::new);
-        statusRepository.findById(id)
-                .orElseThrow(IllegalArgumentException::new)
-                .setSect(sect);
-        return new ResponseEntity<>(HttpStatus.OK);
-    }
-
-    public ResponseEntity<HttpStatus> updateStatusType(Long id, Long typeId) throws BadRequestException {
-        if(id == null || typeId == null) {
-            throw BadRequestException.missingParameter();
-        }
-        StatusTypeEntity type = statusTypeRepository.findById(typeId)
-                .orElseThrow(IllegalArgumentException::new);
-        statusRepository.findById(id)
-                .orElseThrow(IllegalArgumentException::new)
-                .setStatusType(type);
-        return new ResponseEntity<>(HttpStatus.OK);
+        statusRepository.delete(entity.get());
+        return new ResponseDTO(HttpStatus.OK, entity);
     }
 }
