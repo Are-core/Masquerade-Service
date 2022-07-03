@@ -25,15 +25,12 @@ class StatusServiceTest {
 
     @Mock
     StatusRepository statusRepository;
-    @Mock
-    StatusTypeRepository statusTypeRepository;
 
     StatusService statusService;
 
     @BeforeEach
     public void setUp() {
         statusRepository = spy(StatusRepository.class);
-        statusTypeRepository = spy(StatusTypeRepository.class);
         setUpMocks();
         statusService = new StatusService(statusRepository);
     }
