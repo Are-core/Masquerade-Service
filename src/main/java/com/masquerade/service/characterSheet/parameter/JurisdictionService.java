@@ -1,17 +1,16 @@
 package com.masquerade.service.characterSheet.parameter;
 
-
 import com.google.gson.Gson;
-import com.masquerade.exception.BadRequestException;
-import com.masquerade.exception.EntityRequestException;
+import com.masquerade.model.dto.controller.ResponseDTO;
 import com.masquerade.model.entity.characterSheet.parameter.JurisdictionEntity;
 import com.masquerade.repository.characterSheet.parameter.JurisdictionRepository;
+import com.masquerade.tools.controller.Responses;
+import com.masquerade.tools.entity.EntityArguments;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
+import java.util.Optional;
 
 @Service
 @Transactional
@@ -22,59 +21,68 @@ public class JurisdictionService {
     public JurisdictionService(JurisdictionRepository jurisdictionRepository) { this.jurisdictionRepository = jurisdictionRepository; }
 
     @Transactional(readOnly = true)
-    public List<JurisdictionEntity> getJurisdictions() {
-        return jurisdictionRepository.findAll();
+    public ResponseDTO getJurisdictions() {
+        return new ResponseDTO(HttpStatus.OK, jurisdictionRepository.findAll());
     }
 
     @Transactional(readOnly = true)
-    public JurisdictionEntity getJurisdiction(Long id) throws BadRequestException {
+    public ResponseDTO getJurisdiction(Long id) {
         if(id == null){
-            throw BadRequestException.missingParameter();
+            return Responses.MissingArgument(EntityArguments.idArgument);
         }
-        return jurisdictionRepository.findById(id)
-                .orElseThrow(IllegalArgumentException::new);
+        Optional<JurisdictionEntity> entries = jurisdictionRepository.findById(id);
+        if(entries.isEmpty()) {
+            return Responses.ResponseNoContent;
+        }
+        return new ResponseDTO(HttpStatus.OK, entries.get());
     }
 
 
-    public ResponseEntity<HttpStatus> removeJurisdiction(Long id) throws BadRequestException {
-        if(id == null) {
-            throw BadRequestException.missingParameter();
+    public ResponseDTO removeJurisdiction(Long id) {
+        if(id == null){
+            return Responses.MissingArgument(EntityArguments.idArgument);
         }
-        jurisdictionRepository.delete(jurisdictionRepository.findById(id)
-                .orElseThrow(IllegalArgumentException::new));
-        return new ResponseEntity<>(HttpStatus.OK);
+        Optional<JurisdictionEntity> entity = jurisdictionRepository.findById(id);
+        if(entity.isEmpty()) {
+            return Responses.ResponseNoContent;
+        }
+        jurisdictionRepository.delete(entity.get());
+        return new ResponseDTO(HttpStatus.OK, entity.get());
     }
 
-    public ResponseEntity<HttpStatus> createJurisdiction(String rawJurisdiction) throws BadRequestException {
-        if(rawJurisdiction == null) {
-            throw BadRequestException.missingParameter();
+    public ResponseDTO createJurisdiction(String rawBody) {
+        if(rawBody == null) {
+            return Responses.MissingArgument(EntityArguments.JsonArgument);
         }
-        Gson gson = new Gson();
-        JurisdictionEntity jurisdiction = gson.fromJson(rawJurisdiction, JurisdictionEntity.class);
-        if(jurisdiction.emptyObjectCheck()) {
-            throw BadRequestException.missingBody();
+        JurisdictionEntity jurisdiction;
+        try {
+            Gson gson = new Gson();
+            jurisdiction = gson.fromJson(rawBody, JurisdictionEntity.class);
+            jurisdiction.setId(null);
+            jurisdiction = jurisdictionRepository.save(jurisdiction);
+        } catch (Exception e) {
+            return Responses.ResponseBadRequest;
         }
-        jurisdictionRepository.save(jurisdiction);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        return new ResponseDTO(HttpStatus.CREATED, jurisdiction);
     }
 
-    public ResponseEntity<HttpStatus> updateJurisdiction(final String rawJurisdiction) throws EntityRequestException {
-        if(rawJurisdiction == null) {
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    public ResponseDTO updateJurisdiction(final String rawBody) {
+        if(rawBody == null) {
+            return Responses.MissingArgument(EntityArguments.JsonArgument);
         }
-        Gson gson = new Gson();
-        final JurisdictionEntity jurisdiction = gson.fromJson(rawJurisdiction, JurisdictionEntity.class);
-        if(jurisdiction.emptyObjectCheck()) {
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        try {
+            Gson gson = new Gson();
+            JurisdictionEntity jurisdiction = gson.fromJson(rawBody, JurisdictionEntity.class);
+            if(jurisdiction == null || jurisdiction.emptyObjectCheck()) {
+                return Responses.ResponseBadRequest;
+            }
+            if(!jurisdictionRepository.existsById(jurisdiction.getId())) {
+                return Responses.ResponseNoContent;
+            }
+            jurisdiction = jurisdictionRepository.save(jurisdiction);
+            return new ResponseDTO(HttpStatus.OK, jurisdiction);
+        } catch (Exception e) {
+            return Responses.ResponseBadRequest;
         }
-        updateJurisdictionData(jurisdiction);
-        return new ResponseEntity<>(HttpStatus.OK);
-    }
-
-    private void updateJurisdictionData(JurisdictionEntity jurisdiction) throws EntityRequestException {
-        if(!jurisdictionRepository.existsById(jurisdiction.getId())) {
-            throw EntityRequestException.doesntExists(jurisdiction.getId());
-        }
-        jurisdictionRepository.save(jurisdiction);
     }
 }

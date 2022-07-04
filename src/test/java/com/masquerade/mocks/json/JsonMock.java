@@ -222,4 +222,28 @@ public class JsonMock {
                 "            \"noteFR\": \"none\"\n" +
                 "        }";
     }
+
+    static public String getJurisdiction() {
+        return "{\n" +
+                "            \"id\": 1,\n" +
+                "            \"description\": \"Metz\",\n" +
+                "            \"updatable\": true\n" +
+                "        }";
+    }
+
+    static public String getBadJurisdiction() {
+        return "{\n" +
+                "            \"id\": 1,\n" +
+                "            \"description: \"Metz\"\n" +
+                "            \"updatable\": true\n" +
+                "        }";
+    }
+
+    static public String getNotExistingJurisdiction() {
+        return "{\n" +
+                "            \"id\": 8,\n" +
+                "            \"description\": \"Metz\",\n" +
+                "            \"updatable\": true\n" +
+                "        }";
+    }
 }
