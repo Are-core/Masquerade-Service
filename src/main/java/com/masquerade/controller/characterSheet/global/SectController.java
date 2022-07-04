@@ -1,15 +1,12 @@
 package com.masquerade.controller.characterSheet.global;
 
-import com.masquerade.exception.BadRequestException;
-import com.masquerade.exception.EntityRequestException;
-import com.masquerade.model.entity.characterSheet.global.SectEntity;
+import com.masquerade.model.dto.controller.ResponseDTO;
+import com.masquerade.model.dto.controller.ResponseEntityDTO;
 import com.masquerade.service.characterSheet.global.SectService;
 import com.masquerade.tools.controller.Section;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @CrossOrigin(origins = Section.CrossOriginUrl)
 @RestController
@@ -20,27 +17,27 @@ public class SectController {
     public SectController(SectService sectService) { this.sectService = sectService; }
 
     @RequestMapping(value = Section.SectPrefix + "/getSects",method = RequestMethod.GET)
-    public ResponseEntity<List<SectEntity>> getArchetypes() {
-        return new ResponseEntity<>(sectService.getSects(), HttpStatus.OK);
+    public ResponseEntityDTO<ResponseDTO> getArchetypes() {
+        return new ResponseEntityDTO<>(sectService.getSects());
     }
 
     @RequestMapping(value = Section.SectPrefix + "/getSectById",method = RequestMethod.GET)
-    public ResponseEntity<SectEntity> getArchetype(Long id) throws BadRequestException {
-        return new ResponseEntity<>(sectService.getSect(id), HttpStatus.OK);
+    public ResponseEntityDTO<ResponseDTO> getArchetype(Long id) {
+        return new ResponseEntityDTO<>(sectService.getSect(id));
     }
 
     @RequestMapping(value = Section.SectPrefix + "/removeSect",method = RequestMethod.DELETE)
-    public ResponseEntity<HttpStatus> removeArchetype(Long id) throws BadRequestException {
-        return sectService.removeSect(id);
+    public ResponseEntityDTO<ResponseDTO> removeArchetype(Long id) {
+        return new ResponseEntityDTO<>(sectService.removeSect(id));
     }
 
     @PostMapping(value = Section.SectPrefix + "/createSect", consumes = "application/json", produces = "application/json")
-    public ResponseEntity<HttpStatus> createSect(@RequestBody String rawSect) throws BadRequestException {
-        return sectService.createSect(rawSect);
+    public ResponseEntityDTO<ResponseDTO> createSect(@RequestBody String rawSect) {
+        return new ResponseEntityDTO<>(sectService.createSect(rawSect));
     }
 
     @PostMapping(value = Section.SectPrefix + "/updateSect", consumes = "application/json", produces = "application/json")
-    public ResponseEntity<HttpStatus> updateSect(@RequestBody String rawSect) throws EntityRequestException {
-        return sectService.updateSect(rawSect);
+    public ResponseEntityDTO<ResponseDTO> updateSect(@RequestBody String rawSect) {
+        return new ResponseEntityDTO<>(sectService.updateSect(rawSect));
     }
 }

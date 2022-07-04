@@ -3,14 +3,19 @@ package com.masquerade.service.characterSheet.global;
 import com.google.gson.Gson;
 import com.masquerade.exception.BadRequestException;
 import com.masquerade.exception.EntityRequestException;
+import com.masquerade.model.dto.controller.ResponseDTO;
 import com.masquerade.model.entity.characterSheet.global.SectEntity;
+import com.masquerade.model.entity.characterSheet.global.TitleEntity;
 import com.masquerade.repository.characterSheet.global.SectRepository;
+import com.masquerade.tools.controller.Responses;
+import com.masquerade.tools.entity.EntityArguments;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Transactional
@@ -20,58 +25,67 @@ public class SectService {
     public SectService(SectRepository sectRepository) { this.sectRepository = sectRepository; }
 
     @Transactional(readOnly = true)
-    public List<SectEntity> getSects() {
-        return sectRepository.findAll();
+    public ResponseDTO getSects() {
+        return new ResponseDTO(HttpStatus.OK, sectRepository.findAll() );
     }
 
     @Transactional(readOnly = true)
-    public SectEntity getSect(Long id) throws BadRequestException {
+    public ResponseDTO getSect(Long id) {
         if(id == null){
-            throw BadRequestException.missingParameter();
+            return Responses.MissingArgument(EntityArguments.idArgument);
         }
-        return sectRepository.findById(id)
-                .orElseThrow(IllegalArgumentException::new);
+        Optional<SectEntity> entries = sectRepository.findById(id);
+        if(entries.isEmpty()) {
+            return Responses.ResponseNoContent;
+        }
+        return new ResponseDTO(HttpStatus.OK, entries.get());
     }
 
-    public ResponseEntity<HttpStatus> removeSect(Long id) throws BadRequestException {
+    public ResponseDTO removeSect(Long id) {
         if(id == null) {
-            throw BadRequestException.missingParameter();
+            return Responses.MissingArgument(EntityArguments.idArgument);
         }
-        sectRepository.delete(sectRepository.findById(id)
-                .orElseThrow(IllegalArgumentException::new));
-        return new ResponseEntity<>(HttpStatus.OK);
+        Optional<SectEntity> entity = sectRepository.findById(id);
+        if(entity.isEmpty()) {
+            return Responses.ResponseNoContent;
+        }
+        sectRepository.delete(entity.get());
+        return new ResponseDTO(HttpStatus.OK, entity.get());
     }
 
-    public ResponseEntity<HttpStatus> createSect(String rawSect) throws BadRequestException {
-        if(rawSect == null) {
-            throw BadRequestException.missingParameter();
+    public ResponseDTO createSect(String rawBody) {
+        if(rawBody == null) {
+            return Responses.MissingArgument(EntityArguments.JsonArgument);
         }
-        Gson gson = new Gson();
-        SectEntity sect = gson.fromJson(rawSect, SectEntity.class);
-        if(sect.emptyObjectCheck()) {
-            throw BadRequestException.missingBody();
+        SectEntity sect;
+        try {
+            Gson gson = new Gson();
+            sect = gson.fromJson(rawBody, SectEntity.class);
+            sect.setId(null);
+            sect = sectRepository.save(sect);
+        } catch (Exception e) {
+            return Responses.ResponseBadRequest;
         }
-        sectRepository.save(sect);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        return new ResponseDTO(HttpStatus.CREATED, sect);
     }
 
-    public ResponseEntity<HttpStatus> updateSect(String rawSect) throws EntityRequestException {
-        if(rawSect == null) {
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    public ResponseDTO updateSect(String rawBody) {
+        if(rawBody == null) {
+            return Responses.MissingArgument(EntityArguments.JsonArgument);
         }
-        Gson gson = new Gson();
-        final SectEntity sect = gson.fromJson(rawSect, SectEntity.class);
-        if(sect.emptyObjectCheck()) {
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        try {
+            Gson gson = new Gson();
+            SectEntity sect = gson.fromJson(rawBody, SectEntity.class);
+            if(sect == null || sect.emptyObjectCheck()) {
+                return Responses.ResponseBadRequest;
+            }
+            if(!sectRepository.existsById(sect.getId())) {
+                return Responses.ResponseNoContent;
+            }
+            sect = sectRepository.save(sect);
+            return new ResponseDTO(HttpStatus.OK, sect);
+        } catch (Exception e) {
+            return Responses.ResponseBadRequest;
         }
-        updateSectData(sect);
-        return new ResponseEntity<>(HttpStatus.OK);
-    }
-
-    private void updateSectData(SectEntity sect) throws EntityRequestException {
-        if(!sectRepository.existsById(sect.getId())) {
-            throw EntityRequestException.doesntExists(sect.getId());
-        }
-        sectRepository.save(sect);
     }
 }
