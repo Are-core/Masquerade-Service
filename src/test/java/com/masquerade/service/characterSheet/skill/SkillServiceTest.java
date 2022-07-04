@@ -152,9 +152,16 @@ class SkillServiceTest {
     }
 
     @Test
+    public void testUpdateSkillEmptyBody() {
+        ResponseDTO response = skillService.updateSkill("{}");
+        assertEquals(HttpStatus.BAD_REQUEST, response.getHttpStatus());
+        verify(skillRepository, times(0)).save(any());
+    }
+
+    @Test
     public void testUpdateSkillDoesNotExist() {
         ResponseDTO response = skillService.updateSkill(JsonMock.getMissingSkillJson());
-        assertEquals(HttpStatus.BAD_REQUEST, response.getHttpStatus());
+        assertEquals(HttpStatus.NO_CONTENT, response.getHttpStatus());
         verify(skillRepository, times(0)).save(any());
     }
 }

@@ -74,8 +74,11 @@ public class SkillService {
         try {
             Gson gson = new Gson();
             SkillEntity skill = gson.fromJson(rawBody, SkillEntity.class);
-            if(skill == null || skill.emptyObjectCheck() || !skillRepository.existsById(skill.getId())) {
+            if(skill == null || skill.emptyObjectCheck()) {
                 return Responses.ResponseBadRequest;
+            }
+            if(!skillRepository.existsById(skill.getId())) {
+                return Responses.ResponseNoContent;
             }
             skill = skillRepository.save(skill);
             return new ResponseDTO(HttpStatus.OK, skill);
