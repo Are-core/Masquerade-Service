@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Feature - JurisdictionService : Add JUnit test">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/service/characterSheet/parameter/CharacterHasStatusServiceTest.java" afterDir="false" />
+    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Feature - CharacterHasStatusService : Add JUnit test">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/service/characterSheet/global/TitleServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/parameter/CharacterHasStatusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/parameter/CharacterHasStatusController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/characterSheet/parameter/DeclaredStatusDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/dto/characterSheet/parameter/DeclaredStatusDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/parameter/CharacterHasStatusService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/parameter/CharacterHasStatusService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/global/TitleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/global/TitleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/global/TitleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/global/TitleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/masquerade/MasqueradeApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/MasqueradeApplicationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/masquerade/mocks/json/JsonMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/mocks/json/JsonMock.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,14 +81,14 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.masquerade.service.characterSheet.global" />
       <recent name="com.masquerade.service.characterSheet.parameter" />
       <recent name="com.masquerade.service.characterSheet.skill" />
       <recent name="com.masquerade.model.dto.controller" />
       <recent name="com.masquerade.model.dto.characterSheet.skill" />
-      <recent name="com.masquerade.model.dto.characterSheet.parameter" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CharacterHasStatusServiceTest">
+  <component name="RunManager" selected="JUnit.TitleServiceTest">
     <configuration name="MasqueradeApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.masquerade.MasqueradeApplication" />
       <module name="Masquerade-service" />
@@ -97,53 +98,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CharacterHasStatusServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Masquerade-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.masquerade.service.characterSheet.parameter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.masquerade.service.characterSheet.parameter" />
-      <option name="MAIN_CLASS_NAME" value="com.masquerade.service.characterSheet.parameter.CharacterHasStatusServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CharacterHasStatusServiceTest.testGetStatusTypes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Masquerade-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.masquerade.service.characterSheet.parameter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.masquerade.service.characterSheet.parameter" />
-      <option name="MAIN_CLASS_NAME" value="com.masquerade.service.characterSheet.parameter.CharacterHasStatusServiceTest" />
-      <option name="METHOD_NAME" value="testGetStatusTypes" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CharacterHasStatusServiceTest.testGetStatusTypesByCharacter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Masquerade-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.masquerade.service.characterSheet.parameter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.masquerade.service.characterSheet.parameter" />
-      <option name="MAIN_CLASS_NAME" value="com.masquerade.service.characterSheet.parameter.CharacterHasStatusServiceTest" />
-      <option name="METHOD_NAME" value="testGetStatusTypesByCharacter" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -170,17 +124,70 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JurisdictionServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TitleServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Masquerade-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.masquerade.service.characterSheet.parameter.*" />
+          <option name="PATTERN" value="com.masquerade.service.characterSheet.global.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="com.masquerade.MasqueradeApplication" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.masquerade.service.characterSheet.parameter" />
-      <option name="MAIN_CLASS_NAME" value="com.masquerade.service.characterSheet.parameter.JurisdictionServiceTest" />
+      <option name="PACKAGE_NAME" value="com.masquerade.service.characterSheet.global" />
+      <option name="MAIN_CLASS_NAME" value="com.masquerade.service.characterSheet.global.TitleServiceTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TitleServiceTest.testCreateTitleWithEmptyBody" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Masquerade-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.masquerade.service.characterSheet.global.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.masquerade.service.characterSheet.global" />
+      <option name="MAIN_CLASS_NAME" value="com.masquerade.service.characterSheet.global.TitleServiceTest" />
+      <option name="METHOD_NAME" value="testCreateTitleWithEmptyBody" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TitleServiceTest.testCreateTitleWithNotExistingId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Masquerade-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.masquerade.service.characterSheet.global.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.masquerade.service.characterSheet.global" />
+      <option name="MAIN_CLASS_NAME" value="com.masquerade.service.characterSheet.global.TitleServiceTest" />
+      <option name="METHOD_NAME" value="testCreateTitleWithNotExistingId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TitleServiceTest.testRemoveStatusOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Masquerade-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.masquerade.service.characterSheet.global.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.masquerade.service.characterSheet.global" />
+      <option name="MAIN_CLASS_NAME" value="com.masquerade.service.characterSheet.global.TitleServiceTest" />
+      <option name="METHOD_NAME" value="testRemoveStatusOk" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -188,18 +195,18 @@
     <list>
       <item itemvalue="Application.MasqueradeApplication" />
       <item itemvalue="JUnit.Junit tests" />
-      <item itemvalue="JUnit.CharacterHasStatusServiceTest" />
-      <item itemvalue="JUnit.CharacterHasStatusServiceTest.testGetStatusTypes" />
-      <item itemvalue="JUnit.CharacterHasStatusServiceTest.testGetStatusTypesByCharacter" />
-      <item itemvalue="JUnit.JurisdictionServiceTest" />
+      <item itemvalue="JUnit.TitleServiceTest.testCreateTitleWithEmptyBody" />
+      <item itemvalue="JUnit.TitleServiceTest.testCreateTitleWithNotExistingId" />
+      <item itemvalue="JUnit.TitleServiceTest.testRemoveStatusOk" />
+      <item itemvalue="JUnit.TitleServiceTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CharacterHasStatusServiceTest" />
-        <item itemvalue="JUnit.CharacterHasStatusServiceTest.testGetStatusTypesByCharacter" />
-        <item itemvalue="JUnit.CharacterHasStatusServiceTest.testGetStatusTypes" />
+        <item itemvalue="JUnit.TitleServiceTest" />
+        <item itemvalue="JUnit.TitleServiceTest.testCreateTitleWithNotExistingId" />
+        <item itemvalue="JUnit.TitleServiceTest.testCreateTitleWithEmptyBody" />
         <item itemvalue="Application.MasqueradeApplication" />
-        <item itemvalue="JUnit.JurisdictionServiceTest" />
+        <item itemvalue="JUnit.TitleServiceTest.testRemoveStatusOk" />
       </list>
     </recent_temporary>
   </component>
@@ -211,13 +218,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654947632401</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Chore - Export string for prefixes to an external class">
-      <created>1656142151468</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1656142151468</updated>
     </task>
     <task id="LOCAL-00025" summary="Chore - Add Column name for entities &amp; Refactoring name">
       <created>1656142885920</created>
@@ -555,7 +555,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656966277916</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="Feature - CharacterHasStatusService : Add JUnit test">
+      <created>1656971353392</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1656971353392</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -581,7 +588,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Feature - StatusTypeEntity : Add JUnit test" />
     <MESSAGE value="Feature - CharacterHasStatusEntity : Add JUnit test" />
     <MESSAGE value="Chore : Remove some unused imports" />
     <MESSAGE value="Feature - StatusEntity : Add JUnit test" />
@@ -606,7 +612,8 @@
     <MESSAGE value="Feature - StatusTypeService : Add JUnit test" />
     <MESSAGE value="Fix - SkillService : Add case to updateSkill" />
     <MESSAGE value="Feature - JurisdictionService : Add JUnit test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature - JurisdictionService : Add JUnit test" />
+    <MESSAGE value="Feature - CharacterHasStatusService : Add JUnit test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature - CharacterHasStatusService : Add JUnit test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -615,11 +622,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/com/masquerade/model/dto/characterSheet/parameter/CharacterStatusDTOTest.java</url>
           <line>69</line>
           <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/parameter/CharacterHasStatusController.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -651,7 +653,7 @@
       <FILTER>com.masquerade.service.characterSheet.parameter.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Masquerade_service$All_in_Masquerade_service__2_.ic" NAME="All in Masquerade-service (2) Coverage Results" MODIFIED="1656757904292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/Masquerade_service$Junit_tests.ic" NAME="Junit tests Coverage Results" MODIFIED="1656966316107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Masquerade_service$Junit_tests.ic" NAME="Junit tests Coverage Results" MODIFIED="1656973459011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <EXCLUDED_FILTER>com.masquerade.tools.controller.Section</EXCLUDED_FILTER>
       <EXCLUDED_FILTER>com.masquerade.tools.entity.EntityArguments</EXCLUDED_FILTER>
     </SUITE>
@@ -665,7 +667,7 @@
       <FILTER>com.masquerade.model.entity.characterSheet.skill.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Masquerade_service$All_in_Masquerade_service__1_.ic" NAME="All in Masquerade-service (1) Coverage Results" MODIFIED="1656761795984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterHasStatusServiceTest.ic" NAME="CharacterHasStatusServiceTest Coverage Results" MODIFIED="1656971293075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterHasStatusServiceTest.ic" NAME="CharacterHasStatusServiceTest Coverage Results" MODIFIED="1656971316084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.masquerade.service.characterSheet.parameter.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Masquerade_service$CharacterStatusDTOTest_testStatus.ic" NAME="CharacterStatusDTOTest.testStatus Coverage Results" MODIFIED="1656779145101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -727,6 +729,13 @@
     </SUITE>
     <SUITE FILE_PATH="coverage/Masquerade_service$StatusEntityTest_testEmptyCheck.ic" NAME="StatusEntityTest.testEmptyCheck Coverage Results" MODIFIED="1656770214658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.masquerade.model.entity.characterSheet.parameter.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$TitleServiceTest.ic" NAME="TitleServiceTest Coverage Results" MODIFIED="1656974358140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.service.characterSheet.global.*</FILTER>
+      <FILTER>com.masquerade.MasqueradeApplication</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$TitleServiceTest_testRemoveStatusOk.ic" NAME="TitleServiceTest.testRemoveStatusOk Coverage Results" MODIFIED="1656973510151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.service.characterSheet.global.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Masquerade_service$SkillServiceTest.ic" NAME="SkillServiceTest Coverage Results" MODIFIED="1656965635279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.masquerade.service.characterSheet.skill.*</FILTER>

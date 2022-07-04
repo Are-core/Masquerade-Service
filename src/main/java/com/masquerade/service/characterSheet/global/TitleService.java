@@ -1,96 +1,89 @@
 package com.masquerade.service.characterSheet.global;
 
 import com.google.gson.Gson;
-import com.masquerade.exception.BadRequestException;
-import com.masquerade.exception.EntityRequestException;
-import com.masquerade.model.entity.characterSheet.global.SectEntity;
+import com.masquerade.model.dto.controller.ResponseDTO;
 import com.masquerade.model.entity.characterSheet.global.TitleEntity;
-import com.masquerade.repository.characterSheet.global.SectRepository;
 import com.masquerade.repository.characterSheet.global.TitleRepository;
+import com.masquerade.tools.controller.Responses;
+import com.masquerade.tools.entity.EntityArguments;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
+import java.util.Optional;
 
 @Service
 @Transactional
 public class TitleService {
 
     private final TitleRepository titleRepository;
-    private final SectRepository sectRepository;
 
-    public TitleService(TitleRepository titleRepository, SectRepository sectRepository) {
+    public TitleService(TitleRepository titleRepository) {
         this.titleRepository = titleRepository;
-        this.sectRepository = sectRepository;
     }
 
     @Transactional(readOnly = true)
-    public List<TitleEntity> getTitles() {
-        return titleRepository.findAll();
+    public ResponseDTO getTitles() {
+        return new ResponseDTO(HttpStatus.OK,titleRepository.findAll());
     }
 
     @Transactional(readOnly = true)
-    public TitleEntity getTitle(Long id) throws BadRequestException {
+    public ResponseDTO getTitle(Long id) {
         if(id == null){
-            throw BadRequestException.missingParameter();
+            return Responses.MissingArgument(EntityArguments.idArgument);
         }
-        return titleRepository.findById(id)
-                .orElseThrow(IllegalArgumentException::new);
+        Optional<TitleEntity> entries = titleRepository.findById(id);
+        if(entries.isEmpty()) {
+            return Responses.ResponseNoContent;
+        }
+        return new ResponseDTO(HttpStatus.OK, entries.get());
     }
 
-    public ResponseEntity<HttpStatus> removeTitle(Long id) throws BadRequestException {
+    public ResponseDTO removeTitle(Long id)  {
         if(id == null) {
-            throw BadRequestException.missingParameter();
+            return Responses.MissingArgument(EntityArguments.idArgument);
         }
-        titleRepository.delete(titleRepository.findById(id)
-                .orElseThrow(IllegalArgumentException::new));
-        return new ResponseEntity<>(HttpStatus.OK);
+        Optional<TitleEntity> entity = titleRepository.findById(id);
+        if(entity.isEmpty()) {
+            return Responses.ResponseNoContent;
+        }
+        titleRepository.delete(entity.get());
+        return new ResponseDTO(HttpStatus.OK, entity.get());
     }
 
-    public ResponseEntity<HttpStatus> createTitle(String rawTitle) throws BadRequestException {
-        if(rawTitle == null) {
-            throw BadRequestException.missingParameter();
+    public ResponseDTO createTitle(String rawBody) {
+        if(rawBody == null) {
+            return Responses.MissingArgument(EntityArguments.JsonArgument);
         }
-        Gson gson = new Gson();
-        TitleEntity title = gson.fromJson(rawTitle, TitleEntity.class);
-        if(title.emptyObjectCheck()) {
-            throw BadRequestException.missingBody();
+        TitleEntity title;
+        try {
+            Gson gson = new Gson();
+            title = gson.fromJson(rawBody, TitleEntity.class);
+            title.setId(null);
+            title = titleRepository.save(title);
+        } catch (Exception e) {
+            return Responses.ResponseBadRequest;
         }
-        titleRepository.save(title);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        return new ResponseDTO(HttpStatus.CREATED, title);
     }
 
-    public ResponseEntity<HttpStatus> updateTitle(final String rawTitle) throws EntityRequestException {
-        if(rawTitle == null) {
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    public ResponseDTO updateTitle(final String rawBody) {
+        if(rawBody == null) {
+            return Responses.MissingArgument(EntityArguments.JsonArgument);
         }
-        Gson gson = new Gson();
-        final TitleEntity title = gson.fromJson(rawTitle, TitleEntity.class);
-        if(title.emptyObjectCheck()) {
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        try {
+            Gson gson = new Gson();
+            TitleEntity title = gson.fromJson(rawBody, TitleEntity.class);
+            if(title == null || title.emptyObjectCheck()) {
+                return Responses.ResponseBadRequest;
+            }
+            if(!titleRepository.existsById(title.getId())) {
+                return Responses.ResponseNoContent;
+            }
+            title = titleRepository.save(title);
+            return new ResponseDTO(HttpStatus.OK, title);
+        } catch (Exception e) {
+            return Responses.ResponseBadRequest;
         }
-        updateTitleData(title);
-        return new ResponseEntity<>(HttpStatus.OK);
-    }
-
-    public ResponseEntity<HttpStatus> updateTitleSect(Long id, Long sect_id) throws BadRequestException {
-        if(id == null || sect_id == null) {
-            throw BadRequestException.missingParameter();
-        }
-        SectEntity sect = sectRepository.findById(sect_id)
-                .orElseThrow(IllegalArgumentException::new);
-        titleRepository.findById(id)
-                .orElseThrow(IllegalArgumentException::new)
-                .setSect(sect);
-        return new ResponseEntity<>(HttpStatus.OK);
-    }
-
-    private void updateTitleData(TitleEntity archetype) throws EntityRequestException {
-        if(!titleRepository.existsById(archetype.getId())) {
-            throw EntityRequestException.doesntExists(archetype.getId());
-        }
-        titleRepository.save(archetype);
     }
 }

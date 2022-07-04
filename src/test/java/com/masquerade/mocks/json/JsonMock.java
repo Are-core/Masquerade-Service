@@ -246,4 +246,85 @@ public class JsonMock {
                 "            \"updatable\": true\n" +
                 "        }";
     }
+
+    static public String getTitle() {
+        return "{\n" +
+                "\t\"id\": 1,\n" +
+                "\t\"sect\": {\n" +
+                "\t\t\"id\": 2,\n" +
+                "\t\t\"description\": \"Camarilla\",\n" +
+                "\t\t\"updatable\": true\n" +
+                "\t},\n" +
+                "\t\"status\": [\n" +
+                "\t\t{\n" +
+                "\t\t\t\"id\": 1\n" +
+                "\t\t},\n" +
+                "\t\t{\n" +
+                "\t\t\t\"id\": 18\n" +
+                "\t\t},\n" +
+                "\t\t{\n" +
+                "\t\t\t\"id\": 63\n" +
+                "\t\t}\n" +
+                "\t],\n" +
+                "\t\"descriptionEN\": \"Imperator\",\n" +
+                "\t\"descriptionFR\": \"none\",\n" +
+                "\t\"noteEN\": \"none\",\n" +
+                "\t\"noteFR\": \"none\",\n" +
+                "\t\"updatable\": true\n" +
+                "}";
+    }
+
+    static public String getNotExistingTitle() {
+        return "{\n" +
+                "\t\"id\": 14,\n" +
+                "\t\"sect\": {\n" +
+                "\t\t\"id\": 2,\n" +
+                "\t\t\"description\": \"Camarilla\",\n" +
+                "\t\t\"updatable\": true\n" +
+                "\t},\n" +
+                "\t\"status\": [\n" +
+                "\t\t{\n" +
+                "\t\t\t\"id\": 1\n" +
+                "\t\t},\n" +
+                "\t\t{\n" +
+                "\t\t\t\"id\": 18\n" +
+                "\t\t},\n" +
+                "\t\t{\n" +
+                "\t\t\t\"id\": 63\n" +
+                "\t\t}\n" +
+                "\t],\n" +
+                "\t\"descriptionEN\": \"Imperator\",\n" +
+                "\t\"descriptionFR\": \"none\",\n" +
+                "\t\"noteEN\": \"none\",\n" +
+                "\t\"noteFR\": \"none\",\n" +
+                "\t\"updatable\": true\n" +
+                "}";
+    }
+
+    static public String getBadTitle() {
+        return "{\n" +
+                "\t\"id\": 1,\n" +
+                "\t\"sect\": {\n" +
+                "\t\t\"id\":\n" +
+                "\t\t\"description\": \"Camarilla\",\n" +
+                "\t\t\"updatable\": true\n" +
+                "\t},\n" +
+                "\t\"status [\n" +
+                "\t\t{\n" +
+                "\t\t\t\"id\": 1\n" +
+                "\t\t},\n" +
+                "\t\t{\n" +
+                "\t\t\t\"id\": 18\n" +
+                "\t\t},\n" +
+                "\t\t{\n" +
+                "\t\t\t\"id\": 63\n" +
+                "\t\t}\n" +
+                "\t],\n" +
+                "\t\"descriptionEN\": \"Imperator\",\n" +
+                "\t\"descriptionFR\": \"none\",\n" +
+                "\t\"noteEN\": \"none\",\n" +
+                "\t\"noteFR\": \"none\",\n" +
+                "\t\"updatable\": true\n" +
+                "}";
+    }
 }
