@@ -7,6 +7,7 @@ import com.masquerade.model.entity.characterSheet.parameter.StatusTypeEntity;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class DeclaredStatusDTO extends StatusEntity {
+    //TODO mettre en place un dto pour le personnage
     private Long entity;
 
     public DeclaredStatusDTO(Long entity) {
