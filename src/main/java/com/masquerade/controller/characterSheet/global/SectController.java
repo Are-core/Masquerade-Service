@@ -4,8 +4,6 @@ import com.masquerade.model.dto.controller.ResponseDTO;
 import com.masquerade.model.dto.controller.ResponseEntityDTO;
 import com.masquerade.service.characterSheet.global.SectService;
 import com.masquerade.tools.controller.Section;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin(origins = Section.CrossOriginUrl)
@@ -17,17 +15,17 @@ public class SectController {
     public SectController(SectService sectService) { this.sectService = sectService; }
 
     @RequestMapping(value = Section.SectPrefix + "/getSects",method = RequestMethod.GET)
-    public ResponseEntityDTO<ResponseDTO> getArchetypes() {
+    public ResponseEntityDTO<ResponseDTO> getSects() {
         return new ResponseEntityDTO<>(sectService.getSects());
     }
 
     @RequestMapping(value = Section.SectPrefix + "/getSectById",method = RequestMethod.GET)
-    public ResponseEntityDTO<ResponseDTO> getArchetype(Long id) {
+    public ResponseEntityDTO<ResponseDTO> getSect(Long id) {
         return new ResponseEntityDTO<>(sectService.getSect(id));
     }
 
     @RequestMapping(value = Section.SectPrefix + "/removeSect",method = RequestMethod.DELETE)
-    public ResponseEntityDTO<ResponseDTO> removeArchetype(Long id) {
+    public ResponseEntityDTO<ResponseDTO> removeSect(Long id) {
         return new ResponseEntityDTO<>(sectService.removeSect(id));
     }
 
