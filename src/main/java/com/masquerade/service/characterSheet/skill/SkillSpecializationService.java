@@ -75,8 +75,11 @@ public class SkillSpecializationService {
         try {
             Gson gson = new Gson();
             SkillSpecializationEntity specialization = gson.fromJson(rawBody, SkillSpecializationEntity.class);
-            if(specialization == null || specialization.emptyObjectCheck() || !skillSpecializationRepository.existsById(specialization.getId())) {
+            if(specialization == null || specialization.emptyObjectCheck()) {
                 return Responses.ResponseBadRequest;
+            }
+            if(!skillSpecializationRepository.existsById(specialization.getId())) {
+                return Responses.ResponseNoContent;
             }
             specialization = skillSpecializationRepository.save(specialization);
             return new ResponseDTO(HttpStatus.OK, specialization);
