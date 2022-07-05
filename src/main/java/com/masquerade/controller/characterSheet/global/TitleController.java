@@ -21,7 +21,7 @@ public class TitleController {
     }
 
     @RequestMapping(value = Section.TitlePrefix + "/getTitleById",method = RequestMethod.GET)
-    public ResponseEntityDTO<ResponseDTO> getArchetype(Long id) {
+    public ResponseEntityDTO<ResponseDTO> getTitle(Long id) {
         return new ResponseEntityDTO<>(titleService.getTitle(id));
     }
 
