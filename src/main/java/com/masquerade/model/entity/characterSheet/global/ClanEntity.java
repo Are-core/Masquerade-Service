@@ -3,6 +3,7 @@ package com.masquerade.model.entity.characterSheet.global;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import javax.persistence.*;
+import java.beans.Transient;
 
 @Table(name="clan")
 @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -43,6 +44,7 @@ public class ClanEntity {
                 this.getNoteFR() == null);
     }
 
+    @Transient
     public boolean isUpdatable() {
         return this.id != null && this.id > 0L;
     }

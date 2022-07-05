@@ -351,4 +351,34 @@ public class JsonMock {
                 "            \"updatable\": false\n" +
                 "        }";
     }
+
+    static public String getClan() {
+        return "{\n" +
+                "            \"id\": 1,\n" +
+                "            \"descriptionEN\": \"Banu Haqim\",\n" +
+                "            \"descriptionFR\": \"Banu Haqim\",\n" +
+                "            \"noteEN\": \"none\",\n" +
+                "            \"noteFR\": \"none\"\n" +
+                "        }";
+    }
+
+    static public String getNotExistingClan() {
+        return "{\n" +
+                "            \"id\": 56461,\n" +
+                "            \"descriptionEN\": \"Banu Haqim\",\n" +
+                "            \"descriptionFR\": \"Banu Haqim\",\n" +
+                "            \"noteEN\": \"none\",\n" +
+                "            \"noteFR\": \"none\"\n" +
+                "        }";
+    }
+
+    static public String getBadClan() {
+        return "{\n" +
+                "            \"id\": 1,\n" +
+                "            \"description\"Banu Haqim\",\n" +
+                "            \"descriptionFR\": \"Banu Haqim\",\n" +
+                "            \"noteEN\": \"none\",\n" +
+                "            \"noteFR\": \"none\"\n" +
+                "        }";
+    }
 }
