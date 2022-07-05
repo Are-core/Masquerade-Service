@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Feature - SkillSpecializationController : add JUnit tests">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/controller/characterSheet/skill/SkillControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/masquerade/service/characterSheet/skill/SkillSpecializationServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/service/characterSheet/skill/SkillSpecializationServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +84,7 @@
       <recent name="com.masquerade.service.characterSheet.parameter" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Junit tests">
+  <component name="RunManager" selected="JUnit.SkillControllerTest">
     <configuration name="MasqueradeApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.masquerade.MasqueradeApplication" />
       <module name="Masquerade-service" />
@@ -121,6 +121,21 @@
       <option name="MAIN_CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SkillControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Masquerade-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.masquerade.controller.characterSheet.skill.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.masquerade.controller.characterSheet.skill" />
+      <option name="MAIN_CLASS_NAME" value="com.masquerade.controller.characterSheet.skill.SkillControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -174,12 +189,14 @@
     <list>
       <item itemvalue="Application.MasqueradeApplication" />
       <item itemvalue="JUnit.Junit tests" />
+      <item itemvalue="JUnit.SkillControllerTest" />
       <item itemvalue="JUnit.SkillSpecializationControllerTest" />
       <item itemvalue="JUnit.SkillSpecializationControllerTest.testUpdateSpecializationWithNotExistingBody" />
       <item itemvalue="JUnit.SkillSpecializationServiceTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SkillControllerTest" />
         <item itemvalue="JUnit.SkillSpecializationServiceTest" />
         <item itemvalue="JUnit.SkillSpecializationControllerTest" />
         <item itemvalue="JUnit.SkillSpecializationControllerTest.testUpdateSpecializationWithNotExistingBody" />
@@ -195,13 +212,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654947632401</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Feature - Add CharacterStatus getter service">
-      <created>1656277337478</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1656277337478</updated>
     </task>
     <task id="LOCAL-00034" summary="Feature - Update dependencies">
       <created>1656533024416</created>
@@ -539,7 +549,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657014960387</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="Feature - SkillSpecializationController : add JUnit tests">
+      <created>1657015118434</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1657015118434</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -630,7 +647,7 @@
       <FILTER>com.masquerade.service.characterSheet.parameter.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Masquerade_service$All_in_Masquerade_service__2_.ic" NAME="All in Masquerade-service (2) Coverage Results" MODIFIED="1656757904292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/Masquerade_service$Junit_tests.ic" NAME="Junit tests Coverage Results" MODIFIED="1657015028107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Masquerade_service$Junit_tests.ic" NAME="Junit tests Coverage Results" MODIFIED="1657015098006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <EXCLUDED_FILTER>com.masquerade.tools.controller.Section</EXCLUDED_FILTER>
       <EXCLUDED_FILTER>com.masquerade.MasqueradeApplication</EXCLUDED_FILTER>
       <EXCLUDED_FILTER>com.masquerade.tools.entity.EntityArguments</EXCLUDED_FILTER>
@@ -724,6 +741,9 @@
     <SUITE FILE_PATH="coverage/Masquerade_service$SkillServiceTest.ic" NAME="SkillServiceTest Coverage Results" MODIFIED="1656965635279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.masquerade.service.characterSheet.skill.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$SkillControllerTest.ic" NAME="SkillControllerTest Coverage Results" MODIFIED="1657016042166" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.controller.characterSheet.skill.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/Masquerade_service$SectionTest.ic" NAME="SectionTest Coverage Results" MODIFIED="1656758763138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.masquerade.tools.controller.*</FILTER>
     </SUITE>
@@ -762,6 +782,9 @@
     </SUITE>
     <SUITE FILE_PATH="coverage/Masquerade_service$SkillSpecializationEntityTest.ic" NAME="SkillSpecializationEntityTest Coverage Results" MODIFIED="1656755543170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.masquerade.model.entity.characterSheet.skill.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$SkillSpecializationServiceTest.ic" NAME="SkillSpecializationServiceTest Coverage Results" MODIFIED="1657015093039" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.service.characterSheet.skill.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Masquerade_service$SkillEntityTest.ic" NAME="SkillEntityTest Coverage Results" MODIFIED="1656761781212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.masquerade.model.entity.characterSheet.skill.*</FILTER>
