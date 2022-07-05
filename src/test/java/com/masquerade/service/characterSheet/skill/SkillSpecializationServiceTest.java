@@ -240,9 +240,8 @@ class SkillSpecializationServiceTest {
     @Test
     void updateSkillSpecializationNotExisting() {
         try {
-            ResponseDTO response = skillSpecializationService.updateSkillSpecialization(JsonMock.getSkillSpecializationJson());
-            verify(skillSpecializationRepository, times(0)).save(any());
-            assertSame(response.getHttpStatus(), HttpStatus.BAD_REQUEST);
+            ResponseDTO response = skillSpecializationService.updateSkillSpecialization(JsonMock.getNotExistingSkillSpecializationJson());
+            assertSame(response.getHttpStatus(), HttpStatus.NO_CONTENT);
         } catch(Exception e) {
             fail();
         }
