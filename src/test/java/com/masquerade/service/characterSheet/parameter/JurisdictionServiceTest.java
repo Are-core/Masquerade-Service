@@ -19,9 +19,9 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.spy;
 
 class JurisdictionServiceTest {
-    @Mock
     JurisdictionService jurisdictionService;
 
+    @Mock
     JurisdictionRepository jurisdictionRepository;
 
     @BeforeEach
