@@ -1,6 +1,7 @@
 package com.masquerade.model.entity.characterSheet.skill;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.masquerade.model.entity.characterSheet.MasqueradeEntity;
 import com.masquerade.model.entity.characterSheet.CharacterEntity;
 
 import javax.persistence.*;
@@ -8,7 +9,7 @@ import javax.persistence.*;
 @Table(name="character_has_skill")
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Entity
-public class CharacterHasSkillEntity {
+public class CharacterHasSkillEntity extends MasqueradeEntity {
     @EmbeddedId
     private CharacterHasSkillKey id;
 
@@ -49,7 +50,10 @@ public class CharacterHasSkillEntity {
     }
 
     public boolean generateId() {
-        if(emptyObjectCheck()) {
+        if(this.id != null) {
+            return false;
+        }
+        if(isEmpty()) {
             return true;
         }
         try {
@@ -58,10 +62,6 @@ public class CharacterHasSkillEntity {
             return true;
         }
         return false;
-    }
-
-    public boolean emptyObjectCheck() {
-        return this.id == null && this.character == null && this.skill == null;
     }
 
     public CharacterHasSkillKey getId() {

@@ -83,7 +83,7 @@ class CharacterHasSkillServiceTest {
 
     @Test
     public void getDeclaredSkillByCharacter() {
-        ResponseDTO response = skillSpecializationService.getCharacterSkills(1L);
+        ResponseDTO response = skillSpecializationService.getDeclaredSkillsByCharacter(1L);
         if (response.getBody() instanceof List<?>) {
             final List<?> listValue = (List<?>) response.getBody();
             assertNotNull(listValue);
@@ -97,93 +97,105 @@ class CharacterHasSkillServiceTest {
 
     @Test
     public void getDeclaredSkillByCharacterWithMissingId() {
-        ResponseDTO response = skillSpecializationService.getCharacterSkills(null);
+        ResponseDTO response = skillSpecializationService.getDeclaredSkillsByCharacter(null);
         assertNull(response.getBody());
         assertEquals(HttpStatus.BAD_REQUEST, response.getHttpStatus());
     }
 
     @Test
     public void getDeclaredSkillByCharacterEmptyList() {
-        ResponseDTO response = skillSpecializationService.getCharacterSkills(9L);
+        ResponseDTO response = skillSpecializationService.getDeclaredSkillsByCharacter(9L);
         assertNull(response.getBody());
         assertEquals(HttpStatus.NO_CONTENT, response.getHttpStatus());
     }
 
     @Test
     public void testSetSkill() {
-        ResponseDTO response = skillSpecializationService.setSkillForCharacter(JsonMock.getCharacterSkill());
+        ResponseDTO response = skillSpecializationService.addSkillToCharacter(JsonMock.getCharacterSkill());
         assertEquals(HttpStatus.CREATED, response.getHttpStatus());
     }
 
     @Test
     public void testSetSkillWithMissingBody() {
-        ResponseDTO response = skillSpecializationService.setSkillForCharacter(null);
+        ResponseDTO response = skillSpecializationService.addSkillToCharacter(null);
         assertEquals(HttpStatus.BAD_REQUEST, response.getHttpStatus());
     }
 
     @Test
     public void testSetSkillWithBadBody() {
-        ResponseDTO response = skillSpecializationService.setSkillForCharacter(JsonMock.getBadCharacterSkill());
+        ResponseDTO response = skillSpecializationService.addSkillToCharacter(JsonMock.getBadCharacterSkill());
+        assertEquals(HttpStatus.BAD_REQUEST, response.getHttpStatus());
+    }
+
+    @Test
+    public void testSetSkillWithEmptyBody() {
+        ResponseDTO response = skillSpecializationService.addSkillToCharacter("{}");
         assertEquals(HttpStatus.BAD_REQUEST, response.getHttpStatus());
     }
 
     @Test
     public void testSetSkillWithMissingIds() {
-        ResponseDTO response = skillSpecializationService.setSkillForCharacter(JsonMock.getMissingIdCharacterSkill());
+        ResponseDTO response = skillSpecializationService.addSkillToCharacter(JsonMock.getMissingIdCharacterSkill());
         assertEquals(HttpStatus.BAD_REQUEST, response.getHttpStatus());
     }
 
     @Test
     public void testRemoveSkill() {
-        ResponseDTO response = skillSpecializationService.removeSkillForCharacter(1L, 1L);
+        ResponseDTO response = skillSpecializationService.removeSkillToCharacter(1L, 1L);
         assertEquals(HttpStatus.OK, response.getHttpStatus());
     }
 
     @Test
     public void testRemoveSkillBadIds() {
-        ResponseDTO response = skillSpecializationService.removeSkillForCharacter(1L, 2L);
+        ResponseDTO response = skillSpecializationService.removeSkillToCharacter(1L, 2L);
         assertEquals(HttpStatus.NO_CONTENT, response.getHttpStatus());
     }
 
     @Test
     public void testRemoveSkillMissingCharacterId() {
-        ResponseDTO response = skillSpecializationService.removeSkillForCharacter(null, 1L);
+        ResponseDTO response = skillSpecializationService.removeSkillToCharacter(null, 1L);
         assertEquals(HttpStatus.BAD_REQUEST, response.getHttpStatus());
     }
 
     @Test
     public void testRemoveSkillMissingSkillId() {
-        ResponseDTO response = skillSpecializationService.removeSkillForCharacter(1L, null);
+        ResponseDTO response = skillSpecializationService.removeSkillToCharacter(1L, null);
         assertEquals(HttpStatus.BAD_REQUEST, response.getHttpStatus());
     }
 
     @Test
     public void testUpdateSkill() {
-        ResponseDTO response = skillSpecializationService.updateSkillForCharacter(JsonMock.getSkillCharacter());
+        ResponseDTO response = skillSpecializationService.updateSkillToCharacter(JsonMock.getSkillCharacter());
         assertEquals(HttpStatus.OK, response.getHttpStatus());
     }
 
     @Test
     public void testUpdateSkillWithMissingBody() {
-        ResponseDTO response = skillSpecializationService.updateSkillForCharacter(null);
+        ResponseDTO response = skillSpecializationService.updateSkillToCharacter(null);
         assertEquals(HttpStatus.BAD_REQUEST, response.getHttpStatus());
     }
 
     @Test
     public void testUpdateSkillWithMissingIds() {
-        ResponseDTO response = skillSpecializationService.updateSkillForCharacter(JsonMock.getSkillCharacterMissingId());
+        ResponseDTO response = skillSpecializationService.updateSkillToCharacter(JsonMock.getSkillCharacterMissingId());
         assertEquals(HttpStatus.BAD_REQUEST, response.getHttpStatus());
     }
 
     @Test
     public void testUpdateSkillWithNoMatch() {
-        ResponseDTO response = skillSpecializationService.updateSkillForCharacter(JsonMock.getNoMatchSkillCharacter());
+        ResponseDTO response = skillSpecializationService.updateSkillToCharacter(JsonMock.getNoMatchSkillCharacter());
         assertEquals(HttpStatus.NO_CONTENT, response.getHttpStatus());
     }
 
     @Test
+    public void testUpdateSkillWithEmptyBody() {
+        ResponseDTO response = skillSpecializationService.updateSkillToCharacter("{}");
+        assertEquals(HttpStatus.BAD_REQUEST, response.getHttpStatus());
+    }
+
+    @Test
     public void testUpdateSkillWithBadBody() {
-        ResponseDTO response = skillSpecializationService.updateSkillForCharacter(JsonMock.getBadSkillCharacter());
+        ResponseDTO response = skillSpecializationService.updateSkillToCharacter(JsonMock.getBadSkillCharacter());
         assertEquals(HttpStatus.BAD_REQUEST, response.getHttpStatus());
     }
 

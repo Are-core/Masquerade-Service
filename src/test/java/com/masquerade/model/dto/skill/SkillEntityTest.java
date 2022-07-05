@@ -1,5 +1,7 @@
-package com.masquerade.model.entity.characterSheet.skill;
+package com.masquerade.model.dto.skill;
 
+import com.masquerade.model.entity.characterSheet.skill.SkillEntity;
+import com.masquerade.model.entity.characterSheet.skill.SkillSpecializationEntity;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -18,28 +20,12 @@ class SkillEntityTest {
         skillEntity = new SkillEntity();
     }
 
-    @Test
-    public void testNullFields()  {
-        setUp();
-        Field[] fields = skillEntity.getClass().getDeclaredFields();
-        for (Field field : fields) {
-            field.setAccessible(true);
-            try {
-                if(!field.getName().equals("__$lineHits$__")) {
-                    assertNull(field.get(skillEntity));
-                }
-            } catch (Exception e) {
-                fail();
-            }
-        }
-    }
-
     /* Constructor */
 
     @Test
     void testConstructor() {
         skillEntity = new SkillEntity();
-        assertTrue(skillEntity.emptyObjectCheck());
+        assertTrue(skillEntity.isEmpty());
 
         skillEntity = new SkillEntity(25L, null, null, null, null, null, null, null);
         assertEquals(25L, skillEntity.getId());

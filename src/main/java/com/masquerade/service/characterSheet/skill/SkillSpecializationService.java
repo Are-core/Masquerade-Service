@@ -46,7 +46,9 @@ public class SkillSpecializationService {
         SkillSpecializationEntity specialization;
         try {
             specialization = gson.fromJson(rawBody, SkillSpecializationEntity.class);
-            //Prevent Updating if id is not null
+            if(specialization.isEmpty()) {
+                return Responses.ResponseEmptyObject;
+            }
             specialization.setId(null);
             specialization = skillSpecializationRepository.save(specialization);
         } catch (Exception e) {
@@ -68,14 +70,13 @@ public class SkillSpecializationService {
     }
 
     public ResponseDTO updateSkillSpecialization(final String rawBody) {
-        //TODO Check JUnit for rawBody = null
         if(rawBody == null) {
             return Responses.MissingArgument(EntityArguments.JsonArgument);
         }
         try {
             Gson gson = new Gson();
             SkillSpecializationEntity specialization = gson.fromJson(rawBody, SkillSpecializationEntity.class);
-            if(specialization == null || specialization.emptyObjectCheck()) {
+            if(specialization == null || specialization.isEmpty() || !specialization.isUpdatable()) {
                 return Responses.ResponseBadRequest;
             }
             if(!skillSpecializationRepository.existsById(specialization.getId())) {

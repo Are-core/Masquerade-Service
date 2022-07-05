@@ -31,7 +31,7 @@ public class CharacterHasSkillService {
     }
 
     @Transactional(readOnly = true)
-    public ResponseDTO getCharacterSkills(Long id) {
+    public ResponseDTO getDeclaredSkillsByCharacter(Long id) {
         if (id == null) {
             return Responses.MissingArgument(EntityArguments.idArgument);
         }
@@ -42,7 +42,7 @@ public class CharacterHasSkillService {
         return new ResponseDTO(HttpStatus.OK, getDTO(entries));
     }
 
-    public ResponseDTO setSkillForCharacter(String rawBody) {
+    public ResponseDTO addSkillToCharacter(String rawBody) {
         if (rawBody == null) {
             return Responses.MissingArgument(EntityArguments.JsonArgument);
         }
@@ -50,6 +50,9 @@ public class CharacterHasSkillService {
         CharacterHasSkillEntity characterSkill;
         try {
             characterSkill = gson.fromJson(rawBody, CharacterHasSkillEntity.class);
+            if(characterSkill.isEmpty()) {
+                return Responses.ResponseEmptyObject;
+            }
             if (characterSkill.generateId()) {
                 return Responses.ResponseBadRequest;
             }
@@ -60,7 +63,7 @@ public class CharacterHasSkillService {
         }
     }
 
-    public ResponseDTO removeSkillForCharacter(Long characterId, Long skillId) {
+    public ResponseDTO removeSkillToCharacter(Long characterId, Long skillId) {
         List<String> missingParameters = new ArrayList<>();
         if (characterId == null) {
             missingParameters.add(EntityArguments.characterIdArgument);
@@ -79,14 +82,14 @@ public class CharacterHasSkillService {
         return new ResponseDTO(HttpStatus.OK, entity);
     }
 
-    public ResponseDTO updateSkillForCharacter(String rawBody) {
+    public ResponseDTO updateSkillToCharacter(String rawBody) {
         if (rawBody == null) {
             return Responses.MissingArgument(EntityArguments.JsonArgument);
         }
         try {
             Gson gson = new Gson();
             CharacterHasSkillEntity skill = gson.fromJson(rawBody, CharacterHasSkillEntity.class);
-            if (skill == null || skill.emptyObjectCheck() || skill.generateId()) {
+            if (skill == null || skill.isEmpty() || skill.generateId()) {
                 return Responses.ResponseBadRequest;
             }
             if (!characterHasSkillRepository.existsByCharacterIdAndSkillId(skill.getId().characterId, skill.getId().skillId)) {

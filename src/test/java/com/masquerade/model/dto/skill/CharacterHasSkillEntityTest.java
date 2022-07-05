@@ -1,6 +1,10 @@
-package com.masquerade.model.entity.characterSheet.skill;
+package com.masquerade.model.dto.skill;
 
 import com.masquerade.model.entity.characterSheet.CharacterEntity;
+import com.masquerade.model.entity.characterSheet.skill.CharacterHasSkillEntity;
+import com.masquerade.model.entity.characterSheet.skill.CharacterHasSkillKey;
+import com.masquerade.model.entity.characterSheet.skill.SkillEntity;
+import com.masquerade.model.entity.characterSheet.skill.SkillSpecializationEntity;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -14,22 +18,6 @@ class CharacterHasSkillEntityTest {
     @BeforeEach
     public void setUp() {
         characterHasSkillEntity = new CharacterHasSkillEntity();
-    }
-
-    @Test
-    public void testNullFields()  {
-        setUp();
-        Field[] fields = characterHasSkillEntity.getClass().getDeclaredFields();
-        for (Field field : fields) {
-            field.setAccessible(true);
-            try {
-                if(!field.getName().equals("__$lineHits$__")) {
-                    assertNull(field.get(characterHasSkillEntity));
-                }
-            } catch (Exception e) {
-                fail();
-            }
-        }
     }
 
     /* Constructor */

@@ -58,7 +58,7 @@ class SkillServiceTest {
             assertFalse(listValue.isEmpty());
             if (listValue.get(0) instanceof CharacterListItemDTO) {
                 SkillEntity skill = (SkillEntity) listValue.get(0);
-                assertTrue(skill.emptyObjectCheck());
+                assertTrue(skill.isEmpty());
             }
         }
     }
@@ -98,6 +98,13 @@ class SkillServiceTest {
     @Test
     public void testCreateSkillMissingParameter() {
         ResponseDTO response = skillService.createSkill(null);
+        assertEquals(HttpStatus.BAD_REQUEST, response.getHttpStatus());
+        verify(skillRepository, times(0)).save(any());
+    }
+
+    @Test
+    public void testCreateSkillWithEmptyBody() {
+        ResponseDTO response = skillService.createSkill("{}");
         assertEquals(HttpStatus.BAD_REQUEST, response.getHttpStatus());
         verify(skillRepository, times(0)).save(any());
     }

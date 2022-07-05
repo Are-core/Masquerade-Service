@@ -1,5 +1,6 @@
-package com.masquerade.model.entity.characterSheet.skill;
+package com.masquerade.model.dto.skill;
 
+import com.masquerade.model.entity.characterSheet.skill.SkillSpecializationEntity;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -37,20 +38,20 @@ class SkillSpecializationEntityTest {
     @Test
     void testConstructor() {
         skillSpecialization = new SkillSpecializationEntity();
-        assertTrue(skillSpecialization.emptyObjectCheck());
+        assertTrue(skillSpecialization.isEmpty());
     }
 
     @Test
     void testConstructorWithValues() {
         skillSpecialization = new SkillSpecializationEntity("EN text", "FR text");
-        assertFalse(skillSpecialization.emptyObjectCheck());
+        assertFalse(skillSpecialization.isEmpty());
         assertEquals("FR text", skillSpecialization.getDescriptionFR());
     }
 
     @Test
     void testConstructorWithAllValues() {
         skillSpecialization = new SkillSpecializationEntity(5L, "EN text", "FR text");
-        assertFalse(skillSpecialization.emptyObjectCheck());
+        assertFalse(skillSpecialization.isEmpty());
         assertEquals(5L, skillSpecialization.getId());
     }
 

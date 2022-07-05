@@ -1,5 +1,6 @@
-package com.masquerade.model.entity.characterSheet.skill;
+package com.masquerade.model.dto.skill;
 
+import com.masquerade.model.entity.characterSheet.skill.CharacterHasSkillKey;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

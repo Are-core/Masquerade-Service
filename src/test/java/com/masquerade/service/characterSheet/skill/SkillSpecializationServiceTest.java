@@ -149,7 +149,7 @@ class SkillSpecializationServiceTest {
     @Test
     void createSkillSpecializationEmptyBody() {
         try {
-            ResponseDTO response = skillSpecializationService.createSkillSpecialization("[]");
+            ResponseDTO response = skillSpecializationService.createSkillSpecialization("{}");
             verify(skillSpecializationRepository, times(0)).save(any());
             assertSame(response.getHttpStatus(), HttpStatus.BAD_REQUEST);
         } catch (Exception e) {

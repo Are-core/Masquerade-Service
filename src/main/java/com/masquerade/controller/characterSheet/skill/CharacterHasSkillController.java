@@ -22,22 +22,22 @@ public class CharacterHasSkillController {
 
     @RequestMapping(value = Section.CharacterHasSkillPrefix + "/getCharacterSkills",method = RequestMethod.GET)
     public ResponseEntityDTO<ResponseDTO> getCharacterSkills(Long id) {
-        return new ResponseEntityDTO<>(characterHasSkillService.getCharacterSkills(id));
+        return new ResponseEntityDTO<>(characterHasSkillService.getDeclaredSkillsByCharacter(id));
     }
 
     @PostMapping(value = Section.CharacterHasSkillPrefix + "/setSkillForCharacter", consumes = "application/json", produces = "application/json")
     public ResponseEntityDTO<ResponseDTO> setSkillForCharacter(@RequestBody String rawArchetype) {
-        return new ResponseEntityDTO<>(characterHasSkillService.setSkillForCharacter(rawArchetype));
+        return new ResponseEntityDTO<>(characterHasSkillService.addSkillToCharacter(rawArchetype));
     }
 
     @PostMapping(value = Section.CharacterHasSkillPrefix + "/updateSkillForCharacter", consumes = "application/json", produces = "application/json")
     public ResponseEntityDTO<ResponseDTO> updateSkillForCharacter(@RequestBody String rawArchetype) {
-        return new ResponseEntityDTO<>(characterHasSkillService.updateSkillForCharacter(rawArchetype));
+        return new ResponseEntityDTO<>(characterHasSkillService.updateSkillToCharacter(rawArchetype));
     }
 
     @RequestMapping(value = Section.CharacterHasSkillPrefix + "/removeSkillForCharacter",method = RequestMethod.DELETE)
     public ResponseEntityDTO<ResponseDTO> removeSkillForCharacter(Long characterId, Long skillId) {
-        return new ResponseEntityDTO<>(characterHasSkillService.removeSkillForCharacter(characterId, skillId));
+        return new ResponseEntityDTO<>(characterHasSkillService.removeSkillToCharacter(characterId, skillId));
     }
 
 }

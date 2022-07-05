@@ -11,6 +11,7 @@ public class Responses {
     public static final ResponseDTO ResponseNotFound = new ResponseDTO(HttpStatus.NOT_FOUND);
     public static final ResponseDTO ResponseNoContent = new ResponseDTO(HttpStatus.NO_CONTENT);
     public static final ResponseDTO ResponseBadRequest = new ResponseDTO(HttpStatus.BAD_REQUEST);
+    public static final ResponseDTO ResponseEmptyObject = new ResponseDTO(HttpStatus.BAD_REQUEST, "The body is empty");
 
     public static ResponseDTO MissingArgument(String argument) {
         List<String> arguments = new ArrayList<>();

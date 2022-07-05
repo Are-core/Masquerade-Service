@@ -46,8 +46,10 @@ public class SkillService {
         try {
             Gson gson = new Gson();
             skill = gson.fromJson(rawBody, SkillEntity.class);
-            //TODO use isUpdatable() and manage exception
             skill.setId(null);
+            if(skill.isEmpty()) {
+                return Responses.ResponseEmptyObject;
+            }
             skill = skillRepository.save(skill);
         } catch (Exception e) {
             return Responses.ResponseBadRequest;
@@ -74,7 +76,7 @@ public class SkillService {
         try {
             Gson gson = new Gson();
             SkillEntity skill = gson.fromJson(rawBody, SkillEntity.class);
-            if(skill == null || skill.emptyObjectCheck()) {
+            if(skill == null || skill.isEmpty()|| !skill.isUpdatable()) {
                 return Responses.ResponseBadRequest;
             }
             if(!skillRepository.existsById(skill.getId())) {

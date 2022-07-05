@@ -1,13 +1,14 @@
 package com.masquerade.model.entity.characterSheet.skill;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.masquerade.model.entity.characterSheet.MasqueradeEntity;
 
 import javax.persistence.*;
 
 @Table(name="skill_specialization")
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Entity
-public class SkillSpecializationEntity {
+public class SkillSpecializationEntity extends MasqueradeEntity {
     @Id
     @Column(nullable = false, unique = true, updatable = false, name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,11 +30,6 @@ public class SkillSpecializationEntity {
     public SkillSpecializationEntity(Long id, String descriptionEN, String descriptionFR) {
         this(descriptionEN, descriptionFR);
         this.id = id;
-    }
-
-    public boolean emptyObjectCheck() {
-        return (this.getDescriptionEN() == null &&
-                this.getDescriptionFR() == null);
     }
 
     public boolean isUpdatable() {
