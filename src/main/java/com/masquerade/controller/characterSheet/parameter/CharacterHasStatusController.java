@@ -19,12 +19,12 @@ public class CharacterHasStatusController {
     }
 
     @RequestMapping(value = Section.CharacterHasStatusPrefix + "/getDeclaredStatus",method = RequestMethod.GET)
-    public ResponseEntityDTO<ResponseDTO> getDeclaredSkills() {
+    public ResponseEntityDTO<ResponseDTO> getDeclaredStatus() {
         return new ResponseEntityDTO<>(characterHasStatusService.getDeclaredStatus());
     }
 
     @RequestMapping(value = Section.CharacterHasStatusPrefix + "/getCharacterStatus",method = RequestMethod.GET)
-    public ResponseEntityDTO<ResponseDTO> getCharacterSkills(Long id) {
+    public ResponseEntityDTO<ResponseDTO> getCharacterStatus(Long id) {
         return new ResponseEntityDTO<>(characterHasStatusService.getCharacterStatus(id));
     }
 
