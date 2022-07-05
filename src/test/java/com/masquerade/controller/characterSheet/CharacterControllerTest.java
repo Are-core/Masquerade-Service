@@ -3,7 +3,6 @@ package com.masquerade.controller.characterSheet;
 import com.masquerade.model.dto.controller.ResponseDTO;
 import com.masquerade.model.dto.controller.ResponseEntityDTO;
 import com.masquerade.model.entity.characterSheet.CharacterEntity;
-import com.masquerade.model.entity.characterSheet.global.ClanEntity;
 import com.masquerade.service.characterSheet.CharacterService;
 import com.masquerade.service.characterSheet.skill.CharacterHasSkillService;
 import com.masquerade.service.repository.characterSheet.CharacterRepository;
@@ -19,7 +18,6 @@ import java.util.List;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.spy;
 
 class CharacterControllerTest {
