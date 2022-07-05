@@ -44,7 +44,7 @@ public class CharacterController {
                 return character;
             }
         }
-        return null;
+        return character;
     }
 
     private List<DeclaredSkillDTO> getSkills(Long characterId) {

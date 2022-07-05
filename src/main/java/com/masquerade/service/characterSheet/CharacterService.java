@@ -2,13 +2,17 @@ package com.masquerade.service.characterSheet;
 
 import com.masquerade.model.dto.characterSheet.CharacterListItemDTO;
 import com.masquerade.model.dto.controller.ResponseDTO;
-import com.masquerade.repository.characterSheet.CharacterRepository;
+import com.masquerade.model.entity.characterSheet.CharacterEntity;
+import com.masquerade.model.entity.characterSheet.skill.CharacterHasSkillEntity;
+import com.masquerade.service.repository.characterSheet.CharacterRepository;
 import com.masquerade.tools.controller.Responses;
 import com.masquerade.tools.entity.EntityArguments;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -28,9 +32,13 @@ public class CharacterService {
 
     @Transactional(readOnly = true)
     public ResponseDTO getById(Long id) {
-        if(id == null){
+        if (id == null) {
             return Responses.MissingArgument(EntityArguments.idArgument);
         }
-        return new ResponseDTO(HttpStatus.OK,characterRepository.findById(id));
+        Optional<CharacterEntity> entries = characterRepository.findById(id);
+        if (entries.isEmpty()) {
+            return Responses.ResponseNoContent;
+        }
+        return new ResponseDTO(HttpStatus.OK, entries);
     }
 }

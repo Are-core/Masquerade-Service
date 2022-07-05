@@ -5,7 +5,7 @@ import com.masquerade.model.entity.characterSheet.CharacterEntity;
 import com.masquerade.model.entity.characterSheet.parameter.CharacterHasStatusEntity;
 import com.masquerade.model.entity.characterSheet.parameter.CharacterHasStatusKey;
 import com.masquerade.model.entity.characterSheet.parameter.StatusEntity;
-import com.masquerade.repository.characterSheet.parameter.CharacterHasStatusRepository;
+import com.masquerade.service.repository.characterSheet.parameter.CharacterHasStatusRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;

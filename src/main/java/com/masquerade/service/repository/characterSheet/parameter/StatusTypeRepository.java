@@ -1,4 +1,4 @@
-package com.masquerade.repository.characterSheet.parameter;
+package com.masquerade.service.repository.characterSheet.parameter;
 
 import com.masquerade.model.entity.characterSheet.parameter.StatusTypeEntity;
 import org.springframework.data.jpa.repository.JpaRepository;

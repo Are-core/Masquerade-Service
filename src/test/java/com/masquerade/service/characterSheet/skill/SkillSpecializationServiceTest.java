@@ -3,7 +3,7 @@ package com.masquerade.service.characterSheet.skill;
 import com.masquerade.mocks.json.JsonMock;
 import com.masquerade.model.dto.controller.ResponseDTO;
 import com.masquerade.model.entity.characterSheet.skill.SkillSpecializationEntity;
-import com.masquerade.repository.characterSheet.skill.SkillSpecializationRepository;
+import com.masquerade.service.repository.characterSheet.skill.SkillSpecializationRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;

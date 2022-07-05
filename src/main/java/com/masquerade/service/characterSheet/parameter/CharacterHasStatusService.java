@@ -5,7 +5,7 @@ import com.masquerade.model.dto.characterSheet.parameter.DeclaredStatusDTO;
 import com.masquerade.model.dto.controller.ResponseDTO;
 import com.masquerade.model.entity.characterSheet.CharacterEntity;
 import com.masquerade.model.entity.characterSheet.parameter.CharacterHasStatusEntity;
-import com.masquerade.repository.characterSheet.parameter.CharacterHasStatusRepository;
+import com.masquerade.service.repository.characterSheet.parameter.CharacterHasStatusRepository;
 import com.masquerade.tools.controller.Responses;
 import com.masquerade.tools.entity.EntityArguments;
 import org.springframework.http.HttpStatus;

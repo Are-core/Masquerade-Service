@@ -3,7 +3,7 @@ package com.masquerade.service.characterSheet.parameter;
 import com.masquerade.mocks.json.JsonMock;
 import com.masquerade.model.dto.controller.ResponseDTO;
 import com.masquerade.model.entity.characterSheet.parameter.JurisdictionEntity;
-import com.masquerade.repository.characterSheet.parameter.JurisdictionRepository;
+import com.masquerade.service.repository.characterSheet.parameter.JurisdictionRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
