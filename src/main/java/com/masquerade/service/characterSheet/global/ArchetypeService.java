@@ -1,18 +1,16 @@
 package com.masquerade.service.characterSheet.global;
 
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import com.masquerade.exception.BadRequestException;
-import com.masquerade.exception.EntityRequestException;
+import com.masquerade.model.dto.controller.ResponseDTO;
 import com.masquerade.model.entity.characterSheet.global.ArchetypeEntity;
 import com.masquerade.repository.characterSheet.global.ArchetypeRepository;
+import com.masquerade.tools.controller.Responses;
+import com.masquerade.tools.entity.EntityArguments;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.lang.reflect.Type;
-import java.util.List;
+import java.util.Optional;
 
 @Service
 @Transactional
@@ -24,73 +22,67 @@ public class ArchetypeService {
     }
 
     @Transactional(readOnly = true)
-    public List<ArchetypeEntity> getArchetypes() {
-        return archetypeRepository.findAll();
+    public ResponseDTO getArchetypes() {
+        return new ResponseDTO(HttpStatus.OK, archetypeRepository.findAll());
     }
 
     @Transactional(readOnly = true)
-    public ArchetypeEntity getArchetype(Long id) throws BadRequestException {
+    public ResponseDTO getArchetype(Long id) {
         if(id == null){
-            throw BadRequestException.missingParameter();
+            return Responses.MissingArgument(EntityArguments.idArgument);
         }
-        return archetypeRepository.findById(id)
-                .orElseThrow(IllegalArgumentException::new);
+        Optional<ArchetypeEntity> entries = archetypeRepository.findById(id);
+        if(entries.isEmpty()) {
+            return Responses.ResponseNoContent;
+        }
+        return new ResponseDTO(HttpStatus.OK, entries.get());
     }
 
-    public ResponseEntity<HttpStatus> removeArchetype(Long id) throws BadRequestException {
+    public ResponseDTO removeArchetype(Long id) {
         if(id == null) {
-            throw BadRequestException.missingParameter();
+            return Responses.MissingArgument(EntityArguments.idArgument);
         }
-        archetypeRepository.delete(archetypeRepository.findById(id)
-                .orElseThrow(IllegalArgumentException::new));
-        return new ResponseEntity<>(HttpStatus.OK);
+        Optional<ArchetypeEntity> entity = archetypeRepository.findById(id);
+        if(entity.isEmpty()) {
+            return Responses.ResponseNoContent;
+        }
+        archetypeRepository.delete(entity.get());
+        return new ResponseDTO(HttpStatus.OK, entity.get());
     }
 
-    public ResponseEntity<HttpStatus> createArchetype(String rawArchetype) throws BadRequestException {
-        if(rawArchetype == null) {
-            throw BadRequestException.missingParameter();
+    public ResponseDTO createArchetype(String rawBody) {
+        if(rawBody == null) {
+            return Responses.MissingArgument(EntityArguments.JsonArgument);
         }
-        Gson gson = new Gson();
-        ArchetypeEntity archetype = gson.fromJson(rawArchetype, ArchetypeEntity.class);
-        if(archetype.emptyObjectCheck()) {
-            throw BadRequestException.missingBody();
+        ArchetypeEntity archetype;
+        try {
+            Gson gson = new Gson();
+            archetype = gson.fromJson(rawBody, ArchetypeEntity.class);
+            archetype.setId(null);
+            archetype = archetypeRepository.save(archetype);
+        } catch (Exception e) {
+            return Responses.ResponseBadRequest;
         }
-        archetypeRepository.save(archetype);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        return new ResponseDTO(HttpStatus.CREATED, archetype);
     }
 
-    public ResponseEntity<HttpStatus> updateArchetype(final String rawArchetype) throws  EntityRequestException {
-        if(rawArchetype == null) {
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    public ResponseDTO updateArchetype(final String rawBody) {
+        if(rawBody == null) {
+            return Responses.MissingArgument(EntityArguments.JsonArgument);
         }
-        Gson gson = new Gson();
-        final ArchetypeEntity archetype = gson.fromJson(rawArchetype, ArchetypeEntity.class);
-        if(archetype.emptyObjectCheck()) {
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-        }
-        updateArchetypeData(archetype);
-        return new ResponseEntity<>(HttpStatus.OK);
-    }
-
-    public ResponseEntity<HttpStatus> updateArchetypes(final String rawArchetype) throws EntityRequestException {
-        if(rawArchetype == null) {
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-        }
-        Type listType = new TypeToken<List<ArchetypeEntity>>() {}.getType();
-        final List<ArchetypeEntity> archetypes = new Gson().fromJson(rawArchetype, listType);
-        for(ArchetypeEntity archetype : archetypes) {
-            if(archetype.emptyObjectCheck()) {
-                return new ResponseEntity<>(HttpStatus.PARTIAL_CONTENT);
+        try {
+            Gson gson = new Gson();
+            ArchetypeEntity archetype = gson.fromJson(rawBody, ArchetypeEntity.class);
+            if(archetype == null || archetype.emptyObjectCheck()) {
+                return Responses.ResponseBadRequest;
             }
-            updateArchetypeData(archetype);
+            if(!archetypeRepository.existsById(archetype.getId())) {
+                return Responses.ResponseNoContent;
+            }
+            archetype = archetypeRepository.save(archetype);
+            return new ResponseDTO(HttpStatus.OK, archetype);
+        } catch (Exception e) {
+            return Responses.ResponseBadRequest;
         }
-        return new ResponseEntity<>(HttpStatus.OK);
-    }
-
-    private void updateArchetypeData(ArchetypeEntity archetype) throws EntityRequestException {
-        if(!archetypeRepository.existsById(archetype.getId())) {
-            throw EntityRequestException.doesntExists(archetype.getId());
-        }
-        archetypeRepository.save(archetype);
     }
 }

@@ -381,4 +381,37 @@ public class JsonMock {
                 "            \"noteFR\": \"none\"\n" +
                 "        }";
     }
+
+    static public String getArchetype() {
+        return "{\n" +
+                "            \"id\": 1,\n" +
+                "            \"descriptionEN\": \"Architect\",\n" +
+                "            \"descriptionFR\": \"soon\",\n" +
+                "            \"noteEN\": \"You love physical and social structures, and abhor anyone who works outside the system.\",\n" +
+                "            \"noteFR\": \"soon\",\n" +
+                "            \"updatable\": true\n" +
+                "        }";
+    }
+
+    static public String getBadArchetype() {
+        return "{\n" +
+                "            \"id\": 1,\n" +
+                "            \"descriptionEN\": \"Architect\",\n" +
+                "            \"descriptionFR soon\"\n" +
+                "            \"noteEN\": \"You love physical and social structures, and abhor anyone who works outside the system.\",\n" +
+                "            \"noteFR\": \"soon\",\n" +
+                "            \"updatable\": true\n" +
+                "        }";
+    }
+
+    static public String getNotExistingArchetype() {
+        return "{\n" +
+                "            \"id\": 135445,\n" +
+                "            \"descriptionEN\": \"Architect\",\n" +
+                "            \"descriptionFR\": \"soon\",\n" +
+                "            \"noteEN\": \"You love physical and social structures, and abhor anyone who works outside the system.\",\n" +
+                "            \"noteFR\": \"soon\",\n" +
+                "            \"updatable\": true\n" +
+                "        }";
+    }
 }

@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Feature - SectService : add JUnit tests">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/service/characterSheet/global/ClanServiceTest.java" afterDir="false" />
+    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Feature - ClanService : add JUnit tests">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/service/characterSheet/global/ArchetypeServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/global/ClanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/global/ClanController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/characterSheet/global/ClanEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/characterSheet/global/ClanEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/global/ClanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/global/ClanService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/global/ArchetypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/global/ArchetypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/parameter/JurisdictionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/parameter/JurisdictionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/exception/BadRequestException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/exception/EntityRequestException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/global/ArchetypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/global/ArchetypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/global/SectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/global/SectService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/parameter/StatusService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/parameter/StatusService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/masquerade/mocks/json/JsonMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/mocks/json/JsonMock.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +92,7 @@
       <recent name="com.masquerade.model.dto.characterSheet.skill" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ClanServiceTest">
+  <component name="RunManager" selected="JUnit.ArchetypeServiceTest">
     <configuration name="MasqueradeApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.masquerade.MasqueradeApplication" />
       <module name="Masquerade-service" />
@@ -98,6 +102,21 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArchetypeServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Masquerade-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.masquerade.service.characterSheet.global.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.masquerade.service.characterSheet.global" />
+      <option name="MAIN_CLASS_NAME" value="com.masquerade.service.characterSheet.global.ArchetypeServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -170,37 +189,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SectServiceTest.testGetSects" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Masquerade-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.masquerade.service.characterSheet.global.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.masquerade.service.characterSheet.global" />
-      <option name="MAIN_CLASS_NAME" value="com.masquerade.service.characterSheet.global.SectServiceTest" />
-      <option name="METHOD_NAME" value="testGetSects" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.MasqueradeApplication" />
       <item itemvalue="JUnit.Junit tests" />
+      <item itemvalue="JUnit.ArchetypeServiceTest" />
       <item itemvalue="JUnit.ClanServiceTest" />
       <item itemvalue="JUnit.ClanServiceTest.testCreateClanOk" />
       <item itemvalue="JUnit.SectServiceTest" />
-      <item itemvalue="JUnit.SectServiceTest.testGetSects" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ArchetypeServiceTest" />
+        <item itemvalue="Application.MasqueradeApplication" />
         <item itemvalue="JUnit.ClanServiceTest" />
         <item itemvalue="JUnit.ClanServiceTest.testCreateClanOk" />
-        <item itemvalue="Application.MasqueradeApplication" />
         <item itemvalue="JUnit.SectServiceTest" />
-        <item itemvalue="JUnit.SectServiceTest.testGetSects" />
       </list>
     </recent_temporary>
   </component>
@@ -212,13 +215,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654947632401</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Modify - Rework service path prefixes">
-      <created>1656147644263</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1656147644263</updated>
     </task>
     <task id="LOCAL-00029" summary="Feature - Add Skill services">
       <created>1656251982497</created>
@@ -556,7 +552,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657006555957</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="Feature - ClanService : add JUnit tests">
+      <created>1657008925445</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1657008925445</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -582,7 +585,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Feature - JurisdictionEntity : Add JUnit test" />
     <MESSAGE value="Feature - CharacterHasStatusKey : Add JUnit test" />
     <MESSAGE value="Feature - TitleEntity : Add JUnit test" />
     <MESSAGE value="Feature - SectEntity : Add JUnit test" />
@@ -607,7 +609,8 @@
     <MESSAGE value="Feature - TitleService : Add JUnit test" />
     <MESSAGE value="Feature - SectService : Sect new service model" />
     <MESSAGE value="Feature - SectService : add JUnit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature - SectService : add JUnit tests" />
+    <MESSAGE value="Feature - ClanService : add JUnit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature - ClanService : add JUnit tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -647,7 +650,7 @@
       <FILTER>com.masquerade.service.characterSheet.parameter.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Masquerade_service$All_in_Masquerade_service__2_.ic" NAME="All in Masquerade-service (2) Coverage Results" MODIFIED="1656757904292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/Masquerade_service$Junit_tests.ic" NAME="Junit tests Coverage Results" MODIFIED="1657006576570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Masquerade_service$Junit_tests.ic" NAME="Junit tests Coverage Results" MODIFIED="1657008937922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <EXCLUDED_FILTER>com.masquerade.tools.controller.Section</EXCLUDED_FILTER>
       <EXCLUDED_FILTER>com.masquerade.MasqueradeApplication</EXCLUDED_FILTER>
     </SUITE>
@@ -728,6 +731,9 @@
       <FILTER>com.masquerade.service.characterSheet.global.*</FILTER>
       <FILTER>com.masquerade.MasqueradeApplication</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$ArchetypeServiceTest.ic" NAME="ArchetypeServiceTest Coverage Results" MODIFIED="1657010351399" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.service.characterSheet.global.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/Masquerade_service$TitleServiceTest_testRemoveStatusOk.ic" NAME="TitleServiceTest.testRemoveStatusOk Coverage Results" MODIFIED="1656973510151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.masquerade.service.characterSheet.global.*</FILTER>
     </SUITE>
@@ -777,7 +783,7 @@
       <FILTER>com.masquerade.model.entity.characterSheet.skill.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Masquerade_service$All_in_Masquerade_service__4_.ic" NAME="All in Masquerade-service (4) Coverage Results" MODIFIED="1656627634422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/Masquerade_service$ClanServiceTest.ic" NAME="ClanServiceTest Coverage Results" MODIFIED="1657008800727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Masquerade_service$ClanServiceTest.ic" NAME="ClanServiceTest Coverage Results" MODIFIED="1657008910743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.masquerade.service.characterSheet.global.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Masquerade_service$StatusTypeServiceTest.ic" NAME="StatusTypeServiceTest Coverage Results" MODIFIED="1656869051221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

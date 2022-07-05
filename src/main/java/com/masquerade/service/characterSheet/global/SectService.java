@@ -1,20 +1,15 @@
 package com.masquerade.service.characterSheet.global;
 
 import com.google.gson.Gson;
-import com.masquerade.exception.BadRequestException;
-import com.masquerade.exception.EntityRequestException;
 import com.masquerade.model.dto.controller.ResponseDTO;
 import com.masquerade.model.entity.characterSheet.global.SectEntity;
-import com.masquerade.model.entity.characterSheet.global.TitleEntity;
 import com.masquerade.repository.characterSheet.global.SectRepository;
 import com.masquerade.tools.controller.Responses;
 import com.masquerade.tools.entity.EntityArguments;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service
