@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Feature - SectController : add JUnit tests">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/controller/characterSheet/global/ClanControllerTest.java" afterDir="false" />
+    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Feature - ClanController : add JUnit tests">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/controller/characterSheet/global/ArchetypeControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +84,22 @@
       <recent name="com.masquerade.controller.characterSheet" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Junit tests">
+  <component name="RunManager" selected="JUnit.ArchetypeControllerTest">
+    <configuration name="ArchetypeControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Masquerade-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.masquerade.controller.characterSheet.global.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.masquerade.controller.characterSheet.global" />
+      <option name="MAIN_CLASS_NAME" value="com.masquerade.controller.characterSheet.global.ArchetypeControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ClanControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Masquerade-service" />
       <extension name="coverage">
@@ -142,21 +157,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StatusControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Masquerade-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.masquerade.controller.characterSheet.parameter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.masquerade.controller.characterSheet.parameter" />
-      <option name="MAIN_CLASS_NAME" value="com.masquerade.controller.characterSheet.parameter.StatusControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="StatusTypeControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Masquerade-service" />
       <extension name="coverage">
@@ -189,19 +189,19 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.Junit tests" />
+      <item itemvalue="JUnit.ArchetypeControllerTest" />
       <item itemvalue="JUnit.ClanControllerTest" />
       <item itemvalue="JUnit.SectControllerTest" />
-      <item itemvalue="JUnit.StatusControllerTest" />
       <item itemvalue="JUnit.StatusTypeControllerTest" />
       <item itemvalue="JUnit.TitleControllerTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ArchetypeControllerTest" />
         <item itemvalue="JUnit.ClanControllerTest" />
         <item itemvalue="JUnit.SectControllerTest" />
         <item itemvalue="JUnit.TitleControllerTest" />
         <item itemvalue="JUnit.StatusTypeControllerTest" />
-        <item itemvalue="JUnit.StatusControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -213,13 +213,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654947632401</updated>
-    </task>
-    <task id="LOCAL-00042" summary="Feature - Application : Add JUnit test">
-      <created>1656757964039</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1656757964039</updated>
     </task>
     <task id="LOCAL-00043" summary="Feature - Response : Add JUnit test">
       <created>1656759602562</created>
@@ -557,7 +550,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657021174091</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="Feature - ClanController : add JUnit tests">
+      <created>1657021347857</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1657021347857</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -583,7 +583,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Feature - DeclaredSkillDTO : Add JUnit test" />
     <MESSAGE value="Feature - ResponseDTO : Add JUnit test" />
     <MESSAGE value="Feature - ResponseEntityDTO : Add JUnit test" />
     <MESSAGE value="Feature - SkillService : Add JUnit test" />
@@ -608,7 +607,8 @@
     <MESSAGE value="Feature - StatusTypeController : add JUnit tests" />
     <MESSAGE value="Feature - TitleController : add JUnit tests" />
     <MESSAGE value="Feature - SectController : add JUnit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature - SectController : add JUnit tests" />
+    <MESSAGE value="Feature - ClanController : add JUnit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature - ClanController : add JUnit tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -654,7 +654,7 @@
     <SUITE FILE_PATH="coverage/Masquerade_service$CharacterHasSkillControllerTest.ic" NAME="CharacterHasSkillControllerTest Coverage Results" MODIFIED="1657018130947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.masquerade.controller.characterSheet.skill.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$Junit_tests.ic" NAME="Junit tests Coverage Results" MODIFIED="1657021180689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Masquerade_service$Junit_tests.ic" NAME="Junit tests Coverage Results" MODIFIED="1657021340701" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <EXCLUDED_FILTER>com.masquerade.tools.controller.Section</EXCLUDED_FILTER>
       <EXCLUDED_FILTER>com.masquerade.MasqueradeApplication</EXCLUDED_FILTER>
       <EXCLUDED_FILTER>com.masquerade.tools.entity.EntityArguments</EXCLUDED_FILTER>
