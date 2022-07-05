@@ -3,7 +3,7 @@ package com.masquerade.service.characterSheet.skill;
 import com.google.gson.Gson;
 import com.masquerade.model.dto.controller.ResponseDTO;
 import com.masquerade.model.entity.characterSheet.skill.SkillEntity;
-import com.masquerade.service.repository.characterSheet.skill.SkillRepository;
+import com.masquerade.repository.characterSheet.skill.SkillRepository;
 import com.masquerade.tools.controller.Responses;
 import com.masquerade.tools.entity.EntityArguments;
 import org.springframework.http.HttpStatus;

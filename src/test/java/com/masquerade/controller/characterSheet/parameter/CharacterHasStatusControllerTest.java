@@ -1,6 +1,5 @@
 package com.masquerade.controller.characterSheet.parameter;
 
-import com.masquerade.mocks.json.JsonMock;
 import com.masquerade.model.dto.controller.ResponseDTO;
 import com.masquerade.model.dto.controller.ResponseEntityDTO;
 import com.masquerade.model.entity.characterSheet.CharacterEntity;
@@ -8,7 +7,7 @@ import com.masquerade.model.entity.characterSheet.parameter.CharacterHasStatusEn
 import com.masquerade.model.entity.characterSheet.parameter.CharacterHasStatusKey;
 import com.masquerade.model.entity.characterSheet.parameter.StatusEntity;
 import com.masquerade.service.characterSheet.parameter.CharacterHasStatusService;
-import com.masquerade.service.repository.characterSheet.parameter.CharacterHasStatusRepository;
+import com.masquerade.repository.characterSheet.parameter.CharacterHasStatusRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;

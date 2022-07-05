@@ -5,7 +5,7 @@ import com.masquerade.model.dto.controller.ResponseDTO;
 import com.masquerade.model.dto.controller.ResponseEntityDTO;
 import com.masquerade.model.entity.characterSheet.parameter.StatusTypeEntity;
 import com.masquerade.service.characterSheet.parameter.StatusTypeService;
-import com.masquerade.service.repository.characterSheet.parameter.StatusTypeRepository;
+import com.masquerade.repository.characterSheet.parameter.StatusTypeRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;

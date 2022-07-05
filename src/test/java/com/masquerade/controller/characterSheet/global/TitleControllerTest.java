@@ -6,7 +6,7 @@ import com.masquerade.model.dto.controller.ResponseEntityDTO;
 import com.masquerade.model.entity.characterSheet.global.SectEntity;
 import com.masquerade.model.entity.characterSheet.global.TitleEntity;
 import com.masquerade.service.characterSheet.global.TitleService;
-import com.masquerade.service.repository.characterSheet.global.TitleRepository;
+import com.masquerade.repository.characterSheet.global.TitleRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;

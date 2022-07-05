@@ -5,7 +5,7 @@ import com.masquerade.model.dto.controller.ResponseDTO;
 import com.masquerade.model.dto.controller.ResponseEntityDTO;
 import com.masquerade.model.entity.characterSheet.skill.SkillEntity;
 import com.masquerade.service.characterSheet.skill.SkillService;
-import com.masquerade.service.repository.characterSheet.skill.SkillRepository;
+import com.masquerade.repository.characterSheet.skill.SkillRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;

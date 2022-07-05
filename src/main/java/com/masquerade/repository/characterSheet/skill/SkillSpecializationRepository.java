@@ -1,4 +1,4 @@
-package com.masquerade.service.repository.characterSheet.skill;
+package com.masquerade.repository.characterSheet.skill;
 
 import com.masquerade.model.entity.characterSheet.skill.SkillSpecializationEntity;
 import org.springframework.data.jpa.repository.JpaRepository;

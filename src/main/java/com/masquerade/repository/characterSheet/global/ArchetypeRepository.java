@@ -1,4 +1,4 @@
-package com.masquerade.service.repository.characterSheet.global;
+package com.masquerade.repository.characterSheet.global;
 
 import com.masquerade.model.entity.characterSheet.global.ArchetypeEntity;
 import org.springframework.data.jpa.repository.JpaRepository;

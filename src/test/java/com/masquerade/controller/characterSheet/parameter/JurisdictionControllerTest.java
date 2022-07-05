@@ -5,7 +5,7 @@ import com.masquerade.model.dto.controller.ResponseDTO;
 import com.masquerade.model.dto.controller.ResponseEntityDTO;
 import com.masquerade.model.entity.characterSheet.parameter.JurisdictionEntity;
 import com.masquerade.service.characterSheet.parameter.JurisdictionService;
-import com.masquerade.service.repository.characterSheet.parameter.JurisdictionRepository;
+import com.masquerade.repository.characterSheet.parameter.JurisdictionRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;

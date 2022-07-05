@@ -5,7 +5,7 @@ import com.masquerade.model.dto.controller.ResponseDTO;
 import com.masquerade.model.dto.controller.ResponseEntityDTO;
 import com.masquerade.model.entity.characterSheet.global.ClanEntity;
 import com.masquerade.service.characterSheet.global.ClanService;
-import com.masquerade.service.repository.characterSheet.global.ClanRepository;
+import com.masquerade.repository.characterSheet.global.ClanRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;

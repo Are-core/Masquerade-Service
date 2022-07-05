@@ -3,7 +3,7 @@ package com.masquerade.service.characterSheet;
 import com.masquerade.model.dto.characterSheet.CharacterListItemDTO;
 import com.masquerade.model.dto.controller.ResponseDTO;
 import com.masquerade.model.entity.characterSheet.CharacterEntity;
-import com.masquerade.service.repository.characterSheet.CharacterRepository;
+import com.masquerade.repository.characterSheet.CharacterRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;

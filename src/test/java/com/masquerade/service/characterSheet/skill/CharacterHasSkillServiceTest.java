@@ -8,7 +8,7 @@ import com.masquerade.model.entity.characterSheet.CharacterEntity;
 import com.masquerade.model.entity.characterSheet.skill.CharacterHasSkillEntity;
 import com.masquerade.model.entity.characterSheet.skill.CharacterHasSkillKey;
 import com.masquerade.model.entity.characterSheet.skill.SkillEntity;
-import com.masquerade.service.repository.characterSheet.skill.CharacterHasSkillRepository;
+import com.masquerade.repository.characterSheet.skill.CharacterHasSkillRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;

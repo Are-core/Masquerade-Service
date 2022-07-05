@@ -3,7 +3,7 @@ package com.masquerade.service.characterSheet.global;
 import com.masquerade.mocks.json.JsonMock;
 import com.masquerade.model.dto.controller.ResponseDTO;
 import com.masquerade.model.entity.characterSheet.global.ArchetypeEntity;
-import com.masquerade.service.repository.characterSheet.global.ArchetypeRepository;
+import com.masquerade.repository.characterSheet.global.ArchetypeRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
