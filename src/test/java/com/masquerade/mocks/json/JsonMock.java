@@ -327,4 +327,28 @@ public class JsonMock {
                 "\t\"updatable\": true\n" +
                 "}";
     }
+
+    static public String getSect() {
+        return "{\n" +
+                "            \"id\": 1,\n" +
+                "            \"description\": \"Generic\",\n" +
+                "            \"updatable\": false\n" +
+                "        }";
+    }
+
+    static public String getNotExistingSect() {
+        return "{\n" +
+                "            \"id\": 590,\n" +
+                "            \"description\": \"Generic\",\n" +
+                "            \"updatable\": false\n" +
+                "        }";
+    }
+
+    static public String getBadSect() {
+        return "{\n" +
+                "            \"id\": 590,\n" +
+                "            \"descriptio Generic\",\n" +
+                "            \"updatable\": false\n" +
+                "        }";
+    }
 }
