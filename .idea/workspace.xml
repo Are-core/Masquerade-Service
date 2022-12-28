@@ -4,24 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Fix - Move back folder to root">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/characterSheet/MasqueradeEntity.java" afterDir="false" />
+    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Feature - Add new isEmpty for entities &amp; add to Skill folder entities">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/skill/CharacterHasSkillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/characterSheet/skill/CharacterHasSkillController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/characterSheet/skill/CharacterHasSkillEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/characterSheet/skill/CharacterHasSkillEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/characterSheet/skill/SkillEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/characterSheet/skill/SkillEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/characterSheet/skill/SkillSpecializationEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/entity/characterSheet/skill/SkillSpecializationEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/skill/CharacterHasSkillService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/skill/CharacterHasSkillService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/skill/SkillService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/skill/SkillService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/skill/SkillSpecializationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/characterSheet/skill/SkillSpecializationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masquerade/tools/controller/Responses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/tools/controller/Responses.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/masquerade/model/entity/characterSheet/skill/CharacterHasSkillEntityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/model/dto/skill/CharacterHasSkillEntityTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/masquerade/model/entity/characterSheet/skill/CharacterHasSkillKeyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/model/dto/skill/CharacterHasSkillKeyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/masquerade/model/entity/characterSheet/skill/SkillEntityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/model/dto/skill/SkillEntityTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/masquerade/model/entity/characterSheet/skill/SkillSpecializationEntityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/model/dto/skill/SkillSpecializationEntityTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/masquerade/service/characterSheet/skill/CharacterHasSkillServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/service/characterSheet/skill/CharacterHasSkillServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/masquerade/service/characterSheet/skill/SkillServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/service/characterSheet/skill/SkillServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/masquerade/service/characterSheet/skill/SkillSpecializationServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/masquerade/service/characterSheet/skill/SkillSpecializationServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,20 +34,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JpbToolWindowState">
-    <option name="myId2FirstActivated">
-      <map>
-        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
-        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
-      </map>
-    </option>
-    <option name="myId2Visible">
-      <map>
-        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
-        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
-      </map>
-    </option>
+    <option name="isToolWindowVisible" value="false" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -650,127 +622,97 @@
     </pin-to-top-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterHasStatusEntityTest_testConstructors.ic" NAME="CharacterHasStatusEntityTest.testConstructors Coverage Results" MODIFIED="1656768755905" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.model.entity.characterSheet.parameter.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$ClanEntityTest.ic" NAME="ClanEntityTest Coverage Results" MODIFIED="1656774553674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.model.entity.characterSheet.global.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterHasStatusControllerTest.ic" NAME="CharacterHasStatusControllerTest Coverage Results" MODIFIED="1657018571966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.controller.characterSheet.parameter.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$StatusTypeEntityTest.ic" NAME="StatusTypeEntityTest Coverage Results" MODIFIED="1656764794348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.model.entity.characterSheet.parameter.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterListItemDTOTest.ic" NAME="CharacterListItemDTOTest Coverage Results" MODIFIED="1656778294941" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.model.dto.characterSheet.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$StatusEntityTest_testConstructors.ic" NAME="StatusEntityTest.testConstructors Coverage Results" MODIFIED="1656770074803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.model.entity.characterSheet.parameter.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$StatusServiceTest_testCreateStatus.ic" NAME="StatusServiceTest.testCreateStatus Coverage Results" MODIFIED="1656859709145" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.service.characterSheet.parameter.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$All_in_Masquerade_service__2_.ic" NAME="All in Masquerade-service (2) Coverage Results" MODIFIED="1656757904292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterHasSkillControllerTest.ic" NAME="CharacterHasSkillControllerTest Coverage Results" MODIFIED="1657018130947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.controller.characterSheet.skill.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$Junit_tests.ic" NAME="Junit tests Coverage Results" MODIFIED="1657032131695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <EXCLUDED_FILTER>com.masquerade.tools.controller.Section</EXCLUDED_FILTER>
-      <EXCLUDED_FILTER>com.masquerade.MasqueradeApplication</EXCLUDED_FILTER>
-      <EXCLUDED_FILTER>com.masquerade.tools.entity.EntityArguments</EXCLUDED_FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$MasqueradeApplicationTest_main.ic" NAME="MasqueradeApplicationTest.main Coverage Results" MODIFIED="1656757858844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterStatusDTOTest.ic" NAME="CharacterStatusDTOTest Coverage Results" MODIFIED="1656779116845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.model.dto.characterSheet.parameter.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterHasSkillEntityTest.ic" NAME="CharacterHasSkillEntityTest Coverage Results" MODIFIED="1656768547225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.model.entity.characterSheet.skill.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$All_in_Masquerade_service__1_.ic" NAME="All in Masquerade-service (1) Coverage Results" MODIFIED="1656761795984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterHasStatusServiceTest.ic" NAME="CharacterHasStatusServiceTest Coverage Results" MODIFIED="1656971316084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.service.characterSheet.parameter.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterStatusDTOTest_testStatus.ic" NAME="CharacterStatusDTOTest.testStatus Coverage Results" MODIFIED="1656779145101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.model.dto.characterSheet.parameter.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterControllerTest.ic" NAME="CharacterControllerTest Coverage Results" MODIFIED="1657012485542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.controller.characterSheet.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$All_in_Masquerade_service.ic" NAME="All in Masquerade-service Coverage Results" MODIFIED="1656759427119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <EXCLUDED_FILTER>com.masquerade.tools.controller.Section</EXCLUDED_FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterHasSkillServiceTest_testUpdateSkillWithBadBody.ic" NAME="CharacterHasSkillServiceTest.testUpdateSkillWithBadBody Coverage Results" MODIFIED="1656862072298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.service.characterSheet.skill.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$JurisdictionControllerTest.ic" NAME="JurisdictionControllerTest Coverage Results" MODIFIED="1657019097466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.controller.characterSheet.parameter.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterHasSkillServiceTest_testUpdateSkillWithMissingIds.ic" NAME="CharacterHasSkillServiceTest.testUpdateSkillWithMissingIds Coverage Results" MODIFIED="1656853466010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.service.characterSheet.skill.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterHasSkillServiceTest.ic" NAME="CharacterHasSkillServiceTest Coverage Results" MODIFIED="1656854442046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.service.characterSheet.skill.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$StatusServiceTest.ic" NAME="StatusServiceTest Coverage Results" MODIFIED="1656864883982" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.service.characterSheet.parameter.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$SkillSpecializationServiceTest_updateSkillSpecializationBadBody.ic" NAME="SkillSpecializationServiceTest.updateSkillSpecializationBadBody Coverage Results" MODIFIED="1656750143325" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.service.characterSheet.skill.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterEntityTest.ic" NAME="CharacterEntityTest Coverage Results" MODIFIED="1656754019830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.model.entity.characterSheet.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterSheetDTOTest.ic" NAME="CharacterSheetDTOTest Coverage Results" MODIFIED="1656777743292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.model.dto.characterSheet.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$StatusServiceTest_testRemoveStatusOk.ic" NAME="StatusServiceTest.testRemoveStatusOk Coverage Results" MODIFIED="1656863234967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.service.characterSheet.parameter.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/Masquerade_service$CharacterHasStatusEntityTest.ic" NAME="CharacterHasStatusEntityTest Coverage Results" MODIFIED="1656769033780" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.model.entity.characterSheet.parameter.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$JurisdictionEntityTest.ic" NAME="JurisdictionEntityTest Coverage Results" MODIFIED="1656771576355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.masquerade.model.entity.characterSheet.parameter.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Masquerade_service$SkillSpecializationEntityTest_testNullFields.ic" NAME="SkillSpecializationEntityTest.testNullFields Coverage Results" MODIFIED="1656757605945" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.masquerade.model.entity.characterSheet.skill.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$StatusServiceTest_testCreateStatus.ic" NAME="StatusServiceTest.testCreateStatus Coverage Results" MODIFIED="1656859709145" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.service.characterSheet.parameter.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$SkillEntityTest.ic" NAME="SkillEntityTest Coverage Results" MODIFIED="1656761781212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.model.entity.characterSheet.skill.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$ClanEntityTest.ic" NAME="ClanEntityTest Coverage Results" MODIFIED="1656774553674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.model.entity.characterSheet.global.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterHasStatusKeyTest.ic" NAME="CharacterHasStatusKeyTest Coverage Results" MODIFIED="1656772247326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.model.entity.characterSheet.parameter.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterHasStatusControllerTest.ic" NAME="CharacterHasStatusControllerTest Coverage Results" MODIFIED="1657018571966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.controller.characterSheet.parameter.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterHasSkillControllerTest.ic" NAME="CharacterHasSkillControllerTest Coverage Results" MODIFIED="1657018130947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.controller.characterSheet.skill.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$SkillSpecializationServiceTest.ic" NAME="SkillSpecializationServiceTest Coverage Results" MODIFIED="1657015093039" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.service.characterSheet.skill.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterHasSkillServiceTest.ic" NAME="CharacterHasSkillServiceTest Coverage Results" MODIFIED="1656854442046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.service.characterSheet.skill.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$StatusTypeControllerTest.ic" NAME="StatusTypeControllerTest Coverage Results" MODIFIED="1657019738805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.controller.characterSheet.parameter.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterHasSkillServiceTest_testUpdateSkillWithBadBody.ic" NAME="CharacterHasSkillServiceTest.testUpdateSkillWithBadBody Coverage Results" MODIFIED="1656862072298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.service.characterSheet.skill.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$MasqueradeApplicationTest_main.ic" NAME="MasqueradeApplicationTest.main Coverage Results" MODIFIED="1656757858844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterSheetDTOTest.ic" NAME="CharacterSheetDTOTest Coverage Results" MODIFIED="1656777743292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.model.dto.characterSheet.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$ArchetypeEntityTest.ic" NAME="ArchetypeEntityTest Coverage Results" MODIFIED="1656775327555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.model.entity.characterSheet.global.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterHasSkillServiceTest_testUpdateSkillWithMissingIds.ic" NAME="CharacterHasSkillServiceTest.testUpdateSkillWithMissingIds Coverage Results" MODIFIED="1656853466010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.service.characterSheet.skill.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$JurisdictionServiceTest.ic" NAME="JurisdictionServiceTest Coverage Results" MODIFIED="1656966260818" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.service.characterSheet.parameter.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$StatusEntityTest_testConstructors.ic" NAME="StatusEntityTest.testConstructors Coverage Results" MODIFIED="1656770074803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.model.entity.characterSheet.parameter.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$StatusServiceTest.ic" NAME="StatusServiceTest Coverage Results" MODIFIED="1656864883982" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.service.characterSheet.parameter.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$DeclaredStatusDTOTest.ic" NAME="DeclaredStatusDTOTest Coverage Results" MODIFIED="1656782922899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.model.dto.characterSheet.parameter.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/Masquerade_service$JurisdictionEntityTest_testConstructors.ic" NAME="JurisdictionEntityTest.testConstructors Coverage Results" MODIFIED="1656771566281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.masquerade.model.entity.characterSheet.parameter.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$ClanEntityTest_testConstructors.ic" NAME="ClanEntityTest.testConstructors Coverage Results" MODIFIED="1656774496039" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.model.entity.characterSheet.global.*</FILTER>
+    <SUITE FILE_PATH="coverage/Masquerade_service$ArchetypeServiceTest.ic" NAME="ArchetypeServiceTest Coverage Results" MODIFIED="1657010413469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.service.characterSheet.global.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$StatusEntityTest.ic" NAME="StatusEntityTest Coverage Results" MODIFIED="1656770883766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.model.entity.characterSheet.parameter.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$ResponsesTest.ic" NAME="ResponsesTest Coverage Results" MODIFIED="1656758552390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.tools.controller.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$TitleEntityTest.ic" NAME="TitleEntityTest Coverage Results" MODIFIED="1656773461639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.model.entity.characterSheet.global.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterHasSkillServiceTest_testUpdateSkillWithMissingBody.ic" NAME="CharacterHasSkillServiceTest.testUpdateSkillWithMissingBody Coverage Results" MODIFIED="1656862063516" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.service.characterSheet.skill.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$StatusEntityTest_testEmptyCheck.ic" NAME="StatusEntityTest.testEmptyCheck Coverage Results" MODIFIED="1656770214658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.model.entity.characterSheet.parameter.*</FILTER>
+    <SUITE FILE_PATH="coverage/Masquerade_service$SkillEntityTest_testUpdatable.ic" NAME="SkillEntityTest.testUpdatable Coverage Results" MODIFIED="1656760231533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.model.entity.characterSheet.skill.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Masquerade_service$TitleServiceTest.ic" NAME="TitleServiceTest Coverage Results" MODIFIED="1656974447588" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.masquerade.service.characterSheet.global.*</FILTER>
       <FILTER>com.masquerade.MasqueradeApplication</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$ArchetypeServiceTest.ic" NAME="ArchetypeServiceTest Coverage Results" MODIFIED="1657010413469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.service.characterSheet.global.*</FILTER>
+    <SUITE FILE_PATH="coverage/Masquerade_service$SectionTest.ic" NAME="SectionTest Coverage Results" MODIFIED="1656758763138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.tools.controller.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$SkillServiceTest_testCreateSkillWithEmptyBody.ic" NAME="SkillServiceTest.testCreateSkillWithEmptyBody Coverage Results" MODIFIED="1657031806765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.service.characterSheet.skill.*</FILTER>
+    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterEntityTest.ic" NAME="CharacterEntityTest Coverage Results" MODIFIED="1656754019830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.model.entity.characterSheet.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$TitleServiceTest_testRemoveStatusOk.ic" NAME="TitleServiceTest.testRemoveStatusOk Coverage Results" MODIFIED="1656973510151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.service.characterSheet.global.*</FILTER>
+    <SUITE FILE_PATH="coverage/Masquerade_service$JurisdictionControllerTest.ic" NAME="JurisdictionControllerTest Coverage Results" MODIFIED="1657019097466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.controller.characterSheet.parameter.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterListItemDTOTest.ic" NAME="CharacterListItemDTOTest Coverage Results" MODIFIED="1656778294941" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.model.dto.characterSheet.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterStatusDTOTest_testStatus.ic" NAME="CharacterStatusDTOTest.testStatus Coverage Results" MODIFIED="1656779145101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.model.dto.characterSheet.parameter.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$All_in_Masquerade_service__4_.ic" NAME="All in Masquerade-service (4) Coverage Results" MODIFIED="1656627634422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Masquerade_service$ClanEntityTest_testConstructors.ic" NAME="ClanEntityTest.testConstructors Coverage Results" MODIFIED="1656774496039" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.model.entity.characterSheet.global.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Masquerade_service$SkillServiceTest.ic" NAME="SkillServiceTest Coverage Results" MODIFIED="1656965635279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.masquerade.service.characterSheet.skill.*</FILTER>
@@ -778,11 +720,28 @@
     <SUITE FILE_PATH="coverage/Masquerade_service$SkillControllerTest.ic" NAME="SkillControllerTest Coverage Results" MODIFIED="1657016410478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.masquerade.controller.characterSheet.skill.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$SectionTest.ic" NAME="SectionTest Coverage Results" MODIFIED="1656758763138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.tools.controller.*</FILTER>
+    <SUITE FILE_PATH="coverage/Masquerade_service$StatusEntityTest_testEmptyCheck.ic" NAME="StatusEntityTest.testEmptyCheck Coverage Results" MODIFIED="1656770214658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.model.entity.characterSheet.parameter.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterHasSkillServiceTest_testUpdateSkill.ic" NAME="CharacterHasSkillServiceTest.testUpdateSkill Coverage Results" MODIFIED="1656862056600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.service.characterSheet.skill.*</FILTER>
+    <SUITE FILE_PATH="coverage/Masquerade_service$SkillSpecializationEntityTest.ic" NAME="SkillSpecializationEntityTest Coverage Results" MODIFIED="1656755543170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.model.entity.characterSheet.skill.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$ArchetypeControllerTest.ic" NAME="ArchetypeControllerTest Coverage Results" MODIFIED="1657021568631" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.controller.characterSheet.global.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$Junit_tests.ic" NAME="Junit tests Coverage Results" MODIFIED="1657176513586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <EXCLUDED_FILTER>com.masquerade.tools.controller.Section</EXCLUDED_FILTER>
+      <EXCLUDED_FILTER>com.masquerade.MasqueradeApplication</EXCLUDED_FILTER>
+      <EXCLUDED_FILTER>com.masquerade.tools.entity.EntityArguments</EXCLUDED_FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$StatusTypeEntityTest.ic" NAME="StatusTypeEntityTest Coverage Results" MODIFIED="1656764794348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.model.entity.characterSheet.parameter.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterHasSkillKeyTest.ic" NAME="CharacterHasSkillKeyTest Coverage Results" MODIFIED="1656762374019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.model.entity.characterSheet.skill.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$SectServiceTest.ic" NAME="SectServiceTest Coverage Results" MODIFIED="1657006535934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.service.characterSheet.global.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Masquerade_service$StatusControllerTest.ic" NAME="StatusControllerTest Coverage Results" MODIFIED="1657019419389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.masquerade.controller.characterSheet.parameter.*</FILTER>
@@ -790,64 +749,77 @@
     <SUITE FILE_PATH="coverage/Masquerade_service$SectControllerTest.ic" NAME="SectControllerTest Coverage Results" MODIFIED="1657021159107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.masquerade.controller.characterSheet.global.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$SkillSpecializationServiceTest_updateSkillSpecializationEmptyBody.ic" NAME="SkillSpecializationServiceTest.updateSkillSpecializationEmptyBody Coverage Results" MODIFIED="1656627481571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Masquerade_service$StatusServiceTest_testRemoveStatusOk.ic" NAME="StatusServiceTest.testRemoveStatusOk Coverage Results" MODIFIED="1656863234967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.service.characterSheet.parameter.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterHasSkillServiceTest_testUpdateSkillWithMissingBody.ic" NAME="CharacterHasSkillServiceTest.testUpdateSkillWithMissingBody Coverage Results" MODIFIED="1656862063516" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.masquerade.service.characterSheet.skill.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$SkillEntityTest_testUpdatable.ic" NAME="SkillEntityTest.testUpdatable Coverage Results" MODIFIED="1656760231533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.model.entity.characterSheet.skill.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterHasSkillServiceTest_getAllDeclaredSkills.ic" NAME="CharacterHasSkillServiceTest.getAllDeclaredSkills Coverage Results" MODIFIED="1656846437556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.service.characterSheet.skill.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterHasStatusKeyTest.ic" NAME="CharacterHasStatusKeyTest Coverage Results" MODIFIED="1656772247326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Masquerade_service$StatusEntityTest.ic" NAME="StatusEntityTest Coverage Results" MODIFIED="1656770883766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.masquerade.model.entity.characterSheet.parameter.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$All_in_Masquerade_service__3_.ic" NAME="All in Masquerade-service (3) Coverage Results" MODIFIED="1656627398150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterHasStatusEntityTest_testConstructors.ic" NAME="CharacterHasStatusEntityTest.testConstructors Coverage Results" MODIFIED="1656768755905" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.model.entity.characterSheet.parameter.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterHasStatusServiceTest.ic" NAME="CharacterHasStatusServiceTest Coverage Results" MODIFIED="1656971316084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.service.characterSheet.parameter.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Masquerade_service$SectEntityTest.ic" NAME="SectEntityTest Coverage Results" MODIFIED="1656773922232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.masquerade.model.entity.characterSheet.global.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$DeclaredStatusDTOTest.ic" NAME="DeclaredStatusDTOTest Coverage Results" MODIFIED="1656782922899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.model.dto.characterSheet.parameter.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$ArchetypeEntityTest.ic" NAME="ArchetypeEntityTest Coverage Results" MODIFIED="1656775327555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.model.entity.characterSheet.global.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$JurisdictionServiceTest.ic" NAME="JurisdictionServiceTest Coverage Results" MODIFIED="1656966260818" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.service.characterSheet.parameter.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$SectServiceTest.ic" NAME="SectServiceTest Coverage Results" MODIFIED="1657006535934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.service.characterSheet.global.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterHasSkillKeyTest.ic" NAME="CharacterHasSkillKeyTest Coverage Results" MODIFIED="1656762374019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.model.entity.characterSheet.skill.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$SkillSpecializationEntityTest.ic" NAME="SkillSpecializationEntityTest Coverage Results" MODIFIED="1656755543170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.model.entity.characterSheet.skill.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$SkillSpecializationServiceTest.ic" NAME="SkillSpecializationServiceTest Coverage Results" MODIFIED="1657015093039" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Masquerade_service$All_in_Masquerade_service__1_.ic" NAME="All in Masquerade-service (1) Coverage Results" MODIFIED="1656761795984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Masquerade_service$SkillSpecializationServiceTest_updateSkillSpecializationBadBody.ic" NAME="SkillSpecializationServiceTest.updateSkillSpecializationBadBody Coverage Results" MODIFIED="1656750143325" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.masquerade.service.characterSheet.skill.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$ArchetypeControllerTest.ic" NAME="ArchetypeControllerTest Coverage Results" MODIFIED="1657021568631" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.controller.characterSheet.global.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$SkillEntityTest.ic" NAME="SkillEntityTest Coverage Results" MODIFIED="1656761781212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.model.entity.characterSheet.skill.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$All_in_Masquerade_service__4_.ic" NAME="All in Masquerade-service (4) Coverage Results" MODIFIED="1656627634422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Masquerade_service$ClanServiceTest.ic" NAME="ClanServiceTest Coverage Results" MODIFIED="1657008910743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.masquerade.service.characterSheet.global.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$StatusTypeServiceTest.ic" NAME="StatusTypeServiceTest Coverage Results" MODIFIED="1656869051221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.service.characterSheet.parameter.*</FILTER>
+    <SUITE FILE_PATH="coverage/Masquerade_service$All_in_Masquerade_service__2_.ic" NAME="All in Masquerade-service (2) Coverage Results" MODIFIED="1656757904292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Masquerade_service$SkillSpecializationControllerTest.ic" NAME="SkillSpecializationControllerTest Coverage Results" MODIFIED="1657015013943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.controller.characterSheet.skill.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$All_in_Masquerade_service__3_.ic" NAME="All in Masquerade-service (3) Coverage Results" MODIFIED="1656627398150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/Masquerade_service$StatusTypeControllerTest.ic" NAME="StatusTypeControllerTest Coverage Results" MODIFIED="1657019738805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.controller.characterSheet.parameter.*</FILTER>
+    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterHasSkillEntityTest.ic" NAME="CharacterHasSkillEntityTest Coverage Results" MODIFIED="1656768547225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.model.entity.characterSheet.skill.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$TitleServiceTest_testRemoveStatusOk.ic" NAME="TitleServiceTest.testRemoveStatusOk Coverage Results" MODIFIED="1656973510151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.service.characterSheet.global.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$TitleEntityTest.ic" NAME="TitleEntityTest Coverage Results" MODIFIED="1656773461639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.model.entity.characterSheet.global.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterControllerTest.ic" NAME="CharacterControllerTest Coverage Results" MODIFIED="1657012485542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.controller.characterSheet.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Masquerade_service$TitleControllerTest.ic" NAME="TitleControllerTest Coverage Results" MODIFIED="1657020407120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.masquerade.controller.characterSheet.global.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Masquerade_service$SkillSpecializationControllerTest.ic" NAME="SkillSpecializationControllerTest Coverage Results" MODIFIED="1657015013943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.masquerade.controller.characterSheet.skill.*</FILTER>
+    <SUITE FILE_PATH="coverage/Masquerade_service$ResponsesTest.ic" NAME="ResponsesTest Coverage Results" MODIFIED="1656758552390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.tools.controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$JurisdictionEntityTest.ic" NAME="JurisdictionEntityTest Coverage Results" MODIFIED="1656771576355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.model.entity.characterSheet.parameter.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterHasSkillServiceTest_testUpdateSkill.ic" NAME="CharacterHasSkillServiceTest.testUpdateSkill Coverage Results" MODIFIED="1656862056600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.service.characterSheet.skill.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$All_in_Masquerade_service.ic" NAME="All in Masquerade-service Coverage Results" MODIFIED="1656759427119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <EXCLUDED_FILTER>com.masquerade.tools.controller.Section</EXCLUDED_FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterStatusDTOTest.ic" NAME="CharacterStatusDTOTest Coverage Results" MODIFIED="1656779116845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.model.dto.characterSheet.parameter.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$SkillSpecializationServiceTest_updateSkillSpecializationEmptyBody.ic" NAME="SkillSpecializationServiceTest.updateSkillSpecializationEmptyBody Coverage Results" MODIFIED="1656627481571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.service.characterSheet.skill.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$CharacterHasSkillServiceTest_getAllDeclaredSkills.ic" NAME="CharacterHasSkillServiceTest.getAllDeclaredSkills Coverage Results" MODIFIED="1656846437556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.service.characterSheet.skill.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$StatusTypeServiceTest.ic" NAME="StatusTypeServiceTest Coverage Results" MODIFIED="1656869051221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.service.characterSheet.parameter.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Masquerade_service$SkillServiceTest_testCreateSkillWithEmptyBody.ic" NAME="SkillServiceTest.testCreateSkillWithEmptyBody Coverage Results" MODIFIED="1657031806765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.masquerade.service.characterSheet.skill.*</FILTER>
     </SUITE>
   </component>
 </project>
