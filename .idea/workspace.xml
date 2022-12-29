@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Feature - Add new isEmpty for entities &amp; add to Skill folder entities">
+    <list default="true" id="28b34035-5581-43ba-b8a1-f40cc694c3ec" name="Changes" comment="Feature - Add new controller for credentials">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/masquerade/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,15 +23,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="nullreturn" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -206,13 +209,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654947632401</updated>
-    </task>
-    <task id="LOCAL-00045" summary="Feature - CharacterHasSkillEntity : Add JUnit test">
-      <created>1656763828128</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1656763828128</updated>
     </task>
     <task id="LOCAL-00046" summary="Feature - StatusTypeEntity : Add JUnit test">
       <created>1656764808934</created>
@@ -550,7 +546,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657022494015</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="Feature - Update pom dependecies">
+      <created>1672256600274</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1672256600274</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -576,8 +579,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Feature - SkillService : Add JUnit test" />
-    <MESSAGE value="Feature - CharacterHasSkillService : Add JUnit test" />
     <MESSAGE value="Feature - StatusService : Add JUnit test" />
     <MESSAGE value="Feature - StatusTypeService : Add JUnit test" />
     <MESSAGE value="Fix - SkillService : Add case to updateSkill" />
@@ -601,7 +602,9 @@
     <MESSAGE value="Feature - ClanController : add JUnit tests" />
     <MESSAGE value="Feature - ArchetypeController : add JUnit tests" />
     <MESSAGE value="Fix - Move back folder to root" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix - Move back folder to root" />
+    <MESSAGE value="Feature - Update pom dependecies" />
+    <MESSAGE value="Feature - Add new controller for credentials" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature - Add new controller for credentials" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
