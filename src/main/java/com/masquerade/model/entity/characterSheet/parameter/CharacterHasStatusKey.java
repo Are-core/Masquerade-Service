@@ -1,6 +1,6 @@
 package com.masquerade.model.entity.characterSheet.parameter;
 
-import javax.persistence.Column;
+import jakarta.persistence.*;
 import java.io.Serializable;
 
 public class CharacterHasStatusKey implements Serializable {

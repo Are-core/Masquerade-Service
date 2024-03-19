@@ -3,7 +3,7 @@ package com.masquerade.model.entity.characterSheet.skill;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.masquerade.model.entity.characterSheet.MasqueradeEntity;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Table(name="skill_specialization")
 @JsonInclude(JsonInclude.Include.NON_NULL)

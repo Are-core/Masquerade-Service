@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.masquerade.model.entity.characterSheet.MasqueradeEntity;
 import com.masquerade.model.entity.characterSheet.CharacterEntity;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Table(name="character_has_skill")
 @JsonInclude(JsonInclude.Include.NON_NULL)

@@ -2,7 +2,7 @@ package com.masquerade.model.entity.characterSheet.parameter;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Table(name="jurisdiction")
 @JsonInclude(JsonInclude.Include.NON_NULL)

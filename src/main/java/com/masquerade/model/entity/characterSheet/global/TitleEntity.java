@@ -3,7 +3,7 @@ package com.masquerade.model.entity.characterSheet.global;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.masquerade.model.entity.characterSheet.parameter.StatusEntity;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.List;
 
 @Table(name="title")

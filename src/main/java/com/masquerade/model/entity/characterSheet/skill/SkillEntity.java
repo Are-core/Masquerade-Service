@@ -2,8 +2,8 @@ package com.masquerade.model.entity.characterSheet.skill;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.masquerade.model.entity.characterSheet.MasqueradeEntity;
+import jakarta.persistence.*;
 
-import javax.persistence.*;
 import java.util.List;
 
 @Table(name="skill")

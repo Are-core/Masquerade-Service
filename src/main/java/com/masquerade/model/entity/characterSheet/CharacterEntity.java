@@ -6,7 +6,7 @@ import com.masquerade.model.entity.characterSheet.global.ClanEntity;
 import com.masquerade.model.entity.characterSheet.global.SectEntity;
 import com.masquerade.model.entity.characterSheet.parameter.JurisdictionEntity;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Table(name="character_sheet")
 @JsonInclude(JsonInclude.Include.NON_NULL)
