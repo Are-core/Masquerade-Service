@@ -2,7 +2,7 @@ package com.masquerade.model.entity.characterSheet.global;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.beans.Transient;
 
 @Table(name="clan")

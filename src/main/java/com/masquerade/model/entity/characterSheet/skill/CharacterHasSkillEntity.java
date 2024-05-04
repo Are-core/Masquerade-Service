@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.masquerade.model.entity.characterSheet.MasqueradeEntity;
 import com.masquerade.model.entity.characterSheet.CharacterEntity;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Table(name="character_has_skill")
 @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -14,13 +14,13 @@ public class CharacterHasSkillEntity extends MasqueradeEntity {
     private CharacterHasSkillKey id;
 
     @ManyToOne
-    @MapsId("character")
-    @JoinColumn(name = "character_id")
+    //@MapsId("character")
+    @JoinColumn(name = "character_id", insertable = false, updatable = false)
     private CharacterEntity character;
 
     @ManyToOne
-    @MapsId("skill")
-    @JoinColumn(name = "skill_id")
+    //@MapsId("skill")
+    @JoinColumn(name = "skill_id", insertable = false, updatable = false)
     private SkillEntity skill;
 
     @Column(name = "level")

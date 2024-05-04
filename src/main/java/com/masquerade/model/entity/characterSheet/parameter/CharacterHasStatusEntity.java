@@ -3,7 +3,7 @@ package com.masquerade.model.entity.characterSheet.parameter;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.masquerade.model.entity.characterSheet.CharacterEntity;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Table(name="character_has_status")
 @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -13,13 +13,13 @@ public class CharacterHasStatusEntity {
     private CharacterHasStatusKey id;
 
     @ManyToOne
-    @MapsId("character")
-    @JoinColumn(name = "character_id")
+    //@MapsId("character")
+    @JoinColumn(name = "character_id", insertable = false, updatable = false)
     private CharacterEntity character;
 
     @ManyToOne
-    @MapsId("status")
-    @JoinColumn(name = "status_id")
+    //@MapsId("status")
+    @JoinColumn(name = "status_id", insertable = false, updatable = false)
     private StatusEntity status;
 
     @Column(name = "entity_id")
